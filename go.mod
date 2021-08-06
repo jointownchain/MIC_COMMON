@@ -2,7 +2,6 @@ module github.com/jointownchain/mic_common
 
 go 1.16
 
-retract [v0.2.1,v0.2.2,v0.2.3,v0.2.4,v0.2.5,v0.2.6,v0.2.7]
 require (
 	github.com/fastly/go-utils v0.0.0-20180712184237-d95a45783239 // indirect
 	github.com/golang/protobuf v1.5.2

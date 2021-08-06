@@ -1237,12 +1237,13 @@ message GetShipmentOrderReportsReq {
   int64 managerId = 1;
   //指定获取哪个医保局的订单报表数据，目前不支持不同医保局混合统计
   int64 mibId = 2;
+  string miCode = 3;
   //报表的起止日期必填
-  google.protobuf.Timestamp startAt = 3;
-  google.protobuf.Timestamp endAt = 4;
-  OrderReportGetCondition optionalFilterCond = 5;
-  OrderReportGroupCondition optionalGroupCond = 6;
-  Page page = 7;
+  google.protobuf.Timestamp startAt = 4;
+  google.protobuf.Timestamp endAt = 5;
+  OrderReportGetCondition optionalFilterCond = 6;
+  OrderReportGroupCondition optionalGroupCond = 7;
+  Page page = 8;
 }
 message ShipmentOrderDayReport {
   //谁在请求 按照搜索账号控制显示范围
@@ -2231,6 +2232,29 @@ message GetMiSpecialConfigResp {
   int64 pageNumber = 4;
 }
 
+//创建银行账号部分
+message CreateBankAccountReq {
+  repeated AccountInfo list = 1;
+  int64 managerId = 2;
+}
+
+message AccountInfo {
+  int64  mibId = 1;
+  string  cardNo = 2;
+  string accountType = 3;
+  string bank = 4;
+  int64   organizationId = 5;
+  string   toibkn = 6;
+  string   cardOwner = 7;
+  int64  frozenAmount = 8;
+  string  cardStatus = 9;
+  int64  bankAccountInfoId = 10;
+}
+
+message CreateBankAccountResp {
+  int64 result = 1;
+}
+
 service ManagerService {
   //合同相关
   rpc ListContract(ContractListReq) returns(ContractListResp);
@@ -2335,6 +2359,8 @@ service ManagerService {
   //医疗机构专户填平额度设置
   rpc GetMiSpecialConfig(GetMiSpecialConfigReq) returns (GetMiSpecialConfigResp);
   rpc UpdateMiSpecialConfig(UpdateMiSpecialConfigReq) returns (UpdateMiSpecialConfigResp);  
+
+  rpc CreateBankAccount(CreateBankAccountReq) returns(CreateBankAccountResp);
 }
 
 message StockSyncReq{

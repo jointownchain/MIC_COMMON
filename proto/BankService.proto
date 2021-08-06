@@ -41,7 +41,7 @@ message ListBankAccountVo {
   google.protobuf.Timestamp createdAt = 11;
 }
 //创建银行账号部分
-message CreateOneAccountInfoReq {
+message CreateBankAccountReq {
   repeated AccountInfo list = 1;
   int64 managerId = 2;
 }
@@ -59,7 +59,7 @@ message AccountInfo {
   int64  bankAccountInfoId = 10;
 }
 
-message CreateOneAccountInfoResp {
+message CreateBankAccountResp {
   int64 result = 1;
 }
 //更新帐号信息
@@ -542,6 +542,7 @@ message CnapsVo {
   string bankName = 3;
   string address = 4;
 }
+
 message GetMiSpecialConfigReq {
   //谁在请求 按照搜索账号控制显示范围
   int64 managerId = 1;
@@ -585,7 +586,7 @@ service BankService {
   rpc ListCnaps(ListCnapsReq) returns(ListCnapsResp);
   //银行账号相关
   rpc ListBankAccount(ListBankAccountReq) returns(ListBankAccountResp);
-  rpc CreateOneAccountInfo(CreateOneAccountInfoReq) returns(CreateOneAccountInfoResp);
+  rpc CreateBankAccount(CreateBankAccountReq) returns(CreateBankAccountResp);
   rpc UpdateBankAccount(UpdateBankAccountReq) returns(UpdateBankAccountResp);
   rpc UpdateBankAccountList(UpdateBankAccountListReq) returns(UpdateBankAccountListResp);
   //配送企业授信额度设置
