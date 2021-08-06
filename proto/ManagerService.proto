@@ -1237,13 +1237,14 @@ message GetShipmentOrderReportsReq {
   int64 managerId = 1;
   //指定获取哪个医保局的订单报表数据，目前不支持不同医保局混合统计
   int64 mibId = 2;
-  string miCode = 3;
+  int64 year = 3;
+  string miCode = 4;
   //报表的起止日期必填
-  google.protobuf.Timestamp startAt = 4;
-  google.protobuf.Timestamp endAt = 5;
-  OrderReportGetCondition optionalFilterCond = 6;
-  OrderReportGroupCondition optionalGroupCond = 7;
-  Page page = 8;
+  google.protobuf.Timestamp startAt = 5;
+  google.protobuf.Timestamp endAt = 6;
+  OrderReportGetCondition optionalFilterCond = 7;
+  OrderReportGroupCondition optionalGroupCond = 8;
+  Page page = 9;
 }
 message ShipmentOrderDayReport {
   //谁在请求 按照搜索账号控制显示范围
