@@ -534,6 +534,8 @@ message ListMiReq {
   Page page = 4;
   int64 managerId = 5;
   repeated int64 miIds = 6;
+  string province = 7;
+  string city = 8;
 }
 
 message ListMiResp {
@@ -555,6 +557,7 @@ message ListMiVo {
   string  zone = 9;
   string  hashInfo = 10;
   google.protobuf.Timestamp  createdAt = 11;
+  string  logoUrl = 12;
 }
 //查询医疗机构 通用接口
 message CommonMIReq {
@@ -572,10 +575,24 @@ message CommonMIResp {
   int64 pageNumber = 4;
 }
 
+message CommonMIInfoResp {
+  repeated CommonMIInfoVo list = 1;
+  int64 total = 2;
+  int64 pageSize = 3;
+  int64 pageNumber = 4;
+}
+
 message CommonMIVo {
   int64   miId = 1;
   string  miName = 2;
   string  miCode = 3;
+}
+
+message CommonMIInfoVo {
+  int64   miId = 1;
+  string  miName = 2;
+  string  miCode = 3;
+  string  logoUrl = 4;
 }
 //创建医疗机构信息(主体信息)
 message CreateOneMIReq {
@@ -651,6 +668,8 @@ message ListCompanyReq {
   Page page = 4;
   int64 managerId = 5;
   repeated int64 companyIds = 6;
+  string province = 7;
+  string city = 8;
 }
 
 message ListCompanyResp {
@@ -671,6 +690,7 @@ message ListCompanyVo {
   string zone = 8;
   string hashInfo = 9;
   google.protobuf.Timestamp createdAt = 10;
+  string  logoUrl = 11;
 }
 //配送企业基础信息创建
 message CreateOneCompanyReq {
@@ -710,7 +730,7 @@ message ListTpPlanErrReq {
   string  tpOrderCode = 1;
   string medicineName = 2;
   string medicineCode = 3;
-  google.protobuf.Timestamp stratDate = 4;
+  google.protobuf.Timestamp startDate = 4;
   google.protobuf.Timestamp endDate = 5;
   Page page = 6;
   int64 managerId = 7;
@@ -754,7 +774,7 @@ message ListShipmentPlanReq {
   string medicineCode = 4;
   string companyCode = 5;
   string planStatus = 6;
-  google.protobuf.Timestamp stratDate = 7;
+  google.protobuf.Timestamp startDate = 7;
   google.protobuf.Timestamp endDate = 8;
   Page page = 9;
   int64 managerId = 10;
@@ -806,6 +826,14 @@ message DetailShipmentOrderReq {
   string shipmentNo = 1;
   int64 managerId = 2;
 }
+message ShipmentReceiveOrderReq {
+  string shipmentNo = 1;
+  int64 managerId = 2;
+  int64 miId = 3;
+}
+message ShipmentReceiveOrderResp {
+  int64  result = 1;
+}
 //先返回部分关键字段
 message DetailShipmentOrderResp {
   int64 mibId = 1;
@@ -830,7 +858,7 @@ message ListShipmentPlanForOrderReq {
   //  string medicineCode = 4;
   //  string companyCode = 5;
   //  string planStatus = 6;
-  //  google.protobuf.Timestamp stratDate = 7;
+  //  google.protobuf.Timestamp startDate = 7;
   //  google.protobuf.Timestamp endDate = 8;
   //  Page page = 9;
   int64 managerId = 2;
@@ -1048,6 +1076,81 @@ message GetConfigResp {
   int64 total = 2;
   int64 pageSize = 3;
   int64 pageNumber = 4;
+}
+
+message GetMiInfoReq {
+  int64 managerId = 1;
+  int64 miId = 2;
+  Page page = 3;
+}
+message MiInfoVo {
+  int64 miId = 1;
+  string miCode = 2;
+  string miName = 3;
+  string miType = 4;
+  string managerName = 5;
+  string managerPhone = 6;
+  string province = 7;
+  string city = 8;
+  string zone = 9;
+  string normalId = 10;
+  string normalCardOwner = 11;
+  string normalToibkn = 12;
+  string normalBank = 13;
+  string normalCardNo = 14;
+  string normalCardStatus = 15;
+  string specialId = 16;
+  string specialCardOwner = 17;
+  string specialToibkn = 18;
+  string specialBank = 19;
+  string specialCardNo = 20;
+  string specialCardStatus = 21;
+  google.protobuf.Timestamp createdAt = 22;
+  string hashInfo = 23;
+  string normalValidStatus = 24;
+  string specialValidStatus = 25;
+}
+message GetMiInfoResp {
+  repeated MiInfoVo list = 1;
+  int64 total = 2;
+  int64 pageSize = 3;
+  int64 pageNumber = 4;
+}
+message GetMiSpecialConfigReq {
+  //谁在请求 按照搜索账号控制显示范围
+  int64 managerId = 1;
+  string miCode = 2;
+  int64 miId = 3;
+  string miName = 4;
+  Page page = 5;
+}
+message MiSpecialConfig {
+  int64 miId = 1;
+  string miName = 2;
+  string miCode = 3;
+  int64 limitBalance = 4;
+  string cardNo = 5;
+  string accountType = 6;
+  string bank = 7;
+  string toibkn = 8;
+  int64 frozenAmount = 9;
+  string cardOwner = 10;
+  string cardStatus = 11;
+  string validStatus = 12;
+  google.protobuf.Timestamp createdAt = 13;
+}
+message GetMiSpecialConfigResp {
+  repeated MiSpecialConfig list = 1;
+  int64 total = 2;
+  int64 pageSize = 3;
+  int64 pageNumber = 4;
+}
+message UpdateMiSpecialConfigReq {
+  //谁在请求 按照搜索账号控制显示范围
+  int64 managerId = 1;
+  string miCode = 2;
+  int64 limitBalance = 3;
+  int64 oldLimitBalance = 4;
 }
 
 //招采单报表可选聚合维度
@@ -1656,6 +1759,181 @@ message GetCurrentNeedPayResp {
   int64 needPayAmount = 1;
 }
 
+message GetMiDashboardReq {
+  //谁在请求 按照搜索账号控制显示范围
+  int64 managerId = 1;
+  //指定获取哪家医院的聚合数据
+  int64 miId = 2;
+  //指定获取哪家配送企业的聚合数据 不可同时指定
+  int64 comId = 3;
+}
+
+message BankAccounts {
+  string accountType = 1;
+  string cardNo = 2;
+  string cardStatus = 3;
+  string validStatus = 4;
+}
+
+message GetMiDashboardBaseInfoResp {
+  string miName = 1;
+  string miLogo = 2;
+  string province = 3;
+  string city = 4;
+  string zone = 5;
+  repeated BankAccounts bankAccounts = 6;
+}
+
+message GetDashboardShipmentRankCompanyDataYearReq {
+  google.protobuf.Timestamp startAt = 1;
+  google.protobuf.Timestamp endAt = 2;
+  int64 medicineCount = 3;
+  int64 rankCount = 4;
+  int64 managerId = 5;
+  int64 miId = 6;
+  int64 comId = 7;
+}
+
+message DashboardShipmentRankCompanyDataYearVo {
+  string rank = 1;
+  string comName = 2;
+  string comCode = 3;
+  string shipmentPlanAmount = 4;
+  string province = 5;
+  string city = 6;
+  string zone = 7;
+  repeated string medicineName = 8;
+}
+
+message GetDashboardShipmentRankCompanyDataYearResp {
+  repeated DashboardShipmentRankCompanyDataYearVo list = 1;
+}
+
+message GetDashboardShipmentRankMedicineDataYearReq {
+  int64 managerId = 1;
+  int64 mibId = 2;
+  int64 miId = 3;
+  google.protobuf.Timestamp startAt = 4;
+  google.protobuf.Timestamp endAt = 5;
+}
+
+message DashboardShipmentRankMedicineDataYear {
+  string rank = 1;
+  string medicineName = 2;
+  string shipmentPlanAmount = 3;
+}
+
+message GetDashboardShipmentRankMedicineDataYearResp {
+  repeated DashboardShipmentRankMedicineDataYear list = 1;
+}
+
+message GetDashboardCompanyRankReq {
+  int64 managerId = 1;
+  int64 miId = 2;
+  int64 comId = 3;
+  Page page = 4;
+}
+
+message DashboardCompanyRankVo {
+  string companyName = 1;
+  string amount = 2;
+}
+
+message GetDashboardCompanyRankResp {
+  repeated DashboardCompanyRankVo vo = 1;
+  int64 total = 2;
+  int64 pageSize = 3;
+  int64 pageNumber = 4;
+}
+
+message GetDashboardShipmentListReq {
+  int64 managerId = 1;
+  int64 miId = 2;
+  int64 comId = 3;
+  Page page = 4;
+}
+
+message DashboardShipmentVo {
+  string medicineName = 1;
+  string medicineCode = 2;
+  string shipmentStatus = 3;
+  google.protobuf.Timestamp receiveDeadline = 4;
+}
+
+message GetDashboardShipmentListResp {
+  repeated DashboardShipmentVo list  = 1;
+  int64 total = 2;
+  int64 pageSize = 3;
+  int64 pageNumber = 4;
+}
+
+message GetDashboardMedicineRankReq {
+  int64 managerId = 1;
+  int64 miId = 2;
+  Page page = 3;
+}
+
+message DashboardMedicineRankVo {
+  string medicineName = 1;
+  string medicineNum = 2;
+}
+
+message GetDashboardMedicineRankResp {
+  repeated DashboardMedicineRankVo vo = 1;
+  int64 total = 2;
+  int64 pageSize = 3;
+  int64 pageNumber = 4;
+}
+
+message GetDashboardStockListReq {
+  int64 managerId = 1;
+  int64 miId = 2;
+  int64 comId = 3;
+  Page page = 4;
+}
+
+message DashboardStockVo {
+  string medicineName = 1;
+  string medicineCode = 2;
+  string contractNo = 3;
+  string tenderCompany = 4;
+  string companyName = 5;
+  string comStockNum = 6;
+  string miName = 7;
+  string miStockNum = 8;
+  string medicineSpecification = 9;
+}
+
+message GetDashboardStockListResp {
+  repeated DashboardStockVo list  = 1;
+  int64 total = 2;
+  int64 pageSize = 3;
+  int64 pageNumber = 4;
+}
+
+message GetCompanyBankAccountReq {
+  string companyCode = 1;
+}
+
+message GetCompanyBankAccountResp {
+  string cardNo = 1;
+  string bank = 2;
+  string cardOwner = 3;
+  string comName = 4;
+  string comId = 5;
+}
+
+message GetPayOrderReq {
+  int64 managerId = 1;
+  int64 miId = 2;
+}
+
+message GetPayOrderResp {
+  string payOrderAmount = 1;
+  string payOrderNum = 2;
+  string waitNum = 3;
+}
+
 message GetCompanyHashReq {
   //谁在请求 按照搜索账号控制显示范围
   int64 managerId = 1;
@@ -2035,8 +2313,8 @@ message GetMIBDashboardBaseInfoReq {
   string city = 4;
 }
 message GetMIBDashboardBaseInfoResp {
-  int64 miCount = 1;
-  int64 companyCount = 2;
+  repeated ListMiVo mis = 1;
+  repeated ListCompanyVo companies = 2;
 }
 
 message ListBindReq {
@@ -2191,46 +2469,7 @@ message OpReimbResp {
   string result = 1;
 }
 
-
-message GetMiSpecialConfigReq {
-  //谁在请求 按照搜索账号控制显示范围
-  int64 managerId = 1;
-  string miCode = 2;
-  int64 miId = 3;
-  string miName = 4;
-  Page page = 5;
-}
-
-message UpdateMiSpecialConfigReq {
-  //谁在请求 按照搜索账号控制显示范围
-  int64 managerId = 1;
-  string miCode = 2;
-  int64 limitBalance = 3;
-  int64 oldLimitBalance = 4;
-}
-
 message UpdateMiSpecialConfigResp {
-}
-
-message MiSpecialConfig {
-  int64 miId = 1;
-  string miName = 2;
-  string miCode = 3;
-  int64 limitBalance = 4;
-  int64 bankAccountId = 5;
-  string  managerName = 6;
-  string  managerPhone = 7;
-  string  province = 8;
-  string  city = 9;
-  string  zone = 10;
-  int64 configId = 11;
-}
-
-message GetMiSpecialConfigResp {
-  repeated MiSpecialConfig list = 1;
-  int64 total = 2;
-  int64 pageSize = 3;
-  int64 pageNumber = 4;
 }
 
 //创建银行账号部分
@@ -2299,6 +2538,7 @@ service ManagerService {
   //医疗机构相关
   rpc ListMi(ListMiReq) returns(ListMiResp);
   rpc CommonMI(CommonMIReq) returns(CommonMIResp);
+  rpc CommonMIInfo(CommonMIReq) returns(CommonMIInfoResp);
   rpc CreateOneMI(CreateOneMIReq) returns(CreateOneMIResp);
   rpc UpdateMi(UpdateMiReq) returns(UpdateMiResp);
 
@@ -2308,6 +2548,7 @@ service ManagerService {
   rpc UpdateOneCompany(UpdateOneCompanyReq) returns(UpdateOneCompanyResp);
   rpc CommonCompany(CommonCompanyReq) returns(CommonCompanyResp);
   rpc SelCompanyByNames(SelCompanyByNamesReq) returns(SelCompanyByNamesResp);
+  rpc QueryCompanyBankAccount(GetCompanyBankAccountReq) returns(GetCompanyBankAccountResp);
 
   //招采异常订单相关
   rpc ListTpPlanErr(ListTpPlanErrReq) returns(ListTpPlanErrResp);
@@ -2316,6 +2557,7 @@ service ManagerService {
   rpc ListShipmentPlan(ListShipmentPlanReq) returns(ListShipmentPlanResp);
   rpc CountShipmentPlan(CountShipmentPlanReq) returns(CountShipmentPlanResp);
   //配送单详情
+  rpc ShipmentReceiveOrder(ShipmentReceiveOrderReq) returns (ShipmentReceiveOrderResp);
   rpc DetailShipmentOrder(DetailShipmentOrderReq) returns(DetailShipmentOrderResp);
   rpc ListShipmentPlanForOrder(ListShipmentPlanForOrderReq) returns(ListShipmentPlanForOrderResp);
   //配送单创建
@@ -2330,6 +2572,8 @@ service ManagerService {
   rpc GetContractByShipmentPlanId(GetContractByShipmentPlanIdReq) returns(GetContractByShipmentPlanIdResp);
   //配送单修改
   rpc UpdateShipmentOrder(UpdateShipmentOrderReq) returns(UpdateShipmentOrderResp);
+  //支付单汇总
+  rpc CountPayOrder(GetPayOrderReq) returns(GetPayOrderResp);
 
   //通用配置查询
   rpc GetConfig(GetConfigReq) returns (GetConfigResp);
@@ -2359,7 +2603,9 @@ service ManagerService {
 
   //医疗机构专户填平额度设置
   rpc GetMiSpecialConfig(GetMiSpecialConfigReq) returns (GetMiSpecialConfigResp);
-  rpc UpdateMiSpecialConfig(UpdateMiSpecialConfigReq) returns (UpdateMiSpecialConfigResp);  
+  rpc UpdateMiSpecialConfig(UpdateMiSpecialConfigReq) returns (UpdateMiSpecialConfigResp);
+  //医疗机构基础信息
+  rpc QueryMiInfo(GetMiInfoReq) returns (GetMiInfoResp);
 
   rpc CreateBankAccount(CreateBankAccountReq) returns(CreateBankAccountResp);
 }
@@ -2540,4 +2786,15 @@ service RankService {
   rpc GetRankMedicineYear(GetRankMedicineYearReq) returns (GetRankMedicineYearResp);
   //  濮阳行政地图此时的数据
   rpc GetMIBDashboardBaseInfo(GetMIBDashboardBaseInfoReq) returns (GetMIBDashboardBaseInfoResp);
+}
+
+//=======Dashboard展示管理========================
+service DashboardService {
+  rpc GetMiDashboardBaseInfo(GetMiDashboardReq) returns (GetMiDashboardBaseInfoResp);
+  rpc GetDashboardShipmentRankCompanyDataYear(GetDashboardShipmentRankCompanyDataYearReq) returns (GetDashboardShipmentRankCompanyDataYearResp);
+  rpc GetDashboardShipmentRankMedicineDataYear(GetDashboardShipmentRankMedicineDataYearReq) returns (GetDashboardShipmentRankMedicineDataYearResp);
+  rpc GetDashboardShipmentCompanyRank(GetDashboardCompanyRankReq) returns (GetDashboardCompanyRankResp);
+  rpc GetDashboardShipmentList(GetDashboardShipmentListReq) returns (GetDashboardShipmentListResp);
+  rpc GetDashboardMedicineRank(GetDashboardMedicineRankReq) returns (GetDashboardMedicineRankResp);
+  rpc GetDashboardStockList(GetDashboardStockListReq) returns (GetDashboardStockListResp);
 }
