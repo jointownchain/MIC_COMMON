@@ -1898,9 +1898,9 @@ message DashboardStockVo {
   string contractNo = 3;
   string tenderCompany = 4;
   string companyName = 5;
-  string comStockNum = 6;
+  int64 comStockNum = 6;
   string miName = 7;
-  string miStockNum = 8;
+  int64 miStockNum = 8;
   string medicineSpecification = 9;
 }
 
@@ -2608,6 +2608,17 @@ service ManagerService {
   rpc QueryMiInfo(GetMiInfoReq) returns (GetMiInfoResp);
 
   rpc CreateBankAccount(CreateBankAccountReq) returns(CreateBankAccountResp);
+  
+  //开发者配置
+  rpc CreateMiDevelopUser(CreateMiDevelopUserReq) returns(CreateMiDevelopUserResp);
+  rpc GetClientPermission(ClientPermissionReq) returns(ClientPermissionResp);
+  rpc SetClientDevelop(SetClientDevelopReq) returns(SetClientDevelopResp);
+  rpc SaveClientPermission(SaveClientPermissionReq) returns(SaveClientPermissionResp);
+  rpc MedicineBindList(ListMedicineBindListReq) returns(ListMedicineBindListResp);
+  rpc MedicineBindCode(CreateStockMedcineCodeBindReq) returns(CreateStockMedcineCodeBindResp);
+  //同步库存mi
+  rpc SyncInfoMedicineMiStock(MedicineMiStockReq) returns(MedicineMiStockResp);
+  rpc SyncInfoMedicineCompanyStock(MedicineCompanyStockReq) returns(MedicineCompanyStockResp);
 }
 
 message StockSyncReq{
@@ -2797,4 +2808,159 @@ service DashboardService {
   rpc GetDashboardShipmentList(GetDashboardShipmentListReq) returns (GetDashboardShipmentListResp);
   rpc GetDashboardMedicineRank(GetDashboardMedicineRankReq) returns (GetDashboardMedicineRankResp);
   rpc GetDashboardStockList(GetDashboardStockListReq) returns (GetDashboardStockListResp);
+}
+
+
+
+//=======开发者管理========================
+ //创建客户端开发者
+message CreateMiDevelopUserReq {
+  string  organizationCode = 1;
+  int64  organizationId = 2;
+  string  organizationType = 3;
+  string  clientId = 4;
+  string  client_secret = 5;
+  int64 managerId = 6;
+
+}
+message CreateMiDevelopUserResp {
+  int64  result = 1;
+  string  clientId = 2;
+  string  client_secret = 3;
+}
+//关联关系clientdevlop_permission
+message ClientPermissionReq {
+  string  clientId = 1;
+  int64 managerId = 2;
+
+}
+message ClientPermissionResp {
+  string  clientId = 2;
+  string  clientSecret = 3;
+  string organizationCode = 4;
+  int64 organizationId = 5;
+  string organizationType = 6;
+  repeated ClientPermission list = 7;
+}
+
+message ClientPermission{
+	string permission = 1;
+	string permissionUrl = 2;
+	string  clientId = 3;
+ 
+}
+
+ //重置秘钥
+message SetClientDevelopReq {
+  string  clientId = 1;
+  string  clientSecret = 2;
+  string organizationCode = 3;
+  int64 organizationId = 4;
+  string organizationType = 5;
+
+}
+message SetClientDevelopResp {
+  int64  result = 1;
+  string  clientId = 2;
+  string  clientSecret = 3;
+}
+//保存关系
+message SaveClientPermissionReq {
+  string clientId = 1; 
+  repeated ClientPermission reqs = 2;
+}
+
+
+message SaveClientPermissionResp {
+  int64  result = 1;
+  string  clientId = 2;
+  repeated ClientPermission reps = 3;
+}
+
+
+//his 药品码绑定查询
+message ListMedicineBindListReq {
+  string  medicineCode = 1;
+  string  medicineName = 2;
+  string organizationCode = 3;
+  int64 organizationId = 4;
+  string linkType = 5;
+  Page page = 6;
+  int64 managerId = 7;
+}
+
+message ListMedicineBindListResp {
+  repeated ListMedicineBindListVo list = 1;
+  int64 total = 2;
+  int64 pageSize = 3;
+  int64 pageNumber = 4;
+}
+
+message ListMedicineBindListVo {
+  string medicineName = 1;
+  string medicineCode = 2;
+  string medicineLinkName = 3;
+  int64 bindId = 4;
+  string miCode = 5;
+
+}
+//stock_medcine_code_bind
+message CreateStockMedcineCodeBindReq {
+  string  medicineCode = 1;
+  string  medicineLinkCode = 2;
+  string  medicineName = 3;
+  string  organization_code = 4; 
+  int64  organization_id = 5;
+  string  link_type = 6;
+  int64 managerId = 7;
+}
+message CreateStockMedcineCodeBindResp {
+  int64  result = 1;
+}
+//医疗库存同步 medicine_mi_stock
+message MedicineMiStockReq {
+  string  clientId = 1;
+  int64 managerId = 2;
+  string organizationCode = 3;
+  int64 organizationId = 4;
+  repeated MedicineMiStock list = 7;
+
+}
+message MedicineMiStockResp {
+	int64  result = 1;
+}
+
+
+message MedicineMiStock{
+	string medicineLinkCode = 1;
+	string medicineLinkName = 2;
+	int64  num = 3;
+	int64  stockNum = 4;
+	string  warehouseCode = 5;
+	google.protobuf.Timestamp changeTime = 6;
+ 
+}
+
+//医要企业疗库存同步 medicine_company_stock
+message MedicineCompanyStockReq {
+  string  clientId = 1;
+  int64 managerId = 2;
+  string organizationCode = 3;
+  int64 organizationId = 4;
+  repeated MedicineCompanyStock list = 7;
+
+}
+message MedicineCompanyStockResp {
+	int64  result = 1;
+}
+
+
+message MedicineCompanyStock{
+	string medicineLinkCode = 1;
+	string medicineLinkName = 2;
+	int64  num = 3;
+	int64  stockNum = 4;
+	string  warehouseCode = 5;
+	google.protobuf.Timestamp changeTime = 6;
+ 
 }
