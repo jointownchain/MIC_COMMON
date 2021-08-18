@@ -145,7 +145,8 @@ message ContractMiListVo {
   string  contractUrl = 12;
   string  activeStatus = 13;
   string  manufacturer = 14;
-  int64  MedicineReceive = 15;
+  int64  medicineReceive = 15;
+  int64  miId = 16;
 }
 //子合同补录
 message CreateOneContractMIReq {
@@ -566,6 +567,12 @@ message CommonMIReq {
   int64 managerId = 3;
   Page page = 4;
   string activeStatus = 5;
+}
+
+message CommonMIInfoReq {
+  int64 miId = 1;
+  int64 managerId = 2;
+  Page page = 3;
 }
 
 message CommonMIResp {
@@ -2538,7 +2545,7 @@ service ManagerService {
   //医疗机构相关
   rpc ListMi(ListMiReq) returns(ListMiResp);
   rpc CommonMI(CommonMIReq) returns(CommonMIResp);
-  rpc CommonMIInfo(CommonMIReq) returns(CommonMIInfoResp);
+  rpc CommonMIInfo(CommonMIInfoReq) returns(CommonMIInfoResp);
   rpc CreateOneMI(CreateOneMIReq) returns(CreateOneMIResp);
   rpc UpdateMi(UpdateMiReq) returns(UpdateMiResp);
 
