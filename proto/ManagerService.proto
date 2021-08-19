@@ -655,6 +655,7 @@ message CommonCompanyVo {
   int64 companyId = 1;
   string companyName = 2;
   string companyCode = 3;
+  string logoUrl = 4;
 }
 
 //配送企业列表根据name查询
