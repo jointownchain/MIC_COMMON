@@ -34,8 +34,8 @@ type Page struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	PageNumber int64 `protobuf:"varint,1,opt,name=pageNumber,proto3" json:"pageNumber,omitempty"`
-	PageSize   int64 `protobuf:"varint,2,opt,name=pageSize,proto3" json:"pageSize,omitempty"`
+	PageNumber int64 `protobuf:"varint,1,opt,name=pageNumber,proto3" json:"pageNumber"`
+	PageSize   int64 `protobuf:"varint,2,opt,name=pageSize,proto3" json:"pageSize"`
 }
 
 func (x *Page) Reset() {
@@ -89,7 +89,7 @@ type OpRoleResp struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Result int64 `protobuf:"varint,1,opt,name=result,proto3" json:"result,omitempty"`
+	Result int64 `protobuf:"varint,1,opt,name=result,proto3" json:"result"`
 }
 
 func (x *OpRoleResp) Reset() {
@@ -136,11 +136,11 @@ type CreateRoleReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Role         string   `protobuf:"bytes,1,opt,name=role,proto3" json:"role,omitempty"`
-	RoleName     string   `protobuf:"bytes,2,opt,name=roleName,proto3" json:"roleName,omitempty"`
-	RoleStatus   string   `protobuf:"bytes,3,opt,name=roleStatus,proto3" json:"roleStatus,omitempty"`
-	PlatFormType string   `protobuf:"bytes,4,opt,name=platFormType,proto3" json:"platFormType,omitempty"`
-	Permissions  []string `protobuf:"bytes,5,rep,name=permissions,proto3" json:"permissions,omitempty"`
+	Role         string   `protobuf:"bytes,1,opt,name=role,proto3" json:"role"`
+	RoleName     string   `protobuf:"bytes,2,opt,name=roleName,proto3" json:"roleName"`
+	RoleStatus   string   `protobuf:"bytes,3,opt,name=roleStatus,proto3" json:"roleStatus"`
+	PlatFormType string   `protobuf:"bytes,4,opt,name=platFormType,proto3" json:"platFormType"`
+	Permissions  []string `protobuf:"bytes,5,rep,name=permissions,proto3" json:"permissions"`
 }
 
 func (x *CreateRoleReq) Reset() {
@@ -215,7 +215,7 @@ type DeleteRoleReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Role string `protobuf:"bytes,1,opt,name=role,proto3" json:"role,omitempty"`
+	Role string `protobuf:"bytes,1,opt,name=role,proto3" json:"role"`
 }
 
 func (x *DeleteRoleReq) Reset() {
@@ -262,10 +262,10 @@ type ListRolesReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Role         string `protobuf:"bytes,1,opt,name=role,proto3" json:"role,omitempty"`
-	RoleStatus   string `protobuf:"bytes,2,opt,name=RoleStatus,proto3" json:"RoleStatus,omitempty"`
-	PlatFormType string `protobuf:"bytes,3,opt,name=platFormType,proto3" json:"platFormType,omitempty"`
-	Page         *Page  `protobuf:"bytes,4,opt,name=page,proto3" json:"page,omitempty"`
+	Role         string `protobuf:"bytes,1,opt,name=role,proto3" json:"role"`
+	RoleStatus   string `protobuf:"bytes,2,opt,name=RoleStatus,proto3" json:"RoleStatus"`
+	PlatFormType string `protobuf:"bytes,3,opt,name=platFormType,proto3" json:"platFormType"`
+	Page         *Page  `protobuf:"bytes,4,opt,name=page,proto3" json:"page"`
 }
 
 func (x *ListRolesReq) Reset() {
@@ -333,9 +333,9 @@ type ListRolesResp struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Total int64          `protobuf:"varint,1,opt,name=total,proto3" json:"total,omitempty"`
-	Page  *Page          `protobuf:"bytes,2,opt,name=page,proto3" json:"page,omitempty"`
-	List  []*ListRolesVo `protobuf:"bytes,3,rep,name=list,proto3" json:"list,omitempty"`
+	Total int64          `protobuf:"varint,1,opt,name=total,proto3" json:"total"`
+	Page  *Page          `protobuf:"bytes,2,opt,name=page,proto3" json:"page"`
+	List  []*ListRolesVo `protobuf:"bytes,3,rep,name=list,proto3" json:"list"`
 }
 
 func (x *ListRolesResp) Reset() {
@@ -396,10 +396,10 @@ type ListRolesVo struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Role         string `protobuf:"bytes,1,opt,name=role,proto3" json:"role,omitempty"`
-	RoleName     string `protobuf:"bytes,2,opt,name=roleName,proto3" json:"roleName,omitempty"`
-	RoleStatus   string `protobuf:"bytes,3,opt,name=roleStatus,proto3" json:"roleStatus,omitempty"`
-	PlatFormType string `protobuf:"bytes,4,opt,name=platFormType,proto3" json:"platFormType,omitempty"`
+	Role         string `protobuf:"bytes,1,opt,name=role,proto3" json:"role"`
+	RoleName     string `protobuf:"bytes,2,opt,name=roleName,proto3" json:"roleName"`
+	RoleStatus   string `protobuf:"bytes,3,opt,name=roleStatus,proto3" json:"roleStatus"`
+	PlatFormType string `protobuf:"bytes,4,opt,name=platFormType,proto3" json:"platFormType"`
 }
 
 func (x *ListRolesVo) Reset() {
@@ -467,10 +467,10 @@ type GetRolePermissionsReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Role           string `protobuf:"bytes,1,opt,name=role,proto3" json:"role,omitempty"`
-	PermissionType string `protobuf:"bytes,2,opt,name=PermissionType,proto3" json:"PermissionType,omitempty"`
-	PlatFormType   string `protobuf:"bytes,3,opt,name=platFormType,proto3" json:"platFormType,omitempty"`
-	Page           *Page  `protobuf:"bytes,4,opt,name=page,proto3" json:"page,omitempty"`
+	Role           string `protobuf:"bytes,1,opt,name=role,proto3" json:"role"`
+	PermissionType string `protobuf:"bytes,2,opt,name=PermissionType,proto3" json:"PermissionType"`
+	PlatFormType   string `protobuf:"bytes,3,opt,name=platFormType,proto3" json:"platFormType"`
+	Page           *Page  `protobuf:"bytes,4,opt,name=page,proto3" json:"page"`
 }
 
 func (x *GetRolePermissionsReq) Reset() {
@@ -538,9 +538,9 @@ type GetRolePermissionsResp struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Total int64                   `protobuf:"varint,1,opt,name=total,proto3" json:"total,omitempty"`
-	Page  *Page                   `protobuf:"bytes,2,opt,name=page,proto3" json:"page,omitempty"`
-	List  []*GetRolePermissionsVo `protobuf:"bytes,3,rep,name=list,proto3" json:"list,omitempty"`
+	Total int64                   `protobuf:"varint,1,opt,name=total,proto3" json:"total"`
+	Page  *Page                   `protobuf:"bytes,2,opt,name=page,proto3" json:"page"`
+	List  []*GetRolePermissionsVo `protobuf:"bytes,3,rep,name=list,proto3" json:"list"`
 }
 
 func (x *GetRolePermissionsResp) Reset() {
@@ -601,14 +601,14 @@ type GetRolePermissionsVo struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Permission            string `protobuf:"bytes,1,opt,name=permission,proto3" json:"permission,omitempty"`
-	PermissionUrl         string `protobuf:"bytes,2,opt,name=permissionUrl,proto3" json:"permissionUrl,omitempty"`
-	PermissionType        string `protobuf:"bytes,3,opt,name=permissionType,proto3" json:"permissionType,omitempty"`
-	PermissionDescription string `protobuf:"bytes,4,opt,name=permissionDescription,proto3" json:"permissionDescription,omitempty"`
-	PlatFormType          string `protobuf:"bytes,5,opt,name=platFormType,proto3" json:"platFormType,omitempty"`
-	Layer                 int64  `protobuf:"varint,6,opt,name=layer,proto3" json:"layer,omitempty"`
-	ParentId              int64  `protobuf:"varint,7,opt,name=parentId,proto3" json:"parentId,omitempty"`
-	PermissionId          int64  `protobuf:"varint,8,opt,name=permissionId,proto3" json:"permissionId,omitempty"`
+	Permission            string `protobuf:"bytes,1,opt,name=permission,proto3" json:"permission"`
+	PermissionUrl         string `protobuf:"bytes,2,opt,name=permissionUrl,proto3" json:"permissionUrl"`
+	PermissionType        string `protobuf:"bytes,3,opt,name=permissionType,proto3" json:"permissionType"`
+	PermissionDescription string `protobuf:"bytes,4,opt,name=permissionDescription,proto3" json:"permissionDescription"`
+	PlatFormType          string `protobuf:"bytes,5,opt,name=platFormType,proto3" json:"platFormType"`
+	Layer                 int64  `protobuf:"varint,6,opt,name=layer,proto3" json:"layer"`
+	ParentId              int64  `protobuf:"varint,7,opt,name=parentId,proto3" json:"parentId"`
+	PermissionId          int64  `protobuf:"varint,8,opt,name=permissionId,proto3" json:"permissionId"`
 }
 
 func (x *GetRolePermissionsVo) Reset() {
@@ -704,11 +704,11 @@ type UpdateRoleReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Role         string   `protobuf:"bytes,1,opt,name=role,proto3" json:"role,omitempty"`
-	RoleName     string   `protobuf:"bytes,2,opt,name=roleName,proto3" json:"roleName,omitempty"`
-	RoleStatus   string   `protobuf:"bytes,3,opt,name=roleStatus,proto3" json:"roleStatus,omitempty"`
-	PlatFormType string   `protobuf:"bytes,4,opt,name=platFormType,proto3" json:"platFormType,omitempty"`
-	Permissions  []string `protobuf:"bytes,5,rep,name=permissions,proto3" json:"permissions,omitempty"`
+	Role         string   `protobuf:"bytes,1,opt,name=role,proto3" json:"role"`
+	RoleName     string   `protobuf:"bytes,2,opt,name=roleName,proto3" json:"roleName"`
+	RoleStatus   string   `protobuf:"bytes,3,opt,name=roleStatus,proto3" json:"roleStatus"`
+	PlatFormType string   `protobuf:"bytes,4,opt,name=platFormType,proto3" json:"platFormType"`
+	Permissions  []string `protobuf:"bytes,5,rep,name=permissions,proto3" json:"permissions"`
 }
 
 func (x *UpdateRoleReq) Reset() {
@@ -783,8 +783,8 @@ type UpdateRoleStatusReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Role       string `protobuf:"bytes,1,opt,name=role,proto3" json:"role,omitempty"`
-	RoleStatus string `protobuf:"bytes,2,opt,name=roleStatus,proto3" json:"roleStatus,omitempty"`
+	Role       string `protobuf:"bytes,1,opt,name=role,proto3" json:"role"`
+	RoleStatus string `protobuf:"bytes,2,opt,name=roleStatus,proto3" json:"roleStatus"`
 }
 
 func (x *UpdateRoleStatusReq) Reset() {

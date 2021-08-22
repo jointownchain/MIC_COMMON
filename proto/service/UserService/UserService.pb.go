@@ -34,8 +34,8 @@ type Page struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	PageNumber int64 `protobuf:"varint,1,opt,name=pageNumber,proto3" json:"pageNumber,omitempty"`
-	PageSize   int64 `protobuf:"varint,2,opt,name=pageSize,proto3" json:"pageSize,omitempty"`
+	PageNumber int64 `protobuf:"varint,1,opt,name=pageNumber,proto3" json:"pageNumber"`
+	PageSize   int64 `protobuf:"varint,2,opt,name=pageSize,proto3" json:"pageSize"`
 }
 
 func (x *Page) Reset() {
@@ -89,9 +89,9 @@ type UserPassLoginReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Password     string `protobuf:"bytes,1,opt,name=password,proto3" json:"password,omitempty"`
-	Username     string `protobuf:"bytes,2,opt,name=username,proto3" json:"username,omitempty"`
-	PlatFormType string `protobuf:"bytes,3,opt,name=platFormType,proto3" json:"platFormType,omitempty"`
+	Password     string `protobuf:"bytes,1,opt,name=password,proto3" json:"password"`
+	Username     string `protobuf:"bytes,2,opt,name=username,proto3" json:"username"`
+	PlatFormType string `protobuf:"bytes,3,opt,name=platFormType,proto3" json:"platFormType"`
 }
 
 func (x *UserPassLoginReq) Reset() {
@@ -152,11 +152,11 @@ type OauthTokenReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ClientId         string `protobuf:"bytes,1,opt,name=clientId,proto3" json:"clientId,omitempty"`
-	ClientSecret     string `protobuf:"bytes,2,opt,name=clientSecret,proto3" json:"clientSecret,omitempty"`
-	GrantType        string `protobuf:"bytes,3,opt,name=grantType,proto3" json:"grantType,omitempty"`
-	RefreshToken     string `protobuf:"bytes,4,opt,name=refreshToken,proto3" json:"refreshToken,omitempty"`
-	OrganizationType string `protobuf:"bytes,5,opt,name=organizationType,proto3" json:"organizationType,omitempty"`
+	ClientId         string `protobuf:"bytes,1,opt,name=clientId,proto3" json:"clientId"`
+	ClientSecret     string `protobuf:"bytes,2,opt,name=clientSecret,proto3" json:"clientSecret"`
+	GrantType        string `protobuf:"bytes,3,opt,name=grantType,proto3" json:"grantType"`
+	RefreshToken     string `protobuf:"bytes,4,opt,name=refreshToken,proto3" json:"refreshToken"`
+	OrganizationType string `protobuf:"bytes,5,opt,name=organizationType,proto3" json:"organizationType"`
 }
 
 func (x *OauthTokenReq) Reset() {
@@ -231,14 +231,14 @@ type OauthTokenResp struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	AccessToken      string            `protobuf:"bytes,1,opt,name=accessToken,proto3" json:"accessToken,omitempty"`
-	TokenType        string            `protobuf:"bytes,2,opt,name=tokenType,proto3" json:"tokenType,omitempty"`
-	ExpiresIn        int64             `protobuf:"varint,3,opt,name=expiresIn,proto3" json:"expiresIn,omitempty"`
-	RefreshToken     string            `protobuf:"bytes,4,opt,name=refreshToken,proto3" json:"refreshToken,omitempty"`
-	OrganizationCode string            `protobuf:"bytes,5,opt,name=organizationCode,proto3" json:"organizationCode,omitempty"`
-	OrganizationId   int64             `protobuf:"varint,6,opt,name=organizationId,proto3" json:"organizationId,omitempty"`
-	OrganizationType string            `protobuf:"bytes,7,opt,name=organizationType,proto3" json:"organizationType,omitempty"`
-	Permissions      []*PermissionInfo `protobuf:"bytes,8,rep,name=permissions,proto3" json:"permissions,omitempty"`
+	AccessToken      string            `protobuf:"bytes,1,opt,name=accessToken,proto3" json:"accessToken"`
+	TokenType        string            `protobuf:"bytes,2,opt,name=tokenType,proto3" json:"tokenType"`
+	ExpiresIn        int64             `protobuf:"varint,3,opt,name=expiresIn,proto3" json:"expiresIn"`
+	RefreshToken     string            `protobuf:"bytes,4,opt,name=refreshToken,proto3" json:"refreshToken"`
+	OrganizationCode string            `protobuf:"bytes,5,opt,name=organizationCode,proto3" json:"organizationCode"`
+	OrganizationId   int64             `protobuf:"varint,6,opt,name=organizationId,proto3" json:"organizationId"`
+	OrganizationType string            `protobuf:"bytes,7,opt,name=organizationType,proto3" json:"organizationType"`
+	Permissions      []*PermissionInfo `protobuf:"bytes,8,rep,name=permissions,proto3" json:"permissions"`
 }
 
 func (x *OauthTokenResp) Reset() {
@@ -334,15 +334,15 @@ type UserPassLoginResp struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	UserId         int64             `protobuf:"varint,1,opt,name=userId,proto3" json:"userId,omitempty"`
-	Username       string            `protobuf:"bytes,2,opt,name=username,proto3" json:"username,omitempty"`
-	Nickname       string            `protobuf:"bytes,3,opt,name=nickname,proto3" json:"nickname,omitempty"`
-	Email          string            `protobuf:"bytes,4,opt,name=email,proto3" json:"email,omitempty"`
-	Role           string            `protobuf:"bytes,5,opt,name=role,proto3" json:"role,omitempty"`
-	OrganizationId int64             `protobuf:"varint,6,opt,name=organizationId,proto3" json:"organizationId,omitempty"`
-	Permissions    []*PermissionInfo `protobuf:"bytes,7,rep,name=permissions,proto3" json:"permissions,omitempty"`
-	ActiveStatus   string            `protobuf:"bytes,8,opt,name=activeStatus,proto3" json:"activeStatus,omitempty"`
-	RoleName       string            `protobuf:"bytes,9,opt,name=roleName,proto3" json:"roleName,omitempty"`
+	UserId         int64             `protobuf:"varint,1,opt,name=userId,proto3" json:"userId"`
+	Username       string            `protobuf:"bytes,2,opt,name=username,proto3" json:"username"`
+	Nickname       string            `protobuf:"bytes,3,opt,name=nickname,proto3" json:"nickname"`
+	Email          string            `protobuf:"bytes,4,opt,name=email,proto3" json:"email"`
+	Role           string            `protobuf:"bytes,5,opt,name=role,proto3" json:"role"`
+	OrganizationId int64             `protobuf:"varint,6,opt,name=organizationId,proto3" json:"organizationId"`
+	Permissions    []*PermissionInfo `protobuf:"bytes,7,rep,name=permissions,proto3" json:"permissions"`
+	ActiveStatus   string            `protobuf:"bytes,8,opt,name=activeStatus,proto3" json:"activeStatus"`
+	RoleName       string            `protobuf:"bytes,9,opt,name=roleName,proto3" json:"roleName"`
 }
 
 func (x *UserPassLoginResp) Reset() {
@@ -445,8 +445,8 @@ type PermissionInfo struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Permission    string `protobuf:"bytes,1,opt,name=permission,proto3" json:"permission,omitempty"`
-	PermissionUrl string `protobuf:"bytes,2,opt,name=permissionUrl,proto3" json:"permissionUrl,omitempty"`
+	Permission    string `protobuf:"bytes,1,opt,name=permission,proto3" json:"permission"`
+	PermissionUrl string `protobuf:"bytes,2,opt,name=permissionUrl,proto3" json:"permissionUrl"`
 }
 
 func (x *PermissionInfo) Reset() {
@@ -500,15 +500,15 @@ type CreateUserReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Username       string `protobuf:"bytes,1,opt,name=username,proto3" json:"username,omitempty"`
-	UserPhone      string `protobuf:"bytes,2,opt,name=userPhone,proto3" json:"userPhone,omitempty"`
-	Password       string `protobuf:"bytes,3,opt,name=password,proto3" json:"password,omitempty"`
-	Role           string `protobuf:"bytes,4,opt,name=role,proto3" json:"role,omitempty"`
-	Nickname       string `protobuf:"bytes,5,opt,name=nickname,proto3" json:"nickname,omitempty"`
-	OrganizationId int64  `protobuf:"varint,6,opt,name=organizationId,proto3" json:"organizationId,omitempty"`
-	AccountStatus  string `protobuf:"bytes,7,opt,name=accountStatus,proto3" json:"accountStatus,omitempty"`
-	ManagerId      int64  `protobuf:"varint,8,opt,name=managerId,proto3" json:"managerId,omitempty"`
-	Email          string `protobuf:"bytes,9,opt,name=email,proto3" json:"email,omitempty"`
+	Username       string `protobuf:"bytes,1,opt,name=username,proto3" json:"username"`
+	UserPhone      string `protobuf:"bytes,2,opt,name=userPhone,proto3" json:"userPhone"`
+	Password       string `protobuf:"bytes,3,opt,name=password,proto3" json:"password"`
+	Role           string `protobuf:"bytes,4,opt,name=role,proto3" json:"role"`
+	Nickname       string `protobuf:"bytes,5,opt,name=nickname,proto3" json:"nickname"`
+	OrganizationId int64  `protobuf:"varint,6,opt,name=organizationId,proto3" json:"organizationId"`
+	AccountStatus  string `protobuf:"bytes,7,opt,name=accountStatus,proto3" json:"accountStatus"`
+	ManagerId      int64  `protobuf:"varint,8,opt,name=managerId,proto3" json:"managerId"`
+	Email          string `protobuf:"bytes,9,opt,name=email,proto3" json:"email"`
 }
 
 func (x *CreateUserReq) Reset() {
@@ -611,7 +611,7 @@ type CreateUserResp struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	UserId int64 `protobuf:"varint,1,opt,name=userId,proto3" json:"userId,omitempty"`
+	UserId int64 `protobuf:"varint,1,opt,name=userId,proto3" json:"userId"`
 }
 
 func (x *CreateUserResp) Reset() {
@@ -658,15 +658,15 @@ type UpdateUserReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	UserId        int64  `protobuf:"varint,1,opt,name=userId,proto3" json:"userId,omitempty"`
-	UserPhone     string `protobuf:"bytes,2,opt,name=userPhone,proto3" json:"userPhone,omitempty"`
-	Password      string `protobuf:"bytes,3,opt,name=password,proto3" json:"password,omitempty"`
-	Role          string `protobuf:"bytes,4,opt,name=role,proto3" json:"role,omitempty"`
-	Nickname      string `protobuf:"bytes,5,opt,name=nickname,proto3" json:"nickname,omitempty"`
-	AccountStatus string `protobuf:"bytes,6,opt,name=accountStatus,proto3" json:"accountStatus,omitempty"`
-	ManagerId     int64  `protobuf:"varint,7,opt,name=managerId,proto3" json:"managerId,omitempty"`
-	Email         string `protobuf:"bytes,8,opt,name=email,proto3" json:"email,omitempty"`
-	ActiveStatus  string `protobuf:"bytes,9,opt,name=activeStatus,proto3" json:"activeStatus,omitempty"`
+	UserId        int64  `protobuf:"varint,1,opt,name=userId,proto3" json:"userId"`
+	UserPhone     string `protobuf:"bytes,2,opt,name=userPhone,proto3" json:"userPhone"`
+	Password      string `protobuf:"bytes,3,opt,name=password,proto3" json:"password"`
+	Role          string `protobuf:"bytes,4,opt,name=role,proto3" json:"role"`
+	Nickname      string `protobuf:"bytes,5,opt,name=nickname,proto3" json:"nickname"`
+	AccountStatus string `protobuf:"bytes,6,opt,name=accountStatus,proto3" json:"accountStatus"`
+	ManagerId     int64  `protobuf:"varint,7,opt,name=managerId,proto3" json:"managerId"`
+	Email         string `protobuf:"bytes,8,opt,name=email,proto3" json:"email"`
+	ActiveStatus  string `protobuf:"bytes,9,opt,name=activeStatus,proto3" json:"activeStatus"`
 }
 
 func (x *UpdateUserReq) Reset() {
@@ -769,7 +769,7 @@ type UpdateUserResp struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	PlatFormType string `protobuf:"bytes,1,opt,name=platFormType,proto3" json:"platFormType,omitempty"`
+	PlatFormType string `protobuf:"bytes,1,opt,name=platFormType,proto3" json:"platFormType"`
 }
 
 func (x *UpdateUserResp) Reset() {
@@ -816,19 +816,19 @@ type ListUserReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	RoleId         int64  `protobuf:"varint,1,opt,name=roleId,proto3" json:"roleId,omitempty"`
-	Nickname       string `protobuf:"bytes,2,opt,name=nickname,proto3" json:"nickname,omitempty"`
-	HospitalName   string `protobuf:"bytes,3,opt,name=hospitalName,proto3" json:"hospitalName,omitempty"`
-	CompanyName    string `protobuf:"bytes,4,opt,name=companyName,proto3" json:"companyName,omitempty"`
-	OrganizationId int64  `protobuf:"varint,5,opt,name=organizationId,proto3" json:"organizationId,omitempty"`
-	PlatFormType   string `protobuf:"bytes,6,opt,name=platFormType,proto3" json:"platFormType,omitempty"`
-	ManagerId      int64  `protobuf:"varint,7,opt,name=managerId,proto3" json:"managerId,omitempty"`
-	Page           *Page  `protobuf:"bytes,8,opt,name=page,proto3" json:"page,omitempty"`
-	Email          string `protobuf:"bytes,9,opt,name=email,proto3" json:"email,omitempty"`
-	Username       string `protobuf:"bytes,10,opt,name=username,proto3" json:"username,omitempty"`
-	AccountStatus  string `protobuf:"bytes,11,opt,name=accountStatus,proto3" json:"accountStatus,omitempty"`
-	ActiveStatus   string `protobuf:"bytes,12,opt,name=activeStatus,proto3" json:"activeStatus,omitempty"`
-	UserPhone      string `protobuf:"bytes,13,opt,name=userPhone,proto3" json:"userPhone,omitempty"`
+	RoleId         int64  `protobuf:"varint,1,opt,name=roleId,proto3" json:"roleId"`
+	Nickname       string `protobuf:"bytes,2,opt,name=nickname,proto3" json:"nickname"`
+	HospitalName   string `protobuf:"bytes,3,opt,name=hospitalName,proto3" json:"hospitalName"`
+	CompanyName    string `protobuf:"bytes,4,opt,name=companyName,proto3" json:"companyName"`
+	OrganizationId int64  `protobuf:"varint,5,opt,name=organizationId,proto3" json:"organizationId"`
+	PlatFormType   string `protobuf:"bytes,6,opt,name=platFormType,proto3" json:"platFormType"`
+	ManagerId      int64  `protobuf:"varint,7,opt,name=managerId,proto3" json:"managerId"`
+	Page           *Page  `protobuf:"bytes,8,opt,name=page,proto3" json:"page"`
+	Email          string `protobuf:"bytes,9,opt,name=email,proto3" json:"email"`
+	Username       string `protobuf:"bytes,10,opt,name=username,proto3" json:"username"`
+	AccountStatus  string `protobuf:"bytes,11,opt,name=accountStatus,proto3" json:"accountStatus"`
+	ActiveStatus   string `protobuf:"bytes,12,opt,name=activeStatus,proto3" json:"activeStatus"`
+	UserPhone      string `protobuf:"bytes,13,opt,name=userPhone,proto3" json:"userPhone"`
 }
 
 func (x *ListUserReq) Reset() {
@@ -959,10 +959,10 @@ type ListUserResp struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	List       []*UserDetail `protobuf:"bytes,1,rep,name=list,proto3" json:"list,omitempty"`
-	Total      int64         `protobuf:"varint,2,opt,name=total,proto3" json:"total,omitempty"`
-	PageSize   int64         `protobuf:"varint,3,opt,name=pageSize,proto3" json:"pageSize,omitempty"`
-	PageNumber int64         `protobuf:"varint,4,opt,name=pageNumber,proto3" json:"pageNumber,omitempty"`
+	List       []*UserDetail `protobuf:"bytes,1,rep,name=list,proto3" json:"list"`
+	Total      int64         `protobuf:"varint,2,opt,name=total,proto3" json:"total"`
+	PageSize   int64         `protobuf:"varint,3,opt,name=pageSize,proto3" json:"pageSize"`
+	PageNumber int64         `protobuf:"varint,4,opt,name=pageNumber,proto3" json:"pageNumber"`
 }
 
 func (x *ListUserResp) Reset() {
@@ -1030,19 +1030,19 @@ type UserDetail struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	UserId           int64                  `protobuf:"varint,1,opt,name=userId,proto3" json:"userId,omitempty"`
-	Username         string                 `protobuf:"bytes,2,opt,name=username,proto3" json:"username,omitempty"`
-	Role             string                 `protobuf:"bytes,3,opt,name=role,proto3" json:"role,omitempty"`
-	PlatFormType     string                 `protobuf:"bytes,4,opt,name=platFormType,proto3" json:"platFormType,omitempty"`
-	UserPhone        string                 `protobuf:"bytes,5,opt,name=userPhone,proto3" json:"userPhone,omitempty"`
-	Nickname         string                 `protobuf:"bytes,6,opt,name=nickname,proto3" json:"nickname,omitempty"`
-	OrganizationId   int64                  `protobuf:"varint,7,opt,name=organizationId,proto3" json:"organizationId,omitempty"`
-	OrganizationName string                 `protobuf:"bytes,8,opt,name=organizationName,proto3" json:"organizationName,omitempty"`
-	CreatedAt        *timestamppb.Timestamp `protobuf:"bytes,9,opt,name=createdAt,proto3" json:"createdAt,omitempty"`
-	Email            string                 `protobuf:"bytes,10,opt,name=email,proto3" json:"email,omitempty"`
-	RoleName         string                 `protobuf:"bytes,11,opt,name=roleName,proto3" json:"roleName,omitempty"`
-	ActiveStatus     string                 `protobuf:"bytes,12,opt,name=activeStatus,proto3" json:"activeStatus,omitempty"`
-	AccountStatus    string                 `protobuf:"bytes,13,opt,name=accountStatus,proto3" json:"accountStatus,omitempty"`
+	UserId           int64                  `protobuf:"varint,1,opt,name=userId,proto3" json:"userId"`
+	Username         string                 `protobuf:"bytes,2,opt,name=username,proto3" json:"username"`
+	Role             string                 `protobuf:"bytes,3,opt,name=role,proto3" json:"role"`
+	PlatFormType     string                 `protobuf:"bytes,4,opt,name=platFormType,proto3" json:"platFormType"`
+	UserPhone        string                 `protobuf:"bytes,5,opt,name=userPhone,proto3" json:"userPhone"`
+	Nickname         string                 `protobuf:"bytes,6,opt,name=nickname,proto3" json:"nickname"`
+	OrganizationId   int64                  `protobuf:"varint,7,opt,name=organizationId,proto3" json:"organizationId"`
+	OrganizationName string                 `protobuf:"bytes,8,opt,name=organizationName,proto3" json:"organizationName"`
+	CreatedAt        *timestamppb.Timestamp `protobuf:"bytes,9,opt,name=createdAt,proto3" json:"createdAt"`
+	Email            string                 `protobuf:"bytes,10,opt,name=email,proto3" json:"email"`
+	RoleName         string                 `protobuf:"bytes,11,opt,name=roleName,proto3" json:"roleName"`
+	ActiveStatus     string                 `protobuf:"bytes,12,opt,name=activeStatus,proto3" json:"activeStatus"`
+	AccountStatus    string                 `protobuf:"bytes,13,opt,name=accountStatus,proto3" json:"accountStatus"`
 }
 
 func (x *UserDetail) Reset() {
@@ -1173,8 +1173,8 @@ type ListRoleReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Page         *Page  `protobuf:"bytes,1,opt,name=page,proto3" json:"page,omitempty"`
-	PlatFormType string `protobuf:"bytes,2,opt,name=platFormType,proto3" json:"platFormType,omitempty"`
+	Page         *Page  `protobuf:"bytes,1,opt,name=page,proto3" json:"page"`
+	PlatFormType string `protobuf:"bytes,2,opt,name=platFormType,proto3" json:"platFormType"`
 }
 
 func (x *ListRoleReq) Reset() {
@@ -1228,10 +1228,10 @@ type ListRoleResp struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	List       []*RoleDetail `protobuf:"bytes,1,rep,name=list,proto3" json:"list,omitempty"`
-	Total      int64         `protobuf:"varint,2,opt,name=total,proto3" json:"total,omitempty"`
-	PageSize   int64         `protobuf:"varint,3,opt,name=pageSize,proto3" json:"pageSize,omitempty"`
-	PageNumber int64         `protobuf:"varint,4,opt,name=pageNumber,proto3" json:"pageNumber,omitempty"`
+	List       []*RoleDetail `protobuf:"bytes,1,rep,name=list,proto3" json:"list"`
+	Total      int64         `protobuf:"varint,2,opt,name=total,proto3" json:"total"`
+	PageSize   int64         `protobuf:"varint,3,opt,name=pageSize,proto3" json:"pageSize"`
+	PageNumber int64         `protobuf:"varint,4,opt,name=pageNumber,proto3" json:"pageNumber"`
 }
 
 func (x *ListRoleResp) Reset() {
@@ -1299,12 +1299,12 @@ type RoleDetail struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	RoleId       int64                  `protobuf:"varint,1,opt,name=roleId,proto3" json:"roleId,omitempty"`
-	Role         string                 `protobuf:"bytes,2,opt,name=role,proto3" json:"role,omitempty"`
-	RoleName     string                 `protobuf:"bytes,3,opt,name=roleName,proto3" json:"roleName,omitempty"`
-	PlatFormType string                 `protobuf:"bytes,4,opt,name=platFormType,proto3" json:"platFormType,omitempty"`
-	RoleStatus   string                 `protobuf:"bytes,5,opt,name=roleStatus,proto3" json:"roleStatus,omitempty"`
-	CreatedAt    *timestamppb.Timestamp `protobuf:"bytes,6,opt,name=createdAt,proto3" json:"createdAt,omitempty"`
+	RoleId       int64                  `protobuf:"varint,1,opt,name=roleId,proto3" json:"roleId"`
+	Role         string                 `protobuf:"bytes,2,opt,name=role,proto3" json:"role"`
+	RoleName     string                 `protobuf:"bytes,3,opt,name=roleName,proto3" json:"roleName"`
+	PlatFormType string                 `protobuf:"bytes,4,opt,name=platFormType,proto3" json:"platFormType"`
+	RoleStatus   string                 `protobuf:"bytes,5,opt,name=roleStatus,proto3" json:"roleStatus"`
+	CreatedAt    *timestamppb.Timestamp `protobuf:"bytes,6,opt,name=createdAt,proto3" json:"createdAt"`
 }
 
 func (x *RoleDetail) Reset() {
@@ -1386,8 +1386,8 @@ type DeleteUserReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	UserId    int64 `protobuf:"varint,1,opt,name=userId,proto3" json:"userId,omitempty"`
-	ManagerId int64 `protobuf:"varint,2,opt,name=managerId,proto3" json:"managerId,omitempty"`
+	UserId    int64 `protobuf:"varint,1,opt,name=userId,proto3" json:"userId"`
+	ManagerId int64 `protobuf:"varint,2,opt,name=managerId,proto3" json:"managerId"`
 }
 
 func (x *DeleteUserReq) Reset() {
@@ -1441,7 +1441,7 @@ type DeleteUserResp struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	UserId int64 `protobuf:"varint,1,opt,name=userId,proto3" json:"userId,omitempty"`
+	UserId int64 `protobuf:"varint,1,opt,name=userId,proto3" json:"userId"`
 }
 
 func (x *DeleteUserResp) Reset() {
@@ -1488,8 +1488,8 @@ type UserInfoReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	UserId    int64 `protobuf:"varint,1,opt,name=userId,proto3" json:"userId,omitempty"`
-	ManagerId int64 `protobuf:"varint,2,opt,name=managerId,proto3" json:"managerId,omitempty"`
+	UserId    int64 `protobuf:"varint,1,opt,name=userId,proto3" json:"userId"`
+	ManagerId int64 `protobuf:"varint,2,opt,name=managerId,proto3" json:"managerId"`
 }
 
 func (x *UserInfoReq) Reset() {
@@ -1543,10 +1543,10 @@ type CreateOauthAccountReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	OrganizationId   int64  `protobuf:"varint,1,opt,name=organizationId,proto3" json:"organizationId,omitempty"`
-	OrganizationType string `protobuf:"bytes,2,opt,name=organizationType,proto3" json:"organizationType,omitempty"`
-	MibId            int64  `protobuf:"varint,3,opt,name=mibId,proto3" json:"mibId,omitempty"`
-	ManagerId        int64  `protobuf:"varint,4,opt,name=managerId,proto3" json:"managerId,omitempty"`
+	OrganizationId   int64  `protobuf:"varint,1,opt,name=organizationId,proto3" json:"organizationId"`
+	OrganizationType string `protobuf:"bytes,2,opt,name=organizationType,proto3" json:"organizationType"`
+	MibId            int64  `protobuf:"varint,3,opt,name=mibId,proto3" json:"mibId"`
+	ManagerId        int64  `protobuf:"varint,4,opt,name=managerId,proto3" json:"managerId"`
 }
 
 func (x *CreateOauthAccountReq) Reset() {
@@ -1614,8 +1614,8 @@ type CreateOauthAccountResp struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ClientId     string `protobuf:"bytes,1,opt,name=clientId,proto3" json:"clientId,omitempty"`
-	ClientSecret string `protobuf:"bytes,2,opt,name=clientSecret,proto3" json:"clientSecret,omitempty"`
+	ClientId     string `protobuf:"bytes,1,opt,name=clientId,proto3" json:"clientId"`
+	ClientSecret string `protobuf:"bytes,2,opt,name=clientSecret,proto3" json:"clientSecret"`
 }
 
 func (x *CreateOauthAccountResp) Reset() {
@@ -1669,11 +1669,11 @@ type ResetOauthAccountReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ClientId         string `protobuf:"bytes,1,opt,name=clientId,proto3" json:"clientId,omitempty"`
-	OrganizationId   int64  `protobuf:"varint,2,opt,name=organizationId,proto3" json:"organizationId,omitempty"`
-	MibId            int64  `protobuf:"varint,3,opt,name=mibId,proto3" json:"mibId,omitempty"`
-	ManagerId        int64  `protobuf:"varint,4,opt,name=managerId,proto3" json:"managerId,omitempty"`
-	OrganizationType string `protobuf:"bytes,5,opt,name=organizationType,proto3" json:"organizationType,omitempty"`
+	ClientId         string `protobuf:"bytes,1,opt,name=clientId,proto3" json:"clientId"`
+	OrganizationId   int64  `protobuf:"varint,2,opt,name=organizationId,proto3" json:"organizationId"`
+	MibId            int64  `protobuf:"varint,3,opt,name=mibId,proto3" json:"mibId"`
+	ManagerId        int64  `protobuf:"varint,4,opt,name=managerId,proto3" json:"managerId"`
+	OrganizationType string `protobuf:"bytes,5,opt,name=organizationType,proto3" json:"organizationType"`
 }
 
 func (x *ResetOauthAccountReq) Reset() {
@@ -1748,12 +1748,12 @@ type GetOauthAccountReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	OrganizationId   int64  `protobuf:"varint,1,opt,name=organizationId,proto3" json:"organizationId,omitempty"`
-	OrganizationType string `protobuf:"bytes,2,opt,name=organizationType,proto3" json:"organizationType,omitempty"`
-	MibId            int64  `protobuf:"varint,3,opt,name=mibId,proto3" json:"mibId,omitempty"`
-	ManagerId        int64  `protobuf:"varint,4,opt,name=managerId,proto3" json:"managerId,omitempty"`
+	OrganizationId   int64  `protobuf:"varint,1,opt,name=organizationId,proto3" json:"organizationId"`
+	OrganizationType string `protobuf:"bytes,2,opt,name=organizationType,proto3" json:"organizationType"`
+	MibId            int64  `protobuf:"varint,3,opt,name=mibId,proto3" json:"mibId"`
+	ManagerId        int64  `protobuf:"varint,4,opt,name=managerId,proto3" json:"managerId"`
 	//也可以直接指定clientId
-	ClientId string `protobuf:"bytes,5,opt,name=clientId,proto3" json:"clientId,omitempty"`
+	ClientId string `protobuf:"bytes,5,opt,name=clientId,proto3" json:"clientId"`
 }
 
 func (x *GetOauthAccountReq) Reset() {
@@ -1828,18 +1828,18 @@ type GetOauthAccountResp struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	AccessToken        string                 `protobuf:"bytes,1,opt,name=accessToken,proto3" json:"accessToken,omitempty"`
-	TokenType          string                 `protobuf:"bytes,2,opt,name=tokenType,proto3" json:"tokenType,omitempty"`
-	ExpiresIn          int64                  `protobuf:"varint,3,opt,name=expiresIn,proto3" json:"expiresIn,omitempty"`
-	RefreshToken       string                 `protobuf:"bytes,4,opt,name=refreshToken,proto3" json:"refreshToken,omitempty"`
-	OrganizationCode   string                 `protobuf:"bytes,5,opt,name=organizationCode,proto3" json:"organizationCode,omitempty"`
-	OrganizationId     int64                  `protobuf:"varint,6,opt,name=organizationId,proto3" json:"organizationId,omitempty"`
-	Permissions        []*PermissionInfo      `protobuf:"bytes,7,rep,name=permissions,proto3" json:"permissions,omitempty"`
-	OrganizationType   string                 `protobuf:"bytes,8,opt,name=organizationType,proto3" json:"organizationType,omitempty"`
-	MibId              int64                  `protobuf:"varint,9,opt,name=mibId,proto3" json:"mibId,omitempty"`
-	ClientId           string                 `protobuf:"bytes,10,opt,name=clientId,proto3" json:"clientId,omitempty"`
-	TokenExpire        *timestamppb.Timestamp `protobuf:"bytes,11,opt,name=tokenExpire,proto3" json:"tokenExpire,omitempty"`
-	RefreshTokenExpire *timestamppb.Timestamp `protobuf:"bytes,12,opt,name=refreshTokenExpire,proto3" json:"refreshTokenExpire,omitempty"`
+	AccessToken        string                 `protobuf:"bytes,1,opt,name=accessToken,proto3" json:"accessToken"`
+	TokenType          string                 `protobuf:"bytes,2,opt,name=tokenType,proto3" json:"tokenType"`
+	ExpiresIn          int64                  `protobuf:"varint,3,opt,name=expiresIn,proto3" json:"expiresIn"`
+	RefreshToken       string                 `protobuf:"bytes,4,opt,name=refreshToken,proto3" json:"refreshToken"`
+	OrganizationCode   string                 `protobuf:"bytes,5,opt,name=organizationCode,proto3" json:"organizationCode"`
+	OrganizationId     int64                  `protobuf:"varint,6,opt,name=organizationId,proto3" json:"organizationId"`
+	Permissions        []*PermissionInfo      `protobuf:"bytes,7,rep,name=permissions,proto3" json:"permissions"`
+	OrganizationType   string                 `protobuf:"bytes,8,opt,name=organizationType,proto3" json:"organizationType"`
+	MibId              int64                  `protobuf:"varint,9,opt,name=mibId,proto3" json:"mibId"`
+	ClientId           string                 `protobuf:"bytes,10,opt,name=clientId,proto3" json:"clientId"`
+	TokenExpire        *timestamppb.Timestamp `protobuf:"bytes,11,opt,name=tokenExpire,proto3" json:"tokenExpire"`
+	RefreshTokenExpire *timestamppb.Timestamp `protobuf:"bytes,12,opt,name=refreshTokenExpire,proto3" json:"refreshTokenExpire"`
 }
 
 func (x *GetOauthAccountResp) Reset() {
@@ -1963,9 +1963,9 @@ type GetOauthTokenReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ClientId         string `protobuf:"bytes,1,opt,name=clientId,proto3" json:"clientId,omitempty"`
-	AccessToken      string `protobuf:"bytes,2,opt,name=accessToken,proto3" json:"accessToken,omitempty"`
-	OrganizationType string `protobuf:"bytes,3,opt,name=organizationType,proto3" json:"organizationType,omitempty"`
+	ClientId         string `protobuf:"bytes,1,opt,name=clientId,proto3" json:"clientId"`
+	AccessToken      string `protobuf:"bytes,2,opt,name=accessToken,proto3" json:"accessToken"`
+	OrganizationType string `protobuf:"bytes,3,opt,name=organizationType,proto3" json:"organizationType"`
 }
 
 func (x *GetOauthTokenReq) Reset() {
@@ -2026,11 +2026,11 @@ type BindOauthPermissionReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	OrganizationId   int64    `protobuf:"varint,1,opt,name=organizationId,proto3" json:"organizationId,omitempty"`
-	OrganizationType string   `protobuf:"bytes,2,opt,name=organizationType,proto3" json:"organizationType,omitempty"`
-	MibId            int64    `protobuf:"varint,3,opt,name=mibId,proto3" json:"mibId,omitempty"`
-	ManagerId        int64    `protobuf:"varint,4,opt,name=managerId,proto3" json:"managerId,omitempty"`
-	Permissions      []string `protobuf:"bytes,5,rep,name=permissions,proto3" json:"permissions,omitempty"`
+	OrganizationId   int64    `protobuf:"varint,1,opt,name=organizationId,proto3" json:"organizationId"`
+	OrganizationType string   `protobuf:"bytes,2,opt,name=organizationType,proto3" json:"organizationType"`
+	MibId            int64    `protobuf:"varint,3,opt,name=mibId,proto3" json:"mibId"`
+	ManagerId        int64    `protobuf:"varint,4,opt,name=managerId,proto3" json:"managerId"`
+	Permissions      []string `protobuf:"bytes,5,rep,name=permissions,proto3" json:"permissions"`
 }
 
 func (x *BindOauthPermissionReq) Reset() {

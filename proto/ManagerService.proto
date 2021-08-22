@@ -639,9 +639,10 @@ message UpdateMiResp {
 message CommonCompanyReq {
   string  companyName = 1;
   string  companyCode = 2;
-  int64 managerId = 3;
-  Page page = 4;
-  string activeStatus = 5;
+  int64 companyId = 3;
+  int64 managerId = 4;
+  Page page = 5;
+  string activeStatus = 6;
 }
 
 message CommonCompanyResp {
@@ -655,7 +656,34 @@ message CommonCompanyVo {
   int64 companyId = 1;
   string companyName = 2;
   string companyCode = 3;
-  string logoUrl = 4;
+  string logoUrl = 4;  
+}
+
+message CompanyInfoResp {
+  repeated CompanyInfoVo list = 1;
+  int64 total = 2;
+  int64 pageSize = 3;
+  int64 pageNumber = 4;
+}
+
+message CompanyInfoVo {
+  int64 companyId = 1;
+  string companyCode = 2;
+  string companyName = 3;
+  string managerName = 4;
+  string managerPhone = 5;
+  string province = 6;
+  string city = 7;
+  string zone = 8;
+  string bankAccountId = 9;
+  string specialCardOwner = 10;
+  string specialToibkn = 11;
+  string specialBank = 12;
+  string specialCardNo = 13;
+  string specialCardStatus = 14;
+  string specialValidStatus = 15;
+  string hashInfo = 16;
+  google.protobuf.Timestamp createdAt = 17;
 }
 
 //配送企业列表根据name查询
@@ -1091,6 +1119,7 @@ message GetMiInfoReq {
   int64 miId = 2;
   Page page = 3;
 }
+
 message MiInfoVo {
   int64 miId = 1;
   string miCode = 2;
@@ -2555,6 +2584,7 @@ service ManagerService {
   rpc CreateOneCompany(CreateOneCompanyReq) returns(CreateOneCompanyResp);
   rpc UpdateOneCompany(UpdateOneCompanyReq) returns(UpdateOneCompanyResp);
   rpc CommonCompany(CommonCompanyReq) returns(CommonCompanyResp);
+  rpc GetCompanyInfo(CommonCompanyReq) returns(CompanyInfoResp);
   rpc SelCompanyByNames(SelCompanyByNamesReq) returns(SelCompanyByNamesResp);
   rpc QueryCompanyBankAccount(GetCompanyBankAccountReq) returns(GetCompanyBankAccountResp);
 

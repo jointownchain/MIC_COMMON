@@ -29,7 +29,7 @@ type PingContent struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Msg string `protobuf:"bytes,1,opt,name=msg,proto3" json:"msg,omitempty"`
+	Msg string `protobuf:"bytes,1,opt,name=msg,proto3" json:"msg"`
 }
 
 func (x *PingContent) Reset() {
@@ -76,7 +76,7 @@ type Pong struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Msg string `protobuf:"bytes,1,opt,name=msg,proto3" json:"msg,omitempty"`
+	Msg string `protobuf:"bytes,1,opt,name=msg,proto3" json:"msg"`
 }
 
 func (x *Pong) Reset() {

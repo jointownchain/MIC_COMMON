@@ -411,6 +411,8 @@ message FactoringOrderPlan{
   google.protobuf.Timestamp applyAt = 42;
   google.protobuf.Timestamp applyResultAt = 43;
   int64 factoringMoney = 44;
+  string payStatus = 45;
+  string payType = 46;
 }
 
 message ListFactoringOrderPlanResp {
@@ -518,8 +520,23 @@ message ApplyReq {
   string factoringOrderNo = 3;
 }
 message ApplyResp {
-  string code = 1;
-  string msg = 2;
+}
+message GetFactoringDataReq {
+  int64 managerId = 1;
+  int64 monthOffset = 2;
+  int64 OrgId = 3;
+}
+message GetFactoringDataResp {
+  //可申请数量
+  int64 notApplyCount = 1; 
+  //已用额度
+  int64 creditUsed = 2;
+  //总额度
+  int64 creditAmount = 3;
+  //月度已保理单数
+  int64 factoringCount = 4;
+  //月度已保理金额
+  int64 factoringTotal = 5;
 }
 
 message ListCnapsReq {
@@ -630,4 +647,6 @@ service FactoringOrderService {
   rpc FinishFactoringOrderError(FinishFactoringOrderErrorReq) returns(FinishFactoringOrderErrorResp);
   //发起保理请求
   rpc Apply(ApplyReq) returns(ApplyResp);
+  
+  rpc GetFactoringData(GetFactoringDataReq) returns(GetFactoringDataResp);
 }
