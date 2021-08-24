@@ -2657,6 +2657,9 @@ service ManagerService {
   //同步库存mi
   rpc SyncInfoMedicineMiStock(MedicineMiStockReq) returns(MedicineMiStockResp);
   rpc SyncInfoMedicineCompanyStock(MedicineCompanyStockReq) returns(MedicineCompanyStockResp);
+  //库存查询
+  rpc MedicineStockMiListStock(MedicineStockMiListReq) returns(MedicineStockMiListResp);
+
 }
 
 message StockSyncReq{
@@ -3001,4 +3004,37 @@ message MedicineCompanyStock{
 	string  warehouseCode = 5;
 	google.protobuf.Timestamp changeTime = 6;
  
+}
+
+message MedicineStockMiListReq {
+  string  companyCode = 1;
+  string  companyName = 2;
+  string contractNo = 3;
+  google.protobuf.Timestamp endAt = 4;
+  string medicineCode = 5;
+  string medicineName = 6;
+  google.protobuf.Timestamp startAt = 7;
+  string tenderCompany = 8 ;
+  int64 organizationId = 9;
+  Page page = 10;
+  int64 managerId = 11;
+}
+
+message MedicineStockMiListResp {
+  repeated MedicineStockMiListVo list = 1;
+  int64 total = 2;
+  int64 pageSize = 3;
+  int64 pageNumber = 4;
+}
+
+message MedicineStockMiListVo {
+  string medicineName = 1;
+  string medicineCode = 2;
+  string contractNo = 3;
+  string tenderCompany = 4;
+  string companyName = 5;
+  int64 comStockNum = 6;
+  string miName = 7;
+  int64 miStockNum = 8;
+  string medicineSpecification = 9;
 }
