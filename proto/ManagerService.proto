@@ -1099,13 +1099,13 @@ message CommonConfig{
   google.protobuf.Timestamp created = 10;
 }
 message UpdateConfigResp {
-
+  int64  result = 1;
 }
 message InsertConfigsResp {
-
+  int64  result = 1;
 }
 message DeleteConfigsResp {
-
+  int64  result = 1;
 }
 message GetConfigResp {
   repeated CommonConfig list = 1;
@@ -2659,6 +2659,9 @@ service ManagerService {
   rpc SyncInfoMedicineCompanyStock(MedicineCompanyStockReq) returns(MedicineCompanyStockResp);
   //库存查询
   rpc MedicineStockMiListStock(MedicineStockMiListReq) returns(MedicineStockMiListResp);
+  //医疗机构（财务管理)
+  rpc ReimbursementLists(ReimbursementListReq) returns(ReimbursementListResp);
+  rpc ReimbursementApplyQuota(ReimbursementApplyQuotaReq) returns(ReimbursementApplyQuotaResp);
 
 }
 
@@ -3037,4 +3040,50 @@ message MedicineStockMiListVo {
   string miName = 7;
   int64 miStockNum = 8;
   string medicineSpecification = 9;
+}
+
+
+message ReimbursementListReq {
+  int64  month = 1;
+  string type = 2;
+  int64 year = 3;
+  int64 managerId = 4;
+}
+
+message ReimbursementListResp {
+  repeated ReimbursementListVo list = 1;
+}
+
+message ReimbursementListVo {
+  int64 year = 1;
+  int64 month = 2;
+  string mi = 3;
+  int64 applyAmount = 4;
+  int64 approvalAmount = 5;
+  int64 floatAmount = 6;
+  int64 fixedAmount = 7;
+  string approvalStatus = 8;
+  string payStatus = 9;
+  string payErrMsg = 10;
+  string bankAccount = 11;
+  
+  string bankOrgName = 12;
+  string bankName = 13;
+  string approvalFile = 14;
+  google.protobuf.Timestamp paySuccessTime = 15;
+  string insuranceType = 16;
+  string applyFile = 17;
+}
+
+message ReimbursementApplyQuotaReq {
+  int64  month = 1;
+  string type = 2;
+  int64 year = 3;
+  int64 managerId = 4;
+  int64 amount = 5;
+}
+
+message ReimbursementApplyQuotaResp {
+  string code = 1;
+  string msg = 2;
 }
