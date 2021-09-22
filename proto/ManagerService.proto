@@ -856,6 +856,12 @@ message ListShipmentPlanrVo {
   string companyCode = 25;
   string miCode = 26;
   google.protobuf.Timestamp sendDeadline = 27;
+  google.protobuf.Timestamp startSendAt = 28;
+  google.protobuf.Timestamp receiveDeadline = 29;
+  google.protobuf.Timestamp createdAt = 30;
+  int64 sentAmount = 31;
+  int64 receivedAmount = 32;  
+  int64 returnAmount = 33;
 }
 //根据配送单号查询配送单详情
 message DetailShipmentOrderReq {
@@ -2578,6 +2584,7 @@ service ManagerService {
   rpc CommonMIInfo(CommonMIInfoReq) returns(CommonMIInfoResp);
   rpc CreateOneMI(CreateOneMIReq) returns(CreateOneMIResp);
   rpc UpdateMi(UpdateMiReq) returns(UpdateMiResp);
+  rpc UploadMiLogoUrl(UploadMiLogoUrlReq) returns(UploadMiLogoUrlResp);
 
   //配送企业相关
   rpc ListCompany(ListCompanyReq) returns(ListCompanyResp);
@@ -2587,6 +2594,7 @@ service ManagerService {
   rpc GetCompanyInfo(CommonCompanyReq) returns(CompanyInfoResp);
   rpc SelCompanyByNames(SelCompanyByNamesReq) returns(SelCompanyByNamesResp);
   rpc QueryCompanyBankAccount(GetCompanyBankAccountReq) returns(GetCompanyBankAccountResp);
+  rpc UploadCompanyLogoUrl(UploadCompanyLogoUrlReq) returns(UploadCompanyLogoUrlResp);
 
   //招采异常订单相关
   rpc ListTpPlanErr(ListTpPlanErrReq) returns(ListTpPlanErrResp);
@@ -2662,6 +2670,13 @@ service ManagerService {
   //医疗机构（财务管理)
   rpc ReimbursementLists(ReimbursementListReq) returns(ReimbursementListResp);
   rpc ReimbursementApplyQuota(ReimbursementApplyQuotaReq) returns(ReimbursementApplyQuotaResp);
+  //获取省合同信息
+  rpc GetWsGetContractList(GetWsGetContractListReq) returns(GetWsGetContractListResp);
+  //配送计划数据测试数据
+  rpc SaveShipmentplan(ShipmentPlanListReq) returns(ShipmentPlanListResp);
+  //合同测试数据
+  rpc SaveTenderContractInfo(TenderContractInfoReq) returns(TenderContractInfoResp);
+  
 
 }
 
@@ -3086,4 +3101,107 @@ message ReimbursementApplyQuotaReq {
 message ReimbursementApplyQuotaResp {
   string code = 1;
   string msg = 2;
+}
+
+message GetWsGetContractListReq {
+  string  user = 1;
+  string password = 2;
+  string begintime = 3;
+  string endtime = 4;
+  int64 pageSize = 5;
+  int64 pageNumber = 6;
+}
+
+message GetWsGetContractListResp {
+  string rtnCode =1;
+  string rtnMsg =2;
+  string rtnTime =3;
+  repeated TpsyncContractListVo resu = 4;
+}
+
+message TpsyncContractListVo {
+  string HTLSH = 1;
+  string YPBH = 2;
+  string YYBH = 3;
+  string PSQYBH = 4;
+  int64 CGL = 5;
+  int64 HTPRICE = 6;
+  string HTUSEDATE = 7;
+
+}
+
+
+message ShipmentPlanListReq {
+  repeated  ShipmentPlan  ShipmentPlans = 1;
+  }
+
+
+message ShipmentPlanListResp {
+ int64 result = 1;
+}
+
+message ShipmentPlaneListVo {
+  string PLANLSH = 1;
+  string YPBH = 2;
+  string PSQYBH = 3;
+  int64 YYBH = 4;
+  string Begintime = 5;
+  int64 PSNUM = 6;
+  int64 PSAMOUNT = 7;
+
+}
+
+
+message TenderContractInfoReq {
+  repeated tenderContract tenderContracts = 1;
+  }
+
+
+message TenderContractInfoResp {
+ int64 result = 1;
+}
+
+
+message tenderContract {
+  int64  medicineId = 1;
+  string  tenderCompany = 2;
+  int64 companyId = 3;
+  int64 medicinePrice = 4;
+  int64 total_amount = 5;
+  google.protobuf.Timestamp startAt = 6;
+  google.protobuf.Timestamp endAt = 7;
+  string contractCode = 8;
+  int64 miId = 9;
+  string linkCode = 10;
+}
+
+message ShipmentPlan {
+  string  medicineCode = 1;
+  string comcode = 2;
+  string miCode = 3;
+  int64 contractMiId = 4;
+  string tpCode = 5;
+  string tpOrderTitle = 6;
+  int64 orderAmount = 7;
+  int64 shipmentAmount = 8;
+}
+
+message UploadCompanyLogoUrlReq {
+  string  logoUrl = 1;
+  int64   managerId = 2;
+
+}
+
+message UploadCompanyLogoUrlResp {
+  int64 result = 1;
+}
+
+message UploadMiLogoUrlReq {
+  string  logoUrl = 1;
+  int64   managerId = 2;
+
+}
+
+message UploadMiLogoUrlResp {
+  int64 result = 1;
 }
