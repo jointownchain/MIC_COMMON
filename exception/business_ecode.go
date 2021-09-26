@@ -54,5 +54,8 @@ var (
 	FactoringApplyCreditNotEnough = add(30003) //授信额度不足
 	FactoringApplyAlreadyPaid     = add(30004) //部分货款已支付，无法申请保理
 	FactoringApplyError           = add(30005) //保理申请信息异常
+	
+	ShipmentInvoiceNoIsUsed = add(40001) //配送发票号已被使用
+	ShipmentInvoiceAmountShouldBeEqualOrderAmount = add(40002) //发票金额应与订单总金额相等
 
 )

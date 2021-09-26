@@ -65,4 +65,7 @@ var CM = map[int]map[string]string{
 	30003: {"EN": "FactoringApplyCreditNotEnough", "CN": "授信额度不足"},
 	30004: {"EN": "FactoringApplyAlreadyPaid", "CN": "部分货款已支付，无法申请保理"},
 	30005: {"EN": "FactoringApplyError", "CN": "保理申请信息异常"},
+	
+	40001: {"EN": "ShipmentOrder InvoiceNo Is Used", "CN": "发票号已经被使用"},
+	40002: {"EN": "ShipmentOrder InvoiceAmount Should Be Equal OrderAmount", "CN": "发票金额应与订单总金额相等"},
 }
