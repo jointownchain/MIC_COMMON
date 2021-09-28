@@ -55,7 +55,12 @@ var (
 	FactoringApplyAlreadyPaid     = add(30004) //部分货款已支付，无法申请保理
 	FactoringApplyError           = add(30005) //保理申请信息异常
 	
-	ShipmentInvoiceNoIsUsed = add(40001) //配送发票号已被使用
+	ShipmentInvoiceNoIsUsed                       = add(40001) //配送发票号已被使用
 	ShipmentInvoiceAmountShouldBeEqualOrderAmount = add(40002) //发票金额应与订单总金额相等
+	InvalidShipmentPlan                           = add(40003) //无效的配送计划
+	InvalidShipmentOrder                          = add(40004) //无效的配送单
+	InvalidShipmentPayOrder                       = add(40005) //无效的配送支付订单
+	InvalidPayRecord                              = add(40006) //无效的支付记录
+	InvalidFactoringRecord                        = add(40007) //无效的保理申请记录
 
 )
