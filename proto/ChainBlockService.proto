@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package ChainBlockService;
+option go_package = "service/ChainBlockService;ChainBlockService";
+
+import public "google/protobuf/timestamp.proto";
+import public "google/protobuf/any.proto";
+
+message Page {
+  int64 pageNumber = 1;
+  int64 pageSize = 2;
+}
+
+
+//根据药品哈希查询药品交易请求信息
+message GetChainTransactionInfoReq {
+  string  hashValue = 1;
+  int64 managerId = 2;
+  string operateType = 3;
+}
+
+message GetChainTransactionInfoResp {
+  string  transactionDetails = 2;
+}
+
+
+service ChainBlockService {
+  //获取hash
+ 
+  rpc GetTransactionHash(GetChainTransactionInfoReq) returns(GetChainTransactionInfoResp);
+
+
+}
+
