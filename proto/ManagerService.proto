@@ -387,6 +387,7 @@ message UpdateMedicineActiveReq {
   int64  medicineId = 1;
   string activeStatus = 2;
   int64 managerId = 3;
+  string infoHash = 4;
 }
 message UpdateMedicineActiveResp {
   int64  Result = 1;
