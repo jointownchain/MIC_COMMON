@@ -613,6 +613,8 @@ message CreateOneMIReq {
   string city = 7;
   string zone = 8;
   int64   managerId = 9;
+  string InfoHash = 10;
+  
 }
 
 message CreateOneMIResp {
@@ -630,6 +632,7 @@ message UpdateMiReq {
   string city = 7;
   string zone = 8;
   int64   managerId = 9;
+  string InfoHash = 10;
 }
 
 message UpdateMiResp {
@@ -739,6 +742,7 @@ message CreateOneCompanyReq {
   string city = 6;
   string zone = 7;
   int64   managerId = 8;
+  string InfoHash = 9;
 }
 
 message CreateOneCompanyResp {
@@ -756,6 +760,7 @@ message UpdateOneCompanyReq {
   string zone = 7;
   int64   managerId = 8;
   int64  companyId = 9;
+  string InfoHash = 10;
 }
 
 message UpdateOneCompanyResp {
@@ -2588,6 +2593,7 @@ service ManagerService {
   rpc CreateOneMI(CreateOneMIReq) returns(CreateOneMIResp);
   rpc UpdateMi(UpdateMiReq) returns(UpdateMiResp);
   rpc UploadMiLogoUrl(UploadMiLogoUrlReq) returns(UploadMiLogoUrlResp);
+  rpc GetMiCodeById(GetMICodeReq) returns(GetMICodeResp);
 
   //配送企业相关
   rpc ListCompany(ListCompanyReq) returns(ListCompanyResp);
@@ -2598,6 +2604,7 @@ service ManagerService {
   rpc SelCompanyByNames(SelCompanyByNamesReq) returns(SelCompanyByNamesResp);
   rpc QueryCompanyBankAccount(GetCompanyBankAccountReq) returns(GetCompanyBankAccountResp);
   rpc UploadCompanyLogoUrl(UploadCompanyLogoUrlReq) returns(UploadCompanyLogoUrlResp);
+  rpc GetCompanysById(GetCompanyInfoReq) returns(GetCompanyInfoResp);
 
   //招采异常订单相关
   rpc ListTpPlanErr(ListTpPlanErrReq) returns(ListTpPlanErrResp);
@@ -3243,4 +3250,39 @@ message MedicineByMedicineIdResp {
   string activeStatus = 10;
   string medicinePCode = 11;
   
+}
+
+
+message GetMICodeReq {
+  int64 miId = 1;
+  int64   managerId = 2;
+}
+
+message GetMICodeResp {
+  int64 miId = 1;
+  string miCode = 2;
+  string miName = 3;
+  string miType = 4;
+  string managerName = 5;
+  string managerPhone = 6;
+  string province = 7;
+  string city = 8;
+  string zone = 9;
+}
+
+
+message GetCompanyInfoReq {
+  int64 companyId = 1;
+  int64   managerId = 2;
+}
+
+message GetCompanyInfoResp {
+  int64 companyId = 1;
+  string companyCode = 2;
+  string companyName = 3;
+  string managerName = 4;
+  string managerPhone = 5;
+  string province = 6;
+  string city = 7;
+  string zone = 8;
 }
