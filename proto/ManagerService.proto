@@ -352,6 +352,7 @@ message CreateMedicineReq {
   string  manufacturer = 7;
   string  medicineUnit = 8;
   int64 managerId = 9;
+  string infoHash = 10;
 }
 message CreateMedicineResp {
   int64  result = 1;
@@ -963,6 +964,7 @@ message CreateShipmentOrderReq {
   string shipmentCompany = 15;
   repeated int64 shipmentPlanIds = 16;
   int64 managerId = 17;
+  string infoHash = 18;
 }
 
 message CreateShipmentOrderResp {
