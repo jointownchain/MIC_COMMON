@@ -34,7 +34,7 @@ message SendCustomMessageReq{
 }
 
 message SendCustomMessageResp{
-  int64 num=1;
+  int64 num = 1;
 }
 
 message SendMessageReq {
@@ -58,7 +58,6 @@ message SendSmsReq {
   //收信手机号
   repeated string toPhones = 5;
 }
-
 message GetMessageRecordsReq {
   google.protobuf.Timestamp startAt = 1;
   google.protobuf.Timestamp endAt = 2;
@@ -68,37 +67,26 @@ message GetMessageRecordsReq {
   Page page = 6;
   //谁在请求 按照搜索账号控制显示范围
   int64 managerId = 7;
+  int64 linkId = 8;
+  string linkCode = 9;
+  string messagePermission = 10;
 }
-
 message GetMessageBusinessReq {
   Page page = 1;
   //谁在请求 按照搜索账号控制显示范围
   int64 managerId = 2;
 }
-
 message ConsumeMessageReq {
   repeated int64 messageIds = 1;
   //谁在请求 按照搜索账号控制显示范围
   int64 managerId = 2;
 }
-
-message DeleteMessageReq {
-  google.protobuf.Timestamp startAt = 1;
-  google.protobuf.Timestamp endAt = 2;
-  string readStatus = 3;
-  repeated int64 msgIds = 4;
-  int64 managerId = 5;
-}
-
-message DeleteMessageResp {
-  int64 result = 1;
-}
-
 message SendMessageResp {
-  int64 num=1;
+  int64 num = 1;
 }
 
 message SendEmailsResp {
+
 }
 
 message SendSmsResp {
@@ -116,6 +104,8 @@ message Message {
   google.protobuf.Timestamp createdAt = 9;
   string readStatus = 10;
   int64  messageId = 11;
+  int64  toUserId = 12;
+  int64  toUsername = 13;
 }
 message MessageListResp {
   repeated Message list = 1;
@@ -145,6 +135,19 @@ message UnreadCountResp {
   int64 infoCount = 1;
   int64 errorCount = 2;
 }
+
+message DeleteMsgReq {
+  int64 managerId = 1;
+  repeated int64 msgIds = 2;
+  google.protobuf.Timestamp start = 3;
+  google.protobuf.Timestamp end = 4;
+  string readStatus = 5;
+}
+
+message DeleteMsgResp {
+  int64 result = 1;
+}
+
 service MessageService {
   //平台消息发送
   rpc SendEmails(SendEmailsReq) returns (SendEmailsResp);
@@ -154,9 +157,10 @@ service MessageService {
   //自定义消息发送
   rpc SendCustomMessage(SendCustomMessageReq) returns (SendCustomMessageResp);
   //平台消息管理
-  rpc GetMessageRecords(GetMessageRecordsReq) returns (MessageListResp);  
-  rpc DeleteMessage(DeleteMessageReq) returns (DeleteMessageResp);
+  rpc GetMessageRecords(GetMessageRecordsReq) returns (MessageListResp);
   rpc GetMessageBusiness(GetMessageBusinessReq) returns (MessageBusinessResp);
   rpc ConsumeMessage(ConsumeMessageReq) returns (ConsumeMessageResp);
   rpc UnreadCount(GetUnreadCountReq) returns (UnreadCountResp);
+  //消息删除
+  rpc DeleteMsg(DeleteMsgReq) returns (DeleteMsgResp);
 }

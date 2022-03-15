@@ -65,12 +65,4 @@ var CM = map[int]map[string]string{
 	30003: {"EN": "FactoringApplyCreditNotEnough", "CN": "授信额度不足"},
 	30004: {"EN": "FactoringApplyAlreadyPaid", "CN": "部分货款已支付，无法申请保理"},
 	30005: {"EN": "FactoringApplyError", "CN": "保理申请信息异常"},
-	
-	40001: {"EN": "ShipmentOrder InvoiceNo Is Used", "CN": "发票号已经被使用"},
-	40002: {"EN": "ShipmentOrder InvoiceAmount Should Be Equal OrderAmount", "CN": "发票金额应与订单总金额相等"},
-	40003: {"EN": "Invalid ShipmentPlan", "CN": "无效的配送计划"},
-	40004: {"EN": "Invalid ShipmentOrder", "CN": "无效的配送单"},
-	40005: {"EN": "Invalid ShipmentPayOrder", "CN": "无效的配送支付订单"},
-	40006: {"EN": "Invalid PayRecord", "CN": "无效的支付记录"},
-	40007: {"EN": "Invalid FactoringRecord", "CN": "无效的保理申请记录"},
 }

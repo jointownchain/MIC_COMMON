@@ -33,3 +33,5 @@ service ChainService {
   //根据哈希查询证书内容
   rpc GetHashContent(GetHashContentReq) returns (GetHashContentResp);
 }
+
+

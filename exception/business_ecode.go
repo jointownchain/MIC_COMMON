@@ -34,8 +34,6 @@ var (
 	IllegalIdRoleChange  = add(10213) // 角色不允许跨平台便跟
 	EmailVerifyCodeError = add(10214) // 邮箱验证码错误
 
-	RoleDuplicate = add(10232) // 重复的角色
-
 	InvalidMi       = add(10301) // 无效的医院信息
 	InvalidCompany  = add(10401) // 无效的企业信息
 	InvalidBank     = add(10501) // 无效的银行信息
@@ -54,13 +52,5 @@ var (
 	FactoringApplyCreditNotEnough = add(30003) //授信额度不足
 	FactoringApplyAlreadyPaid     = add(30004) //部分货款已支付，无法申请保理
 	FactoringApplyError           = add(30005) //保理申请信息异常
-	
-	ShipmentInvoiceNoIsUsed                       = add(40001) //配送发票号已被使用
-	ShipmentInvoiceAmountShouldBeEqualOrderAmount = add(40002) //发票金额应与订单总金额相等
-	InvalidShipmentPlan                           = add(40003) //无效的配送计划
-	InvalidShipmentOrder                          = add(40004) //无效的配送单
-	InvalidShipmentPayOrder                       = add(40005) //无效的配送支付订单
-	InvalidPayRecord                              = add(40006) //无效的支付记录
-	InvalidFactoringRecord                        = add(40007) //无效的保理申请记录
 
 )

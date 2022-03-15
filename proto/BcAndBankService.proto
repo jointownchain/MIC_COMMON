@@ -11,9 +11,11 @@ import public "google/protobuf/timestamp.proto";
 
 service BcAndBankService {
   // --------单纯上链接口 start---------
+  // 通用上链info
+  rpc BcUploadInfo(UploadChainInfo) returns (BcResponse);
   // 上链 configs 信息
   rpc BcUploadConfigs(UploadChainConfigs) returns (BcResponses);
-  // 上链 企业信息s
+  // 上链 企业信息
   rpc BcUploadCompanies(UploadChainCompanies) returns (BcResponses);
   // 医疗机构上链
   rpc BcUploadMis(UploadChainMis) returns (BcResponses);
@@ -31,6 +33,8 @@ service BcAndBankService {
   rpc BcUploadPayOrders(UploadChainPayOrders) returns (BcResponses);
   // 保理单上链（更新）
   rpc BcUploadFactoringOrders(UploadChainFactoringOrders) returns (BcResponses);
+  // 银行要求发消息上链
+  rpc BcUploadChainMessage(UploadChainMsgReq) returns (BcResponses);
   // --------单纯上链接口 end---------
 
   // --------上链 + 银行 组合接口 start---------
@@ -63,6 +67,35 @@ service BcAndBankService {
   rpc BcQueryByTxID(QueryTxIDReq) returns (QueryTxIDRsp);
 
 }
+
+// 通用上链info
+message UploadChainInfo {
+  UploadChainType uploadChainType = 1;
+  string content = 2;
+  string extend = 3;
+}
+
+message UploadChainMsg {
+  UploadChainType uploadChainType = 1;
+  int64 toUserId = 2;
+  string toUsername = 3;
+  int64 toOrganizationId = 4;
+  string toOrganizationName = 5;
+  int64 linkId = 6;
+  string linkCode = 7;
+  string businessKey = 8;
+  string businessPermission = 9;
+  string title = 10;
+  string content = 11;
+  //暂时无用。以后消息已读也要上链时使用
+  string readStatus = 12;
+  google.protobuf.Timestamp readAt = 13;
+}
+
+message UploadChainMsgReq {
+  repeated UploadChainMsg messages = 1;
+}
+
 
 message QueryTxIDReq {
   string TxID = 1;
@@ -164,6 +197,7 @@ message UploadChainCompany {
   google.protobuf.Timestamp startAt = 8;
   google.protobuf.Timestamp endAt = 9;
   BankAccount bankAccount = 10;
+  string creditRate = 11;
 }
 
 message UploadChainCompanies {
@@ -198,6 +232,7 @@ message UploadChainContract {
   int64 totalAmount = 9;
   google.protobuf.Timestamp startAt = 10;
   google.protobuf.Timestamp endAt = 11;
+  string contractActivate = 12; // 合同激活状态
 }
 
 message UploadChainContracts {
@@ -211,6 +246,7 @@ message UploadChainContractMi {
   int64 medicineAmount = 4;
   string contractMd5 = 5;
   string contractUrl = 6;
+  string contractActivate = 7; // 合同激活状态
 }
 
 message UploadChainContractMis {
@@ -231,6 +267,7 @@ message UploadChainFactoringOrder {
   string factoringStatus = 11;
   google.protobuf.Timestamp refundAt = 12;
   string refundStatus = 13;
+  string creditRate = 14;
 }
 
 message UploadChainFactoringOrders {

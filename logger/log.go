@@ -78,6 +78,9 @@ func InitLog(logPath string, logLevel ...string) {
 	)
 	logger = zap.New(core, zap.AddCaller(), zap.AddCallerSkip(1)).Sugar()
 }
+func GetLogger() *zap.SugaredLogger {
+	return logger
+}
 
 func getWriter(dir string, filename string) io.Writer {
 	if dir == "" {
