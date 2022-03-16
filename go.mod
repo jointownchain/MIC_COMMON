@@ -1,4 +1,4 @@
-module github.com/jointownchain/micro_common
+module github.com/jointownchain/mic_common
 
 go 1.16
 
