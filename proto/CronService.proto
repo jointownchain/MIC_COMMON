@@ -2816,6 +2816,22 @@ service CronService {
 
   // 由 contractMiId 列表 获取 主合同列表
   rpc ListContractsByMiContractIds(MiContractIdsReq) returns (ListContractsResp);
+  
+  
+  
+  //地市医保局获取配送企业信息
+  rpc CronWsGetCompany(CreateTpSyncComInfoReq) returns(CreateTpSyncInfoResp);
+  //地市医保局获取生产企业信息
+  rpc CronWsGetCompanySC(CreateTpSyncComInfoReq) returns(CreateTpSyncInfoResp);
+  //地市医保局获取合同信息
+  rpc CronWsGetContract(CreateTpSyncContractMiInfoReq) returns(CreateTpSyncInfoResp);
+  //地市医保局获取药品目录信息
+  rpc CronWsGetGoods(CreateTpSyncMedicineInfoReq) returns(CreateTpSyncInfoResp);
+  //地市医保局获取所属医院信息
+  rpc CronWsGetHospital(CreateTpSyncMiInfoReq) returns(CreateTpSyncInfoResp);
+  //地市医保局获取配送计划信息
+  rpc CronWsGetPlan(CreateTpSyncShipmentPlanReq) returns(CreateTpSyncInfoResp);
+  
 }
 
 message MiContractIdsReq {
@@ -3286,4 +3302,56 @@ message GetNextWorkDayRsp {
 service MicroToolsService {
   // 获取 workDay
   rpc GetNextWorkDay(GetNextWorkDayReq) returns (GetNextWorkDayRsp);
+}
+
+
+//省平台同步数据
+message CreateTpSyncComInfoReq {
+  string  user = 1;
+  string  password = 2;
+  Page page = 3;
+  int64 managerId = 4;
+}
+
+message CreateTpSyncContractMiInfoReq {
+  string  user = 1;
+  string  password = 2;
+  string  beginTime =3;
+  string endTime =4;
+  Page page = 5;
+  int64 managerId = 6;
+}
+
+message CreateTpSyncMedicineInfoReq {
+  string  user = 1;
+  string  password = 2;
+  string  productName =3;
+  string medicineModel =4;
+  string outlookc = 5;
+  string companyNameSc =6;
+  Page page = 7;
+  int64 managerId = 8;
+}
+
+
+
+message CreateTpSyncMiInfoReq {
+  string  user = 1;
+  string  password = 2;
+  Page page = 3;
+  int64 managerId = 4;
+}
+
+
+message CreateTpSyncShipmentPlanReq {
+  string  user = 1;
+  string  password = 2;
+  string  beginTime =3;
+  string endTime =4;
+  Page page = 5;
+  int64 managerId = 6;
+}
+
+message CreateTpSyncInfoResp {
+  int64  result = 1;
 }
