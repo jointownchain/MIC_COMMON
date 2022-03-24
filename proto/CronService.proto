@@ -2831,6 +2831,18 @@ service CronService {
   rpc CronWsGetHospital(CreateTpSyncMiInfoReq) returns(CreateTpSyncInfoResp);
   //地市医保局获取配送计划信息
   rpc CronWsGetPlan(CreateTpSyncShipmentPlanReq) returns(CreateTpSyncInfoResp);
+  //省订单同步
+  rpc SyncPShipmentPlan(CreateSyncShipmentPlanReq) returns(CreateTpSyncInfoResp);
+  
+  
+  
+  //市订单同步
+  rpc SyncShipmentPlanInfo(CreateSyncShipmentPlanReq) returns(CreateTpSyncInfoResp);
+  //市招采获取合同信息
+  rpc CronCityGetContract(CreateCityTpSyncContractMiInfoReq) returns(CreateTpSyncInfoResp);
+  //市招采获取配送计划信息
+  rpc CronCityGetPlan(CreateCityTpSyncShipmentPlanReq) returns(CreateTpSyncInfoResp);
+  
   
 }
 
@@ -3354,4 +3366,20 @@ message CreateTpSyncShipmentPlanReq {
 
 message CreateTpSyncInfoResp {
   int64  result = 1;
+}
+
+message CreateSyncShipmentPlanReq {
+  int64 managerId = 1;
+}
+
+
+message CreateCityTpSyncContractMiInfoReq {
+  string  tokenUser = 1;
+  Page page = 2;
+  int64 managerId = 3;
+}
+message CreateCityTpSyncShipmentPlanReq {
+  string  tokenUser = 1;
+  Page page = 2;
+  int64 managerId = 3;
 }
