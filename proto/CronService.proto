@@ -11,6 +11,13 @@ message Page {
   int64 pageSize = 2;
 }
 
+message OperateIntReq {
+  int64 managerId = 1;
+}
+
+message OperateIntResp {
+  int64 result = 1;
+}
 
 //根据招采单号查询合同信息
 message GetContractInfoReq {
@@ -2843,6 +2850,14 @@ service CronService {
   //市招采获取配送计划信息
   rpc CronCityGetPlan(CreateCityTpSyncShipmentPlanReq) returns(CreateTpSyncInfoResp);
   
+  //联行号下载
+  rpc CronBankSyncCNAPS(OperateIntReq) returns(OperateIntResp);
+  //银行付款结果查询
+  rpc CronBankSyncBankPayment(OperateIntReq) returns(OperateIntResp);
+  //医疗机构自动支付
+  rpc CronBankMiAutoPay(OperateIntReq) returns(OperateIntResp);
+  //保理自动还款
+  rpc CronBankAutoFactoringRepay(OperateIntReq) returns(OperateIntResp); 
   
 }
 
