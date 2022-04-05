@@ -2858,6 +2858,12 @@ service CronService {
   rpc CronBankMiAutoPay(OperateIntReq) returns(OperateIntResp);
   //保理自动还款
   rpc CronBankAutoFactoringRepay(OperateIntReq) returns(OperateIntResp); 
+  //银行回单下载
+  rpc CronBankSyncReceipt(OperateIntReq) returns(OperateIntResp);
+  //银行保理结果查询
+  rpc CronBankSyncFactoring(OperateIntReq) returns(OperateIntResp);
+  //银行保理还款查询
+  rpc CronBankSyncFactoringRepay(OperateIntReq) returns(OperateIntResp); 
   
 }
 
