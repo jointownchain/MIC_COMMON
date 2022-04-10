@@ -2858,12 +2858,44 @@ service CronService {
   rpc CronBankMiAutoPay(OperateIntReq) returns(OperateIntResp);
   //保理自动还款
   rpc CronBankAutoFactoringRepay(OperateIntReq) returns(OperateIntResp); 
-  //银行回单下载
-  rpc CronBankSyncReceipt(OperateIntReq) returns(OperateIntResp);
-  //银行保理结果查询
-  rpc CronBankSyncFactoring(OperateIntReq) returns(OperateIntResp);
-  //银行保理还款查询
-  rpc CronBankSyncFactoringRepay(OperateIntReq) returns(OperateIntResp); 
+  
+    //省续签合同同步
+  rpc SyncPContactRenew(CreateSyncPContactRenewReq) returns(CreateTpSyncInfoResp);
+    //市续签合同同步
+  rpc SyncCContactRenew(CreateSyncCContactRenewReq) returns(CreateTpSyncInfoResp);
+  //采购计划表数据处理
+  rpc CronReportShipmentPlanYear(CreateReportReq) returns(CreateReportResp);
+  rpc CronReportShipmentPlanMonth(CreateReportReq) returns(CreateReportResp);
+  rpc CronReportShipmentPlanDay(CreateReportReq) returns(CreateReportResp);
+  //合同计划表数据处理
+  rpc CronReportContractPlanYear(CreateReportReq) returns(CreateReportResp);
+  rpc CronReportContractPlanMonth(CreateReportReq) returns(CreateReportResp);
+  rpc CronReportContractPlanDay(CreateReportReq) returns(CreateReportResp);
+  
+  //招采单流单
+  rpc CronShipmentPlanOutTimeMsg(CreateMessageReq) returns(CreateMessageResp);
+  //招采单流单警告消息发送
+  rpc CronSendShipmentPlanWarningMsg(CreateMessageReq) returns(CreateMessageResp);
+  //配送逾期消息告知
+  rpc CronShipmentOrderOverdueMsg(CreateMessageReq) returns(CreateMessageResp);
+  //配送逾期预警
+  rpc CronShipmentOrderSendingDeadlineMsg(CreateMessageReq) returns(CreateMessageResp);
+  //配送收货预警消息发送
+  rpc CronShipmentReceiveWarningMsg(CreateMessageReq) returns(CreateMessageResp);
+  //保理单数据
+  rpc CronReportFactoringOrderYear(CreateReportReq) returns(CreateReportResp);
+  rpc CronReportFactoringOrderMonth(CreateReportReq) returns(CreateReportResp);
+  rpc CronReportFactoringOrderDay(CreateReportReq) returns(CreateReportResp);
+  
+  //配送单数据
+  rpc CronReportShipmentOrderYear(CreateReportReq) returns(CreateReportResp);
+  rpc CronReportShipmentOrderMonth(CreateReportReq) returns(CreateReportResp);
+  rpc CronReportShipmentOrderDay(CreateReportReq) returns(CreateReportResp);
+  
+  
+  
+  
+  
   
 }
 
@@ -3403,4 +3435,31 @@ message CreateCityTpSyncShipmentPlanReq {
   string  tokenUser = 1;
   Page page = 2;
   int64 managerId = 3;
+}
+message CreateSyncPContactRenewReq {
+  int64 managerId = 1;
+}
+
+message CreateSyncCContactRenewReq {
+  int64 managerId = 1;
+}
+
+
+
+message CreateReportReq {
+   string  strDate  = 1 ;
+  int64 managerId = 2;
+}
+
+message CreateReportResp {
+  int64 result = 1;
+}
+
+message CreateMessageReq {
+   string  strDate  = 1 ;
+  int64 managerId = 2;
+}
+
+message CreateMessageResp {
+  int64 result = 1;
 }
