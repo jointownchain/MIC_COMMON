@@ -2841,15 +2841,7 @@ service CronService {
   //省订单同步
   rpc SyncPShipmentPlan(CreateSyncShipmentPlanReq) returns(CreateTpSyncInfoResp);
   
-  
-  
-  //市订单同步
-  rpc SyncShipmentPlanInfo(CreateSyncShipmentPlanReq) returns(CreateTpSyncInfoResp);
-  //市招采获取合同信息
-  rpc CronCityGetContract(CreateCityTpSyncContractMiInfoReq) returns(CreateTpSyncInfoResp);
-  //市招采获取配送计划信息
-  rpc CronCityGetPlan(CreateCityTpSyncShipmentPlanReq) returns(CreateTpSyncInfoResp);
-  
+    
   //联行号下载
   rpc CronBankSyncCNAPS(OperateIntReq) returns(OperateIntResp);
   //银行付款结果查询
@@ -2858,10 +2850,23 @@ service CronService {
   rpc CronBankMiAutoPay(OperateIntReq) returns(OperateIntResp);
   //保理自动还款
   rpc CronBankAutoFactoringRepay(OperateIntReq) returns(OperateIntResp); 
+  //银行回单下载
+  rpc CronBankSyncReceipt(OperateIntReq) returns(OperateIntResp);
+  //银行保理结果查询
+  rpc CronBankSyncFactoring(OperateIntReq) returns(OperateIntResp);
+  //银行保理还款查询
+  rpc CronBankSyncFactoringRepay(OperateIntReq) returns(OperateIntResp); 
   
-    //省续签合同同步
+  //市订单同步
+  rpc SyncShipmentPlanInfo(CreateSyncShipmentPlanReq) returns(CreateTpSyncInfoResp);
+  //市招采获取合同信息
+  rpc CronCityGetContract(CreateCityTpSyncContractMiInfoReq) returns(CreateTpSyncInfoResp);
+  //市招采获取配送计划信息
+  rpc CronCityGetPlan(CreateCityTpSyncShipmentPlanReq) returns(CreateTpSyncInfoResp);
+  
+  //省续签合同同步
   rpc SyncPContactRenew(CreateSyncPContactRenewReq) returns(CreateTpSyncInfoResp);
-    //市续签合同同步
+  //市续签合同同步
   rpc SyncCContactRenew(CreateSyncCContactRenewReq) returns(CreateTpSyncInfoResp);
   //采购计划表数据处理
   rpc CronReportShipmentPlanYear(CreateReportReq) returns(CreateReportResp);
