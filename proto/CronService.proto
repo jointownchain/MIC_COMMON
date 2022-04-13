@@ -2897,6 +2897,11 @@ service CronService {
   rpc CronReportShipmentOrderMonth(CreateReportReq) returns(CreateReportResp);
   rpc CronReportShipmentOrderDay(CreateReportReq) returns(CreateReportResp);
   
+  //医疗机构支付按日提醒定时任务
+  rpc CronRemindMiPayMsg(CreateMessageReq) returns(CreateMessageResp);
+  //医疗机构被动支付置为失败
+  rpc CronShipmentPayOrderFail(CreateMessageReq) returns(CreateMessageResp);
+  
   
   
   

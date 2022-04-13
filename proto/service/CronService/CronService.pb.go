@@ -34164,7 +34164,7 @@ var file_CronService_proto_rawDesc = []byte{
 	0x6d, 0x61, 0x6e, 0x61, 0x67, 0x65, 0x72, 0x49, 0x64, 0x22, 0x2b, 0x0a, 0x11, 0x43, 0x72, 0x65,
 	0x61, 0x74, 0x65, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x52, 0x65, 0x73, 0x70, 0x12, 0x16,
 	0x0a, 0x06, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06,
-	0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x32, 0xae, 0x53, 0x0a, 0x0b, 0x43, 0x72, 0x6f, 0x6e, 0x53,
+	0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x32, 0xde, 0x54, 0x0a, 0x0b, 0x43, 0x72, 0x6f, 0x6e, 0x53,
 	0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x45, 0x0a, 0x0a, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65,
 	0x41, 0x72, 0x65, 0x61, 0x12, 0x1a, 0x2e, 0x43, 0x72, 0x6f, 0x6e, 0x53, 0x65, 0x72, 0x76, 0x69,
 	0x63, 0x65, 0x2e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x41, 0x72, 0x65, 0x61, 0x52, 0x65, 0x71,
@@ -34831,7 +34831,18 @@ var file_CronService_proto_rawDesc = []byte{
 	0x6e, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x52,
 	0x65, 0x70, 0x6f, 0x72, 0x74, 0x52, 0x65, 0x71, 0x1a, 0x1d, 0x2e, 0x43, 0x72, 0x6f, 0x6e, 0x53,
 	0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x52, 0x65, 0x70,
-	0x6f, 0x72, 0x74, 0x52, 0x65, 0x73, 0x70, 0x32, 0xbc, 0x04, 0x0a, 0x0c, 0x53, 0x74, 0x6f, 0x63,
+	0x6f, 0x72, 0x74, 0x52, 0x65, 0x73, 0x70, 0x12, 0x53, 0x0a, 0x12, 0x43, 0x72, 0x6f, 0x6e, 0x52,
+	0x65, 0x6d, 0x69, 0x6e, 0x64, 0x4d, 0x69, 0x50, 0x61, 0x79, 0x4d, 0x73, 0x67, 0x12, 0x1d, 0x2e,
+	0x43, 0x72, 0x6f, 0x6e, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x43, 0x72, 0x65, 0x61,
+	0x74, 0x65, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x52, 0x65, 0x71, 0x1a, 0x1e, 0x2e, 0x43,
+	0x72, 0x6f, 0x6e, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x43, 0x72, 0x65, 0x61, 0x74,
+	0x65, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x52, 0x65, 0x73, 0x70, 0x12, 0x59, 0x0a, 0x18,
+	0x43, 0x72, 0x6f, 0x6e, 0x53, 0x68, 0x69, 0x70, 0x6d, 0x65, 0x6e, 0x74, 0x50, 0x61, 0x79, 0x4f,
+	0x72, 0x64, 0x65, 0x72, 0x46, 0x61, 0x69, 0x6c, 0x12, 0x1d, 0x2e, 0x43, 0x72, 0x6f, 0x6e, 0x53,
+	0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x4d, 0x65, 0x73,
+	0x73, 0x61, 0x67, 0x65, 0x52, 0x65, 0x71, 0x1a, 0x1e, 0x2e, 0x43, 0x72, 0x6f, 0x6e, 0x53, 0x65,
+	0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x4d, 0x65, 0x73, 0x73,
+	0x61, 0x67, 0x65, 0x52, 0x65, 0x73, 0x70, 0x32, 0xbc, 0x04, 0x0a, 0x0c, 0x53, 0x74, 0x6f, 0x63,
 	0x6b, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x42, 0x0a, 0x09, 0x53, 0x74, 0x6f, 0x63,
 	0x6b, 0x53, 0x79, 0x6e, 0x63, 0x12, 0x19, 0x2e, 0x43, 0x72, 0x6f, 0x6e, 0x53, 0x65, 0x72, 0x76,
 	0x69, 0x63, 0x65, 0x2e, 0x53, 0x74, 0x6f, 0x63, 0x6b, 0x53, 0x79, 0x6e, 0x63, 0x52, 0x65, 0x71,
@@ -35980,235 +35991,239 @@ var file_CronService_proto_depIdxs = []int32{
 	362, // 424: CronService.CronService.CronReportShipmentOrderYear:input_type -> CronService.CreateReportReq
 	362, // 425: CronService.CronService.CronReportShipmentOrderMonth:input_type -> CronService.CreateReportReq
 	362, // 426: CronService.CronService.CronReportShipmentOrderDay:input_type -> CronService.CreateReportReq
-	312, // 427: CronService.StockService.StockSync:input_type -> CronService.StockSyncReq
-	315, // 428: CronService.StockService.ComStockMedicineBindList:input_type -> CronService.ComStockMedicineBindListReq
-	321, // 429: CronService.StockService.ComStockMedicineBind:input_type -> CronService.ComStockMedicineBindReq
-	318, // 430: CronService.StockService.MiStockMedicineBindList:input_type -> CronService.MiStockMedicineBindListReq
-	323, // 431: CronService.StockService.MiStockMedicineBind:input_type -> CronService.MiStockMedicineBindReq
-	325, // 432: CronService.StockService.StockList:input_type -> CronService.StockListReq
-	134, // 433: CronService.DataReportService.GetShipmentPlanDayReports:input_type -> CronService.GetShipmentPlanReportsReq
-	134, // 434: CronService.DataReportService.GetShipmentPlanMonthReports:input_type -> CronService.GetShipmentPlanReportsReq
-	134, // 435: CronService.DataReportService.GetShipmentPlanYearReports:input_type -> CronService.GetShipmentPlanReportsReq
-	146, // 436: CronService.DataReportService.GetShipmentOrderDayReports:input_type -> CronService.GetShipmentOrderReportsReq
-	146, // 437: CronService.DataReportService.GetShipmentOrderMonthReports:input_type -> CronService.GetShipmentOrderReportsReq
-	146, // 438: CronService.DataReportService.GetShipmentOrderYearReports:input_type -> CronService.GetShipmentOrderReportsReq
-	155, // 439: CronService.DataReportService.GetFactoringOrderDayReports:input_type -> CronService.GetFactoringOrderReportsReq
-	155, // 440: CronService.DataReportService.GetFactoringOrderMonthReports:input_type -> CronService.GetFactoringOrderReportsReq
-	155, // 441: CronService.DataReportService.GetFactoringOrderYearReports:input_type -> CronService.GetFactoringOrderReportsReq
-	164, // 442: CronService.DataReportService.GetContractPlanDayReports:input_type -> CronService.GetContractPlanReportsReq
-	164, // 443: CronService.DataReportService.GetContractPlanMonthReports:input_type -> CronService.GetContractPlanReportsReq
-	164, // 444: CronService.DataReportService.GetContractPlanYearReports:input_type -> CronService.GetContractPlanReportsReq
-	164, // 445: CronService.DataReportService.GetContractSum:input_type -> CronService.GetContractPlanReportsReq
-	175, // 446: CronService.DataReportService.GetValidContractInfo:input_type -> CronService.GetValidContractInfoReq
-	176, // 447: CronService.DataReportService.GetCurrentNeedPay:input_type -> CronService.GetCurrentNeedPayReq
-	177, // 448: CronService.DataReportService.GetCurrentFactoringApply:input_type -> CronService.GetCurrentFactoringApplyReq
-	181, // 449: CronService.HashService.GetCompanyHash:input_type -> CronService.GetCompanyHashReq
-	184, // 450: CronService.HashService.GetMiHash:input_type -> CronService.GetMiHashReq
-	187, // 451: CronService.HashService.GetMedicineHash:input_type -> CronService.GetMedicineReq
-	190, // 452: CronService.HashService.GetContractHash:input_type -> CronService.GetContractHashReq
-	193, // 453: CronService.HashService.GetContractMiHash:input_type -> CronService.GetContractMiHashReq
-	196, // 454: CronService.HashService.GetConfigHash:input_type -> CronService.GetConfigHashReq
-	199, // 455: CronService.HashService.GetShipmentPlanHash:input_type -> CronService.GetShipmentPlanHashReq
-	202, // 456: CronService.HashService.GetShipmentOrderHash:input_type -> CronService.GetShipmentOrderHashReq
-	205, // 457: CronService.HashService.GetShipmentPayHash:input_type -> CronService.GetShipmentPayHashReq
-	208, // 458: CronService.HashService.GetShipmentFactoringHash:input_type -> CronService.GetShipmentFactoringHashReq
-	211, // 459: CronService.HashService.GetMessageHash:input_type -> CronService.ListMessageHashReq
-	328, // 460: CronService.HashService.GetCommonInfoHash:input_type -> CronService.GetInfoHashReq
-	331, // 461: CronService.RankService.GetShipmentMedicineRankDataYear:input_type -> CronService.ShipmentRankDataYearReq
-	331, // 462: CronService.RankService.GetShipmentCompanyRankDataYear:input_type -> CronService.ShipmentRankDataYearReq
-	336, // 463: CronService.RankService.GetShipmentLogisticsList:input_type -> CronService.GetShipmentLogisticsListReq
-	214, // 464: CronService.RankService.GetShipmentRankMedicineDataYear:input_type -> CronService.GetShipmentRankMedicineDataYearReq
-	217, // 465: CronService.RankService.GetShipmentRankCompanyDataYear:input_type -> CronService.GetShipmentRankCompanyDataYearReq
-	221, // 466: CronService.RankService.GetRankMiReceiveYear:input_type -> CronService.GetRankMiReceiveYearReq
-	224, // 467: CronService.RankService.GetRankComReceiveYear:input_type -> CronService.GetRankComReceiveYearReq
-	227, // 468: CronService.RankService.GetRankMiPaidYear:input_type -> CronService.GetRankMiPaidYearReq
-	230, // 469: CronService.RankService.GetRankMedicineYear:input_type -> CronService.GetRankMedicineYearReq
-	233, // 470: CronService.RankService.GetMIBDashboardBaseInfo:input_type -> CronService.GetMIBDashboardBaseInfoReq
-	339, // 471: CronService.ReimbursementSerivce.List:input_type -> CronService.ReimbursementListReq
-	343, // 472: CronService.ReimbursementSerivce.UpApprovalFile:input_type -> CronService.ReimbursementUpApprovalFile
-	342, // 473: CronService.ReimbursementSerivce.UpApplyFile:input_type -> CronService.ReimbursementUpApplyFile
-	346, // 474: CronService.ReimbursementSerivce.UpApplyAmount:input_type -> CronService.ReimbursementUpApplyAmount
-	345, // 475: CronService.ReimbursementSerivce.UpApprovalAmount:input_type -> CronService.ReimbursementUpApprovalAmount
-	347, // 476: CronService.ReimbursementSerivce.UpExpectApplyAmount:input_type -> CronService.ReimbursementUpExpectApplyAmount
-	348, // 477: CronService.ReimbursementSerivce.Approval:input_type -> CronService.ReimbursementApproval
-	349, // 478: CronService.MicroToolsService.GetNextWorkDay:input_type -> CronService.GetNextWorkDayReq
-	302, // 479: CronService.CronService.CreateArea:output_type -> CronService.CreateAreaResp
-	304, // 480: CronService.CronService.EditArea:output_type -> CronService.EditAreaResp
-	306, // 481: CronService.CronService.DeleteArea:output_type -> CronService.DeleteAreaResp
-	308, // 482: CronService.CronService.ListArea:output_type -> CronService.ListAreaResp
-	308, // 483: CronService.CronService.CommonListArea:output_type -> CronService.ListAreaResp
-	274, // 484: CronService.CronService.ContractUpload:output_type -> CronService.ContractCreateResp
-	293, // 485: CronService.CronService.ReturnZoneList:output_type -> CronService.ReturnZoneListResp
-	296, // 486: CronService.CronService.ReturnMiList:output_type -> CronService.ReturnMiListResp
-	299, // 487: CronService.CronService.ReturnMiMedicineList:output_type -> CronService.ReturnMiMedicineListResp
-	288, // 488: CronService.CronService.ContractProportionList:output_type -> CronService.ContractProportionListResp
-	291, // 489: CronService.CronService.ContractProportionUpdate:output_type -> CronService.ContractProportionUpdateResp
-	279, // 490: CronService.CronService.RemovePlans:output_type -> CronService.RemovePlansResp
-	277, // 491: CronService.CronService.ReceivePlans:output_type -> CronService.ReceivePlansResp
-	264, // 492: CronService.CronService.WaitList:output_type -> CronService.ListZCResp
-	258, // 493: CronService.CronService.SplitToPlan:output_type -> CronService.SplitToPlanResp
-	264, // 494: CronService.CronService.ListZC:output_type -> CronService.ListZCResp
-	263, // 495: CronService.CronService.CreateShipmentZC:output_type -> CronService.CreateZCResp
-	262, // 496: CronService.CronService.DeleteShipmentZC:output_type -> CronService.DeleteZCResp
-	267, // 497: CronService.CronService.DetailSupplement:output_type -> CronService.DetailSupplementResp
-	269, // 498: CronService.CronService.DetailPlanList:output_type -> CronService.DetailPlanListResp
-	274, // 499: CronService.CronService.ContractCreate:output_type -> CronService.ContractCreateResp
-	281, // 500: CronService.CronService.ContractRemove:output_type -> CronService.ContractRemoveResp
-	283, // 501: CronService.CronService.ContractStop:output_type -> CronService.ContractStopResp
-	286, // 502: CronService.CronService.ContractEdit:output_type -> CronService.ContractEditResp
-	11,  // 503: CronService.CronService.ListContract:output_type -> CronService.ContractListResp
-	17,  // 504: CronService.CronService.ListMiContract:output_type -> CronService.ContractMiListResp
-	20,  // 505: CronService.CronService.CreateOneContractMI:output_type -> CronService.CreateOneContractMIResp
-	22,  // 506: CronService.CronService.UpdateOneContractMI:output_type -> CronService.UpdateOneContractMIResp
-	24,  // 507: CronService.CronService.UpdateOneContract:output_type -> CronService.UpdateOneContractResp
-	26,  // 508: CronService.CronService.BatchOperateContract:output_type -> CronService.BatchOperateContractResp
-	29,  // 509: CronService.CronService.UpdateContractActive:output_type -> CronService.UpdateContractActiveResp
-	33,  // 510: CronService.CronService.DeleteOneContract:output_type -> CronService.DeleteOneContractResp
-	35,  // 511: CronService.CronService.DeleteOneContractMi:output_type -> CronService.DeleteOneContractMiResp
-	4,   // 512: CronService.CronService.GetContractInfo:output_type -> CronService.GetContractInfoResp
-	6,   // 513: CronService.CronService.CountContract:output_type -> CronService.CountContractResp
-	31,  // 514: CronService.CronService.RefreshContract:output_type -> CronService.RefreshContractResp
-	255, // 515: CronService.CronService.ResetContract:output_type -> CronService.ResetContractResp
-	8,   // 516: CronService.CronService.ContractDetail:output_type -> CronService.ContractDetailResp
-	15,  // 517: CronService.CronService.CheckContractList:output_type -> CronService.CheckContractListResp
-	37,  // 518: CronService.CronService.ListMedicine:output_type -> CronService.MedicineListResp
-	40,  // 519: CronService.CronService.MedicineListForQuery:output_type -> CronService.MedicineListForQueryResp
-	43,  // 520: CronService.CronService.CreateMedicine:output_type -> CronService.CreateMedicineResp
-	45,  // 521: CronService.CronService.CreateBatchMedicine:output_type -> CronService.CreateBatchMedicineResp
-	47,  // 522: CronService.CronService.UpdateMedicine:output_type -> CronService.UpdateMedicineResp
-	49,  // 523: CronService.CronService.UpdateMedicineActive:output_type -> CronService.UpdateMedicineActiveResp
-	51,  // 524: CronService.CronService.DeleteMedicine:output_type -> CronService.DeleteMedicineResp
-	53,  // 525: CronService.CronService.SelectTagByMedicineId:output_type -> CronService.SelectTagByMedicineIdResp
-	55,  // 526: CronService.CronService.SelectInfoByMedicineNames:output_type -> CronService.SelectInfoByMedicineNamesResp
-	57,  // 527: CronService.CronService.TagList:output_type -> CronService.TagListResp
-	60,  // 528: CronService.CronService.CreateTag:output_type -> CronService.CreateTagResp
-	62,  // 529: CronService.CronService.UpdateTag:output_type -> CronService.UpdateTagResp
-	64,  // 530: CronService.CronService.DeleteTag:output_type -> CronService.DeleteTagResp
-	66,  // 531: CronService.CronService.TagDetailList:output_type -> CronService.TagDetailListResp
-	69,  // 532: CronService.CronService.DeleteTagMedicine:output_type -> CronService.DeleteTagMedicineResp
-	71,  // 533: CronService.CronService.CreateTagMedicine:output_type -> CronService.CreateTagMedicineResp
-	73,  // 534: CronService.CronService.CommonMedicineQuery:output_type -> CronService.CommonMedicineQueryResp
-	76,  // 535: CronService.CronService.ListMi:output_type -> CronService.ListMiResp
-	79,  // 536: CronService.CronService.CommonMI:output_type -> CronService.CommonMIResp
-	82,  // 537: CronService.CronService.CreateOneMI:output_type -> CronService.CreateOneMIResp
-	84,  // 538: CronService.CronService.UpdateMi:output_type -> CronService.UpdateMiResp
-	91,  // 539: CronService.CronService.ListCompany:output_type -> CronService.ListCompanyResp
-	94,  // 540: CronService.CronService.CreateOneCompany:output_type -> CronService.CreateOneCompanyResp
-	96,  // 541: CronService.CronService.UpdateOneCompany:output_type -> CronService.UpdateOneCompanyResp
-	86,  // 542: CronService.CronService.CommonCompany:output_type -> CronService.CommonCompanyResp
-	89,  // 543: CronService.CronService.SelCompanyByNames:output_type -> CronService.SelCompanyByNamesResp
-	98,  // 544: CronService.CronService.ListTpPlanErr:output_type -> CronService.ListTpPlanErrResp
-	101, // 545: CronService.CronService.UpdateErrShipmentPlan:output_type -> CronService.UpdateErrShipmentPlanResp
-	103, // 546: CronService.CronService.ListShipmentPlan:output_type -> CronService.ListShipmentPlanResp
-	111, // 547: CronService.CronService.CountShipmentPlan:output_type -> CronService.CountShipmentPlanResp
-	106, // 548: CronService.CronService.DetailShipmentOrder:output_type -> CronService.DetailShipmentOrderResp
-	108, // 549: CronService.CronService.ListShipmentPlanForOrder:output_type -> CronService.ListShipmentPlanForOrderResp
-	113, // 550: CronService.CronService.CreateShipmentOrder:output_type -> CronService.CreateShipmentOrderResp
-	115, // 551: CronService.CronService.ListShipmentOrder:output_type -> CronService.ListShipmentOrderResp
-	118, // 552: CronService.CronService.CountShipmentOrder:output_type -> CronService.CountShipmentOrderResp
-	120, // 553: CronService.CronService.ReceiveShipmentOrder:output_type -> CronService.ReceiveShipmentOrderResp
-	122, // 554: CronService.CronService.GetContractByShipmentPlanId:output_type -> CronService.GetContractByShipmentPlanIdResp
-	131, // 555: CronService.CronService.GetConfig:output_type -> CronService.GetConfigResp
-	128, // 556: CronService.CronService.UpdateConfig:output_type -> CronService.UpdateConfigResp
-	129, // 557: CronService.CronService.InsertConfigs:output_type -> CronService.InsertConfigsResp
-	130, // 558: CronService.CronService.DeleteConfigs:output_type -> CronService.DeleteConfigsResp
-	236, // 559: CronService.CronService.ListCompanyBind:output_type -> CronService.ListCompanyBindResp
-	246, // 560: CronService.CronService.CompanyBind:output_type -> CronService.CompanyBindResp
-	239, // 561: CronService.CronService.ListMiBind:output_type -> CronService.ListMiBindResp
-	249, // 562: CronService.CronService.MiBind:output_type -> CronService.MiBindResp
-	242, // 563: CronService.CronService.ListMedicineBind:output_type -> CronService.ListMedicineBindResp
-	252, // 564: CronService.CronService.MedicineBind:output_type -> CronService.MedicineBindResp
-	311, // 565: CronService.CronService.ListContractsByMiContractIds:output_type -> CronService.ListContractsResp
-	356, // 566: CronService.CronService.CronWsGetCompany:output_type -> CronService.CreateTpSyncInfoResp
-	356, // 567: CronService.CronService.CronWsGetCompanySC:output_type -> CronService.CreateTpSyncInfoResp
-	356, // 568: CronService.CronService.CronWsGetContract:output_type -> CronService.CreateTpSyncInfoResp
-	356, // 569: CronService.CronService.CronWsGetGoods:output_type -> CronService.CreateTpSyncInfoResp
-	356, // 570: CronService.CronService.CronWsGetHospital:output_type -> CronService.CreateTpSyncInfoResp
-	356, // 571: CronService.CronService.CronWsGetPlan:output_type -> CronService.CreateTpSyncInfoResp
-	356, // 572: CronService.CronService.SyncPShipmentPlan:output_type -> CronService.CreateTpSyncInfoResp
-	2,   // 573: CronService.CronService.CronBankSyncCNAPS:output_type -> CronService.OperateIntResp
-	2,   // 574: CronService.CronService.CronBankSyncBankPayment:output_type -> CronService.OperateIntResp
-	2,   // 575: CronService.CronService.CronBankMiAutoPay:output_type -> CronService.OperateIntResp
-	2,   // 576: CronService.CronService.CronBankAutoFactoringRepay:output_type -> CronService.OperateIntResp
-	2,   // 577: CronService.CronService.CronBankSyncReceipt:output_type -> CronService.OperateIntResp
-	2,   // 578: CronService.CronService.CronBankSyncFactoring:output_type -> CronService.OperateIntResp
-	2,   // 579: CronService.CronService.CronBankSyncFactoringRepay:output_type -> CronService.OperateIntResp
-	356, // 580: CronService.CronService.SyncShipmentPlanInfo:output_type -> CronService.CreateTpSyncInfoResp
-	356, // 581: CronService.CronService.CronCityGetContract:output_type -> CronService.CreateTpSyncInfoResp
-	356, // 582: CronService.CronService.CronCityGetPlan:output_type -> CronService.CreateTpSyncInfoResp
-	356, // 583: CronService.CronService.SyncPContactRenew:output_type -> CronService.CreateTpSyncInfoResp
-	356, // 584: CronService.CronService.SyncCContactRenew:output_type -> CronService.CreateTpSyncInfoResp
-	363, // 585: CronService.CronService.CronReportShipmentPlanYear:output_type -> CronService.CreateReportResp
-	363, // 586: CronService.CronService.CronReportShipmentPlanMonth:output_type -> CronService.CreateReportResp
-	363, // 587: CronService.CronService.CronReportShipmentPlanDay:output_type -> CronService.CreateReportResp
-	363, // 588: CronService.CronService.CronReportContractPlanYear:output_type -> CronService.CreateReportResp
-	363, // 589: CronService.CronService.CronReportContractPlanMonth:output_type -> CronService.CreateReportResp
-	363, // 590: CronService.CronService.CronReportContractPlanDay:output_type -> CronService.CreateReportResp
-	365, // 591: CronService.CronService.CronShipmentPlanOutTimeMsg:output_type -> CronService.CreateMessageResp
-	365, // 592: CronService.CronService.CronSendShipmentPlanWarningMsg:output_type -> CronService.CreateMessageResp
-	365, // 593: CronService.CronService.CronShipmentOrderOverdueMsg:output_type -> CronService.CreateMessageResp
-	365, // 594: CronService.CronService.CronShipmentOrderSendingDeadlineMsg:output_type -> CronService.CreateMessageResp
-	365, // 595: CronService.CronService.CronShipmentReceiveWarningMsg:output_type -> CronService.CreateMessageResp
-	363, // 596: CronService.CronService.CronReportFactoringOrderYear:output_type -> CronService.CreateReportResp
-	363, // 597: CronService.CronService.CronReportFactoringOrderMonth:output_type -> CronService.CreateReportResp
-	363, // 598: CronService.CronService.CronReportFactoringOrderDay:output_type -> CronService.CreateReportResp
-	363, // 599: CronService.CronService.CronReportShipmentOrderYear:output_type -> CronService.CreateReportResp
-	363, // 600: CronService.CronService.CronReportShipmentOrderMonth:output_type -> CronService.CreateReportResp
-	363, // 601: CronService.CronService.CronReportShipmentOrderDay:output_type -> CronService.CreateReportResp
-	314, // 602: CronService.StockService.StockSync:output_type -> CronService.StockSyncResp
-	316, // 603: CronService.StockService.ComStockMedicineBindList:output_type -> CronService.ComStockMedicineBindListResp
-	322, // 604: CronService.StockService.ComStockMedicineBind:output_type -> CronService.ComStockMedicineBindResp
-	319, // 605: CronService.StockService.MiStockMedicineBindList:output_type -> CronService.MiStockMedicineBindListResp
-	324, // 606: CronService.StockService.MiStockMedicineBind:output_type -> CronService.MiStockMedicineBindResp
-	326, // 607: CronService.StockService.StockList:output_type -> CronService.StockListResp
-	141, // 608: CronService.DataReportService.GetShipmentPlanDayReports:output_type -> CronService.GetShipmentPlanDayReportsResp
-	142, // 609: CronService.DataReportService.GetShipmentPlanMonthReports:output_type -> CronService.GetShipmentPlanMonthReportsResp
-	143, // 610: CronService.DataReportService.GetShipmentPlanYearReports:output_type -> CronService.GetShipmentPlanYearReportsResp
-	150, // 611: CronService.DataReportService.GetShipmentOrderDayReports:output_type -> CronService.GetShipmentOrderDayReportsResp
-	151, // 612: CronService.DataReportService.GetShipmentOrderMonthReports:output_type -> CronService.GetShipmentOrderMonthReportsResp
-	152, // 613: CronService.DataReportService.GetShipmentOrderYearReports:output_type -> CronService.GetShipmentOrderYearReportsResp
-	157, // 614: CronService.DataReportService.GetFactoringOrderDayReports:output_type -> CronService.GetFactoringOrderDayReportsResp
-	159, // 615: CronService.DataReportService.GetFactoringOrderMonthReports:output_type -> CronService.GetFactoringOrderMonthReportsResp
-	161, // 616: CronService.DataReportService.GetFactoringOrderYearReports:output_type -> CronService.GetFactoringOrderYearReportsResp
-	168, // 617: CronService.DataReportService.GetContractPlanDayReports:output_type -> CronService.GetContractPlanDayReportsResp
-	170, // 618: CronService.DataReportService.GetContractPlanMonthReports:output_type -> CronService.GetContractPlanMonthReportsResp
-	172, // 619: CronService.DataReportService.GetContractPlanYearReports:output_type -> CronService.GetContractPlanYearReportsResp
-	174, // 620: CronService.DataReportService.GetContractSum:output_type -> CronService.GetContractSumResp
-	178, // 621: CronService.DataReportService.GetValidContractInfo:output_type -> CronService.GetValidContractInfoResp
-	179, // 622: CronService.DataReportService.GetCurrentNeedPay:output_type -> CronService.GetCurrentNeedPayResp
-	180, // 623: CronService.DataReportService.GetCurrentFactoringApply:output_type -> CronService.GetCurrentFactoringApplyResp
-	182, // 624: CronService.HashService.GetCompanyHash:output_type -> CronService.GetCompanyHashResp
-	186, // 625: CronService.HashService.GetMiHash:output_type -> CronService.GetMiHashResp
-	189, // 626: CronService.HashService.GetMedicineHash:output_type -> CronService.GetMedicineResp
-	192, // 627: CronService.HashService.GetContractHash:output_type -> CronService.GetContractHashResp
-	195, // 628: CronService.HashService.GetContractMiHash:output_type -> CronService.GetContractMiHashResp
-	198, // 629: CronService.HashService.GetConfigHash:output_type -> CronService.GetConfigHashResp
-	201, // 630: CronService.HashService.GetShipmentPlanHash:output_type -> CronService.GetShipmentPlanHashResp
-	204, // 631: CronService.HashService.GetShipmentOrderHash:output_type -> CronService.GetShipmentOrderHashResp
-	207, // 632: CronService.HashService.GetShipmentPayHash:output_type -> CronService.GetShipmentPayHashResp
-	210, // 633: CronService.HashService.GetShipmentFactoringHash:output_type -> CronService.GetShipmentFactoringHashResp
-	213, // 634: CronService.HashService.GetMessageHash:output_type -> CronService.ListMessageHashResp
-	330, // 635: CronService.HashService.GetCommonInfoHash:output_type -> CronService.GetInfoHashRsp
-	332, // 636: CronService.RankService.GetShipmentMedicineRankDataYear:output_type -> CronService.ShipmentMedicineRankDataYearResp
-	334, // 637: CronService.RankService.GetShipmentCompanyRankDataYear:output_type -> CronService.ShipmentCompanyRankDataYearResp
-	337, // 638: CronService.RankService.GetShipmentLogisticsList:output_type -> CronService.GetShipmentLogisticsListResp
-	216, // 639: CronService.RankService.GetShipmentRankMedicineDataYear:output_type -> CronService.GetShipmentRankMedicineDataYearResp
-	220, // 640: CronService.RankService.GetShipmentRankCompanyDataYear:output_type -> CronService.GetShipmentRankCompanyDataYearResp
-	223, // 641: CronService.RankService.GetRankMiReceiveYear:output_type -> CronService.GetRankMiReceiveYearResp
-	226, // 642: CronService.RankService.GetRankComReceiveYear:output_type -> CronService.GetRankComReceiveYearResp
-	229, // 643: CronService.RankService.GetRankMiPaidYear:output_type -> CronService.GetRankMiPaidYearResp
-	232, // 644: CronService.RankService.GetRankMedicineYear:output_type -> CronService.GetRankMedicineYearResp
-	234, // 645: CronService.RankService.GetMIBDashboardBaseInfo:output_type -> CronService.GetMIBDashboardBaseInfoResp
-	340, // 646: CronService.ReimbursementSerivce.List:output_type -> CronService.ReimbursementListRes
-	344, // 647: CronService.ReimbursementSerivce.UpApprovalFile:output_type -> CronService.StandardRes
-	344, // 648: CronService.ReimbursementSerivce.UpApplyFile:output_type -> CronService.StandardRes
-	344, // 649: CronService.ReimbursementSerivce.UpApplyAmount:output_type -> CronService.StandardRes
-	344, // 650: CronService.ReimbursementSerivce.UpApprovalAmount:output_type -> CronService.StandardRes
-	344, // 651: CronService.ReimbursementSerivce.UpExpectApplyAmount:output_type -> CronService.StandardRes
-	344, // 652: CronService.ReimbursementSerivce.Approval:output_type -> CronService.StandardRes
-	350, // 653: CronService.MicroToolsService.GetNextWorkDay:output_type -> CronService.GetNextWorkDayRsp
-	479, // [479:654] is the sub-list for method output_type
-	304, // [304:479] is the sub-list for method input_type
+	364, // 427: CronService.CronService.CronRemindMiPayMsg:input_type -> CronService.CreateMessageReq
+	364, // 428: CronService.CronService.CronShipmentPayOrderFail:input_type -> CronService.CreateMessageReq
+	312, // 429: CronService.StockService.StockSync:input_type -> CronService.StockSyncReq
+	315, // 430: CronService.StockService.ComStockMedicineBindList:input_type -> CronService.ComStockMedicineBindListReq
+	321, // 431: CronService.StockService.ComStockMedicineBind:input_type -> CronService.ComStockMedicineBindReq
+	318, // 432: CronService.StockService.MiStockMedicineBindList:input_type -> CronService.MiStockMedicineBindListReq
+	323, // 433: CronService.StockService.MiStockMedicineBind:input_type -> CronService.MiStockMedicineBindReq
+	325, // 434: CronService.StockService.StockList:input_type -> CronService.StockListReq
+	134, // 435: CronService.DataReportService.GetShipmentPlanDayReports:input_type -> CronService.GetShipmentPlanReportsReq
+	134, // 436: CronService.DataReportService.GetShipmentPlanMonthReports:input_type -> CronService.GetShipmentPlanReportsReq
+	134, // 437: CronService.DataReportService.GetShipmentPlanYearReports:input_type -> CronService.GetShipmentPlanReportsReq
+	146, // 438: CronService.DataReportService.GetShipmentOrderDayReports:input_type -> CronService.GetShipmentOrderReportsReq
+	146, // 439: CronService.DataReportService.GetShipmentOrderMonthReports:input_type -> CronService.GetShipmentOrderReportsReq
+	146, // 440: CronService.DataReportService.GetShipmentOrderYearReports:input_type -> CronService.GetShipmentOrderReportsReq
+	155, // 441: CronService.DataReportService.GetFactoringOrderDayReports:input_type -> CronService.GetFactoringOrderReportsReq
+	155, // 442: CronService.DataReportService.GetFactoringOrderMonthReports:input_type -> CronService.GetFactoringOrderReportsReq
+	155, // 443: CronService.DataReportService.GetFactoringOrderYearReports:input_type -> CronService.GetFactoringOrderReportsReq
+	164, // 444: CronService.DataReportService.GetContractPlanDayReports:input_type -> CronService.GetContractPlanReportsReq
+	164, // 445: CronService.DataReportService.GetContractPlanMonthReports:input_type -> CronService.GetContractPlanReportsReq
+	164, // 446: CronService.DataReportService.GetContractPlanYearReports:input_type -> CronService.GetContractPlanReportsReq
+	164, // 447: CronService.DataReportService.GetContractSum:input_type -> CronService.GetContractPlanReportsReq
+	175, // 448: CronService.DataReportService.GetValidContractInfo:input_type -> CronService.GetValidContractInfoReq
+	176, // 449: CronService.DataReportService.GetCurrentNeedPay:input_type -> CronService.GetCurrentNeedPayReq
+	177, // 450: CronService.DataReportService.GetCurrentFactoringApply:input_type -> CronService.GetCurrentFactoringApplyReq
+	181, // 451: CronService.HashService.GetCompanyHash:input_type -> CronService.GetCompanyHashReq
+	184, // 452: CronService.HashService.GetMiHash:input_type -> CronService.GetMiHashReq
+	187, // 453: CronService.HashService.GetMedicineHash:input_type -> CronService.GetMedicineReq
+	190, // 454: CronService.HashService.GetContractHash:input_type -> CronService.GetContractHashReq
+	193, // 455: CronService.HashService.GetContractMiHash:input_type -> CronService.GetContractMiHashReq
+	196, // 456: CronService.HashService.GetConfigHash:input_type -> CronService.GetConfigHashReq
+	199, // 457: CronService.HashService.GetShipmentPlanHash:input_type -> CronService.GetShipmentPlanHashReq
+	202, // 458: CronService.HashService.GetShipmentOrderHash:input_type -> CronService.GetShipmentOrderHashReq
+	205, // 459: CronService.HashService.GetShipmentPayHash:input_type -> CronService.GetShipmentPayHashReq
+	208, // 460: CronService.HashService.GetShipmentFactoringHash:input_type -> CronService.GetShipmentFactoringHashReq
+	211, // 461: CronService.HashService.GetMessageHash:input_type -> CronService.ListMessageHashReq
+	328, // 462: CronService.HashService.GetCommonInfoHash:input_type -> CronService.GetInfoHashReq
+	331, // 463: CronService.RankService.GetShipmentMedicineRankDataYear:input_type -> CronService.ShipmentRankDataYearReq
+	331, // 464: CronService.RankService.GetShipmentCompanyRankDataYear:input_type -> CronService.ShipmentRankDataYearReq
+	336, // 465: CronService.RankService.GetShipmentLogisticsList:input_type -> CronService.GetShipmentLogisticsListReq
+	214, // 466: CronService.RankService.GetShipmentRankMedicineDataYear:input_type -> CronService.GetShipmentRankMedicineDataYearReq
+	217, // 467: CronService.RankService.GetShipmentRankCompanyDataYear:input_type -> CronService.GetShipmentRankCompanyDataYearReq
+	221, // 468: CronService.RankService.GetRankMiReceiveYear:input_type -> CronService.GetRankMiReceiveYearReq
+	224, // 469: CronService.RankService.GetRankComReceiveYear:input_type -> CronService.GetRankComReceiveYearReq
+	227, // 470: CronService.RankService.GetRankMiPaidYear:input_type -> CronService.GetRankMiPaidYearReq
+	230, // 471: CronService.RankService.GetRankMedicineYear:input_type -> CronService.GetRankMedicineYearReq
+	233, // 472: CronService.RankService.GetMIBDashboardBaseInfo:input_type -> CronService.GetMIBDashboardBaseInfoReq
+	339, // 473: CronService.ReimbursementSerivce.List:input_type -> CronService.ReimbursementListReq
+	343, // 474: CronService.ReimbursementSerivce.UpApprovalFile:input_type -> CronService.ReimbursementUpApprovalFile
+	342, // 475: CronService.ReimbursementSerivce.UpApplyFile:input_type -> CronService.ReimbursementUpApplyFile
+	346, // 476: CronService.ReimbursementSerivce.UpApplyAmount:input_type -> CronService.ReimbursementUpApplyAmount
+	345, // 477: CronService.ReimbursementSerivce.UpApprovalAmount:input_type -> CronService.ReimbursementUpApprovalAmount
+	347, // 478: CronService.ReimbursementSerivce.UpExpectApplyAmount:input_type -> CronService.ReimbursementUpExpectApplyAmount
+	348, // 479: CronService.ReimbursementSerivce.Approval:input_type -> CronService.ReimbursementApproval
+	349, // 480: CronService.MicroToolsService.GetNextWorkDay:input_type -> CronService.GetNextWorkDayReq
+	302, // 481: CronService.CronService.CreateArea:output_type -> CronService.CreateAreaResp
+	304, // 482: CronService.CronService.EditArea:output_type -> CronService.EditAreaResp
+	306, // 483: CronService.CronService.DeleteArea:output_type -> CronService.DeleteAreaResp
+	308, // 484: CronService.CronService.ListArea:output_type -> CronService.ListAreaResp
+	308, // 485: CronService.CronService.CommonListArea:output_type -> CronService.ListAreaResp
+	274, // 486: CronService.CronService.ContractUpload:output_type -> CronService.ContractCreateResp
+	293, // 487: CronService.CronService.ReturnZoneList:output_type -> CronService.ReturnZoneListResp
+	296, // 488: CronService.CronService.ReturnMiList:output_type -> CronService.ReturnMiListResp
+	299, // 489: CronService.CronService.ReturnMiMedicineList:output_type -> CronService.ReturnMiMedicineListResp
+	288, // 490: CronService.CronService.ContractProportionList:output_type -> CronService.ContractProportionListResp
+	291, // 491: CronService.CronService.ContractProportionUpdate:output_type -> CronService.ContractProportionUpdateResp
+	279, // 492: CronService.CronService.RemovePlans:output_type -> CronService.RemovePlansResp
+	277, // 493: CronService.CronService.ReceivePlans:output_type -> CronService.ReceivePlansResp
+	264, // 494: CronService.CronService.WaitList:output_type -> CronService.ListZCResp
+	258, // 495: CronService.CronService.SplitToPlan:output_type -> CronService.SplitToPlanResp
+	264, // 496: CronService.CronService.ListZC:output_type -> CronService.ListZCResp
+	263, // 497: CronService.CronService.CreateShipmentZC:output_type -> CronService.CreateZCResp
+	262, // 498: CronService.CronService.DeleteShipmentZC:output_type -> CronService.DeleteZCResp
+	267, // 499: CronService.CronService.DetailSupplement:output_type -> CronService.DetailSupplementResp
+	269, // 500: CronService.CronService.DetailPlanList:output_type -> CronService.DetailPlanListResp
+	274, // 501: CronService.CronService.ContractCreate:output_type -> CronService.ContractCreateResp
+	281, // 502: CronService.CronService.ContractRemove:output_type -> CronService.ContractRemoveResp
+	283, // 503: CronService.CronService.ContractStop:output_type -> CronService.ContractStopResp
+	286, // 504: CronService.CronService.ContractEdit:output_type -> CronService.ContractEditResp
+	11,  // 505: CronService.CronService.ListContract:output_type -> CronService.ContractListResp
+	17,  // 506: CronService.CronService.ListMiContract:output_type -> CronService.ContractMiListResp
+	20,  // 507: CronService.CronService.CreateOneContractMI:output_type -> CronService.CreateOneContractMIResp
+	22,  // 508: CronService.CronService.UpdateOneContractMI:output_type -> CronService.UpdateOneContractMIResp
+	24,  // 509: CronService.CronService.UpdateOneContract:output_type -> CronService.UpdateOneContractResp
+	26,  // 510: CronService.CronService.BatchOperateContract:output_type -> CronService.BatchOperateContractResp
+	29,  // 511: CronService.CronService.UpdateContractActive:output_type -> CronService.UpdateContractActiveResp
+	33,  // 512: CronService.CronService.DeleteOneContract:output_type -> CronService.DeleteOneContractResp
+	35,  // 513: CronService.CronService.DeleteOneContractMi:output_type -> CronService.DeleteOneContractMiResp
+	4,   // 514: CronService.CronService.GetContractInfo:output_type -> CronService.GetContractInfoResp
+	6,   // 515: CronService.CronService.CountContract:output_type -> CronService.CountContractResp
+	31,  // 516: CronService.CronService.RefreshContract:output_type -> CronService.RefreshContractResp
+	255, // 517: CronService.CronService.ResetContract:output_type -> CronService.ResetContractResp
+	8,   // 518: CronService.CronService.ContractDetail:output_type -> CronService.ContractDetailResp
+	15,  // 519: CronService.CronService.CheckContractList:output_type -> CronService.CheckContractListResp
+	37,  // 520: CronService.CronService.ListMedicine:output_type -> CronService.MedicineListResp
+	40,  // 521: CronService.CronService.MedicineListForQuery:output_type -> CronService.MedicineListForQueryResp
+	43,  // 522: CronService.CronService.CreateMedicine:output_type -> CronService.CreateMedicineResp
+	45,  // 523: CronService.CronService.CreateBatchMedicine:output_type -> CronService.CreateBatchMedicineResp
+	47,  // 524: CronService.CronService.UpdateMedicine:output_type -> CronService.UpdateMedicineResp
+	49,  // 525: CronService.CronService.UpdateMedicineActive:output_type -> CronService.UpdateMedicineActiveResp
+	51,  // 526: CronService.CronService.DeleteMedicine:output_type -> CronService.DeleteMedicineResp
+	53,  // 527: CronService.CronService.SelectTagByMedicineId:output_type -> CronService.SelectTagByMedicineIdResp
+	55,  // 528: CronService.CronService.SelectInfoByMedicineNames:output_type -> CronService.SelectInfoByMedicineNamesResp
+	57,  // 529: CronService.CronService.TagList:output_type -> CronService.TagListResp
+	60,  // 530: CronService.CronService.CreateTag:output_type -> CronService.CreateTagResp
+	62,  // 531: CronService.CronService.UpdateTag:output_type -> CronService.UpdateTagResp
+	64,  // 532: CronService.CronService.DeleteTag:output_type -> CronService.DeleteTagResp
+	66,  // 533: CronService.CronService.TagDetailList:output_type -> CronService.TagDetailListResp
+	69,  // 534: CronService.CronService.DeleteTagMedicine:output_type -> CronService.DeleteTagMedicineResp
+	71,  // 535: CronService.CronService.CreateTagMedicine:output_type -> CronService.CreateTagMedicineResp
+	73,  // 536: CronService.CronService.CommonMedicineQuery:output_type -> CronService.CommonMedicineQueryResp
+	76,  // 537: CronService.CronService.ListMi:output_type -> CronService.ListMiResp
+	79,  // 538: CronService.CronService.CommonMI:output_type -> CronService.CommonMIResp
+	82,  // 539: CronService.CronService.CreateOneMI:output_type -> CronService.CreateOneMIResp
+	84,  // 540: CronService.CronService.UpdateMi:output_type -> CronService.UpdateMiResp
+	91,  // 541: CronService.CronService.ListCompany:output_type -> CronService.ListCompanyResp
+	94,  // 542: CronService.CronService.CreateOneCompany:output_type -> CronService.CreateOneCompanyResp
+	96,  // 543: CronService.CronService.UpdateOneCompany:output_type -> CronService.UpdateOneCompanyResp
+	86,  // 544: CronService.CronService.CommonCompany:output_type -> CronService.CommonCompanyResp
+	89,  // 545: CronService.CronService.SelCompanyByNames:output_type -> CronService.SelCompanyByNamesResp
+	98,  // 546: CronService.CronService.ListTpPlanErr:output_type -> CronService.ListTpPlanErrResp
+	101, // 547: CronService.CronService.UpdateErrShipmentPlan:output_type -> CronService.UpdateErrShipmentPlanResp
+	103, // 548: CronService.CronService.ListShipmentPlan:output_type -> CronService.ListShipmentPlanResp
+	111, // 549: CronService.CronService.CountShipmentPlan:output_type -> CronService.CountShipmentPlanResp
+	106, // 550: CronService.CronService.DetailShipmentOrder:output_type -> CronService.DetailShipmentOrderResp
+	108, // 551: CronService.CronService.ListShipmentPlanForOrder:output_type -> CronService.ListShipmentPlanForOrderResp
+	113, // 552: CronService.CronService.CreateShipmentOrder:output_type -> CronService.CreateShipmentOrderResp
+	115, // 553: CronService.CronService.ListShipmentOrder:output_type -> CronService.ListShipmentOrderResp
+	118, // 554: CronService.CronService.CountShipmentOrder:output_type -> CronService.CountShipmentOrderResp
+	120, // 555: CronService.CronService.ReceiveShipmentOrder:output_type -> CronService.ReceiveShipmentOrderResp
+	122, // 556: CronService.CronService.GetContractByShipmentPlanId:output_type -> CronService.GetContractByShipmentPlanIdResp
+	131, // 557: CronService.CronService.GetConfig:output_type -> CronService.GetConfigResp
+	128, // 558: CronService.CronService.UpdateConfig:output_type -> CronService.UpdateConfigResp
+	129, // 559: CronService.CronService.InsertConfigs:output_type -> CronService.InsertConfigsResp
+	130, // 560: CronService.CronService.DeleteConfigs:output_type -> CronService.DeleteConfigsResp
+	236, // 561: CronService.CronService.ListCompanyBind:output_type -> CronService.ListCompanyBindResp
+	246, // 562: CronService.CronService.CompanyBind:output_type -> CronService.CompanyBindResp
+	239, // 563: CronService.CronService.ListMiBind:output_type -> CronService.ListMiBindResp
+	249, // 564: CronService.CronService.MiBind:output_type -> CronService.MiBindResp
+	242, // 565: CronService.CronService.ListMedicineBind:output_type -> CronService.ListMedicineBindResp
+	252, // 566: CronService.CronService.MedicineBind:output_type -> CronService.MedicineBindResp
+	311, // 567: CronService.CronService.ListContractsByMiContractIds:output_type -> CronService.ListContractsResp
+	356, // 568: CronService.CronService.CronWsGetCompany:output_type -> CronService.CreateTpSyncInfoResp
+	356, // 569: CronService.CronService.CronWsGetCompanySC:output_type -> CronService.CreateTpSyncInfoResp
+	356, // 570: CronService.CronService.CronWsGetContract:output_type -> CronService.CreateTpSyncInfoResp
+	356, // 571: CronService.CronService.CronWsGetGoods:output_type -> CronService.CreateTpSyncInfoResp
+	356, // 572: CronService.CronService.CronWsGetHospital:output_type -> CronService.CreateTpSyncInfoResp
+	356, // 573: CronService.CronService.CronWsGetPlan:output_type -> CronService.CreateTpSyncInfoResp
+	356, // 574: CronService.CronService.SyncPShipmentPlan:output_type -> CronService.CreateTpSyncInfoResp
+	2,   // 575: CronService.CronService.CronBankSyncCNAPS:output_type -> CronService.OperateIntResp
+	2,   // 576: CronService.CronService.CronBankSyncBankPayment:output_type -> CronService.OperateIntResp
+	2,   // 577: CronService.CronService.CronBankMiAutoPay:output_type -> CronService.OperateIntResp
+	2,   // 578: CronService.CronService.CronBankAutoFactoringRepay:output_type -> CronService.OperateIntResp
+	2,   // 579: CronService.CronService.CronBankSyncReceipt:output_type -> CronService.OperateIntResp
+	2,   // 580: CronService.CronService.CronBankSyncFactoring:output_type -> CronService.OperateIntResp
+	2,   // 581: CronService.CronService.CronBankSyncFactoringRepay:output_type -> CronService.OperateIntResp
+	356, // 582: CronService.CronService.SyncShipmentPlanInfo:output_type -> CronService.CreateTpSyncInfoResp
+	356, // 583: CronService.CronService.CronCityGetContract:output_type -> CronService.CreateTpSyncInfoResp
+	356, // 584: CronService.CronService.CronCityGetPlan:output_type -> CronService.CreateTpSyncInfoResp
+	356, // 585: CronService.CronService.SyncPContactRenew:output_type -> CronService.CreateTpSyncInfoResp
+	356, // 586: CronService.CronService.SyncCContactRenew:output_type -> CronService.CreateTpSyncInfoResp
+	363, // 587: CronService.CronService.CronReportShipmentPlanYear:output_type -> CronService.CreateReportResp
+	363, // 588: CronService.CronService.CronReportShipmentPlanMonth:output_type -> CronService.CreateReportResp
+	363, // 589: CronService.CronService.CronReportShipmentPlanDay:output_type -> CronService.CreateReportResp
+	363, // 590: CronService.CronService.CronReportContractPlanYear:output_type -> CronService.CreateReportResp
+	363, // 591: CronService.CronService.CronReportContractPlanMonth:output_type -> CronService.CreateReportResp
+	363, // 592: CronService.CronService.CronReportContractPlanDay:output_type -> CronService.CreateReportResp
+	365, // 593: CronService.CronService.CronShipmentPlanOutTimeMsg:output_type -> CronService.CreateMessageResp
+	365, // 594: CronService.CronService.CronSendShipmentPlanWarningMsg:output_type -> CronService.CreateMessageResp
+	365, // 595: CronService.CronService.CronShipmentOrderOverdueMsg:output_type -> CronService.CreateMessageResp
+	365, // 596: CronService.CronService.CronShipmentOrderSendingDeadlineMsg:output_type -> CronService.CreateMessageResp
+	365, // 597: CronService.CronService.CronShipmentReceiveWarningMsg:output_type -> CronService.CreateMessageResp
+	363, // 598: CronService.CronService.CronReportFactoringOrderYear:output_type -> CronService.CreateReportResp
+	363, // 599: CronService.CronService.CronReportFactoringOrderMonth:output_type -> CronService.CreateReportResp
+	363, // 600: CronService.CronService.CronReportFactoringOrderDay:output_type -> CronService.CreateReportResp
+	363, // 601: CronService.CronService.CronReportShipmentOrderYear:output_type -> CronService.CreateReportResp
+	363, // 602: CronService.CronService.CronReportShipmentOrderMonth:output_type -> CronService.CreateReportResp
+	363, // 603: CronService.CronService.CronReportShipmentOrderDay:output_type -> CronService.CreateReportResp
+	365, // 604: CronService.CronService.CronRemindMiPayMsg:output_type -> CronService.CreateMessageResp
+	365, // 605: CronService.CronService.CronShipmentPayOrderFail:output_type -> CronService.CreateMessageResp
+	314, // 606: CronService.StockService.StockSync:output_type -> CronService.StockSyncResp
+	316, // 607: CronService.StockService.ComStockMedicineBindList:output_type -> CronService.ComStockMedicineBindListResp
+	322, // 608: CronService.StockService.ComStockMedicineBind:output_type -> CronService.ComStockMedicineBindResp
+	319, // 609: CronService.StockService.MiStockMedicineBindList:output_type -> CronService.MiStockMedicineBindListResp
+	324, // 610: CronService.StockService.MiStockMedicineBind:output_type -> CronService.MiStockMedicineBindResp
+	326, // 611: CronService.StockService.StockList:output_type -> CronService.StockListResp
+	141, // 612: CronService.DataReportService.GetShipmentPlanDayReports:output_type -> CronService.GetShipmentPlanDayReportsResp
+	142, // 613: CronService.DataReportService.GetShipmentPlanMonthReports:output_type -> CronService.GetShipmentPlanMonthReportsResp
+	143, // 614: CronService.DataReportService.GetShipmentPlanYearReports:output_type -> CronService.GetShipmentPlanYearReportsResp
+	150, // 615: CronService.DataReportService.GetShipmentOrderDayReports:output_type -> CronService.GetShipmentOrderDayReportsResp
+	151, // 616: CronService.DataReportService.GetShipmentOrderMonthReports:output_type -> CronService.GetShipmentOrderMonthReportsResp
+	152, // 617: CronService.DataReportService.GetShipmentOrderYearReports:output_type -> CronService.GetShipmentOrderYearReportsResp
+	157, // 618: CronService.DataReportService.GetFactoringOrderDayReports:output_type -> CronService.GetFactoringOrderDayReportsResp
+	159, // 619: CronService.DataReportService.GetFactoringOrderMonthReports:output_type -> CronService.GetFactoringOrderMonthReportsResp
+	161, // 620: CronService.DataReportService.GetFactoringOrderYearReports:output_type -> CronService.GetFactoringOrderYearReportsResp
+	168, // 621: CronService.DataReportService.GetContractPlanDayReports:output_type -> CronService.GetContractPlanDayReportsResp
+	170, // 622: CronService.DataReportService.GetContractPlanMonthReports:output_type -> CronService.GetContractPlanMonthReportsResp
+	172, // 623: CronService.DataReportService.GetContractPlanYearReports:output_type -> CronService.GetContractPlanYearReportsResp
+	174, // 624: CronService.DataReportService.GetContractSum:output_type -> CronService.GetContractSumResp
+	178, // 625: CronService.DataReportService.GetValidContractInfo:output_type -> CronService.GetValidContractInfoResp
+	179, // 626: CronService.DataReportService.GetCurrentNeedPay:output_type -> CronService.GetCurrentNeedPayResp
+	180, // 627: CronService.DataReportService.GetCurrentFactoringApply:output_type -> CronService.GetCurrentFactoringApplyResp
+	182, // 628: CronService.HashService.GetCompanyHash:output_type -> CronService.GetCompanyHashResp
+	186, // 629: CronService.HashService.GetMiHash:output_type -> CronService.GetMiHashResp
+	189, // 630: CronService.HashService.GetMedicineHash:output_type -> CronService.GetMedicineResp
+	192, // 631: CronService.HashService.GetContractHash:output_type -> CronService.GetContractHashResp
+	195, // 632: CronService.HashService.GetContractMiHash:output_type -> CronService.GetContractMiHashResp
+	198, // 633: CronService.HashService.GetConfigHash:output_type -> CronService.GetConfigHashResp
+	201, // 634: CronService.HashService.GetShipmentPlanHash:output_type -> CronService.GetShipmentPlanHashResp
+	204, // 635: CronService.HashService.GetShipmentOrderHash:output_type -> CronService.GetShipmentOrderHashResp
+	207, // 636: CronService.HashService.GetShipmentPayHash:output_type -> CronService.GetShipmentPayHashResp
+	210, // 637: CronService.HashService.GetShipmentFactoringHash:output_type -> CronService.GetShipmentFactoringHashResp
+	213, // 638: CronService.HashService.GetMessageHash:output_type -> CronService.ListMessageHashResp
+	330, // 639: CronService.HashService.GetCommonInfoHash:output_type -> CronService.GetInfoHashRsp
+	332, // 640: CronService.RankService.GetShipmentMedicineRankDataYear:output_type -> CronService.ShipmentMedicineRankDataYearResp
+	334, // 641: CronService.RankService.GetShipmentCompanyRankDataYear:output_type -> CronService.ShipmentCompanyRankDataYearResp
+	337, // 642: CronService.RankService.GetShipmentLogisticsList:output_type -> CronService.GetShipmentLogisticsListResp
+	216, // 643: CronService.RankService.GetShipmentRankMedicineDataYear:output_type -> CronService.GetShipmentRankMedicineDataYearResp
+	220, // 644: CronService.RankService.GetShipmentRankCompanyDataYear:output_type -> CronService.GetShipmentRankCompanyDataYearResp
+	223, // 645: CronService.RankService.GetRankMiReceiveYear:output_type -> CronService.GetRankMiReceiveYearResp
+	226, // 646: CronService.RankService.GetRankComReceiveYear:output_type -> CronService.GetRankComReceiveYearResp
+	229, // 647: CronService.RankService.GetRankMiPaidYear:output_type -> CronService.GetRankMiPaidYearResp
+	232, // 648: CronService.RankService.GetRankMedicineYear:output_type -> CronService.GetRankMedicineYearResp
+	234, // 649: CronService.RankService.GetMIBDashboardBaseInfo:output_type -> CronService.GetMIBDashboardBaseInfoResp
+	340, // 650: CronService.ReimbursementSerivce.List:output_type -> CronService.ReimbursementListRes
+	344, // 651: CronService.ReimbursementSerivce.UpApprovalFile:output_type -> CronService.StandardRes
+	344, // 652: CronService.ReimbursementSerivce.UpApplyFile:output_type -> CronService.StandardRes
+	344, // 653: CronService.ReimbursementSerivce.UpApplyAmount:output_type -> CronService.StandardRes
+	344, // 654: CronService.ReimbursementSerivce.UpApprovalAmount:output_type -> CronService.StandardRes
+	344, // 655: CronService.ReimbursementSerivce.UpExpectApplyAmount:output_type -> CronService.StandardRes
+	344, // 656: CronService.ReimbursementSerivce.Approval:output_type -> CronService.StandardRes
+	350, // 657: CronService.MicroToolsService.GetNextWorkDay:output_type -> CronService.GetNextWorkDayRsp
+	481, // [481:658] is the sub-list for method output_type
+	304, // [304:481] is the sub-list for method input_type
 	304, // [304:304] is the sub-list for extension type_name
 	304, // [304:304] is the sub-list for extension extendee
 	0,   // [0:304] is the sub-list for field type_name
@@ -40842,6 +40857,10 @@ type CronServiceClient interface {
 	CronReportShipmentOrderYear(ctx context.Context, in *CreateReportReq, opts ...grpc.CallOption) (*CreateReportResp, error)
 	CronReportShipmentOrderMonth(ctx context.Context, in *CreateReportReq, opts ...grpc.CallOption) (*CreateReportResp, error)
 	CronReportShipmentOrderDay(ctx context.Context, in *CreateReportReq, opts ...grpc.CallOption) (*CreateReportResp, error)
+	//医疗机构支付按日提醒定时任务
+	CronRemindMiPayMsg(ctx context.Context, in *CreateMessageReq, opts ...grpc.CallOption) (*CreateMessageResp, error)
+	//医疗机构被动支付置为失败
+	CronShipmentPayOrderFail(ctx context.Context, in *CreateMessageReq, opts ...grpc.CallOption) (*CreateMessageResp, error)
 }
 
 type cronServiceClient struct {
@@ -41959,6 +41978,24 @@ func (c *cronServiceClient) CronReportShipmentOrderDay(ctx context.Context, in *
 	return out, nil
 }
 
+func (c *cronServiceClient) CronRemindMiPayMsg(ctx context.Context, in *CreateMessageReq, opts ...grpc.CallOption) (*CreateMessageResp, error) {
+	out := new(CreateMessageResp)
+	err := c.cc.Invoke(ctx, "/CronService.CronService/CronRemindMiPayMsg", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *cronServiceClient) CronShipmentPayOrderFail(ctx context.Context, in *CreateMessageReq, opts ...grpc.CallOption) (*CreateMessageResp, error) {
+	out := new(CreateMessageResp)
+	err := c.cc.Invoke(ctx, "/CronService.CronService/CronShipmentPayOrderFail", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // CronServiceServer is the server API for CronService service.
 type CronServiceServer interface {
 	//区域创建
@@ -42158,6 +42195,10 @@ type CronServiceServer interface {
 	CronReportShipmentOrderYear(context.Context, *CreateReportReq) (*CreateReportResp, error)
 	CronReportShipmentOrderMonth(context.Context, *CreateReportReq) (*CreateReportResp, error)
 	CronReportShipmentOrderDay(context.Context, *CreateReportReq) (*CreateReportResp, error)
+	//医疗机构支付按日提醒定时任务
+	CronRemindMiPayMsg(context.Context, *CreateMessageReq) (*CreateMessageResp, error)
+	//医疗机构被动支付置为失败
+	CronShipmentPayOrderFail(context.Context, *CreateMessageReq) (*CreateMessageResp, error)
 }
 
 // UnimplementedCronServiceServer can be embedded to have forward compatible implementations.
@@ -42532,6 +42573,12 @@ func (*UnimplementedCronServiceServer) CronReportShipmentOrderMonth(context.Cont
 }
 func (*UnimplementedCronServiceServer) CronReportShipmentOrderDay(context.Context, *CreateReportReq) (*CreateReportResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CronReportShipmentOrderDay not implemented")
+}
+func (*UnimplementedCronServiceServer) CronRemindMiPayMsg(context.Context, *CreateMessageReq) (*CreateMessageResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CronRemindMiPayMsg not implemented")
+}
+func (*UnimplementedCronServiceServer) CronShipmentPayOrderFail(context.Context, *CreateMessageReq) (*CreateMessageResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CronShipmentPayOrderFail not implemented")
 }
 
 func RegisterCronServiceServer(s *grpc.Server, srv CronServiceServer) {
@@ -44752,6 +44799,42 @@ func _CronService_CronReportShipmentOrderDay_Handler(srv interface{}, ctx contex
 	return interceptor(ctx, in, info, handler)
 }
 
+func _CronService_CronRemindMiPayMsg_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CreateMessageReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CronServiceServer).CronRemindMiPayMsg(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/CronService.CronService/CronRemindMiPayMsg",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CronServiceServer).CronRemindMiPayMsg(ctx, req.(*CreateMessageReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _CronService_CronShipmentPayOrderFail_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CreateMessageReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CronServiceServer).CronShipmentPayOrderFail(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/CronService.CronService/CronShipmentPayOrderFail",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CronServiceServer).CronShipmentPayOrderFail(ctx, req.(*CreateMessageReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 var _CronService_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "CronService.CronService",
 	HandlerType: (*CronServiceServer)(nil),
@@ -45247,6 +45330,14 @@ var _CronService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CronReportShipmentOrderDay",
 			Handler:    _CronService_CronReportShipmentOrderDay_Handler,
+		},
+		{
+			MethodName: "CronRemindMiPayMsg",
+			Handler:    _CronService_CronRemindMiPayMsg_Handler,
+		},
+		{
+			MethodName: "CronShipmentPayOrderFail",
+			Handler:    _CronService_CronShipmentPayOrderFail_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
