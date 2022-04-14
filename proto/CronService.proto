@@ -2675,156 +2675,6 @@ message ListAreaVo {
 
 //区域相关 end
 service CronService {
-
-  //区域创建
-  rpc CreateArea(CreateAreaReq) returns(CreateAreaResp);
-  //区域编辑
-  rpc EditArea(EditAreaReq) returns(EditAreaResp);
-  //区域删除
-  rpc DeleteArea(DeleteAreaReq) returns(DeleteAreaResp);
-  //区域列表
-  rpc ListArea(ListAreaReq) returns(ListAreaResp);
-  //通用区域列表
-  rpc CommonListArea(ListAreaReq) returns(ListAreaResp);
-
-
-
-  //上传合同 鹰潭  20211109
-  rpc ContractUpload(ContractCreateReq) returns(ContractCreateResp);
-
-  // 20211103 濮阳三期  新增 回款情况 报表
-  rpc ReturnZoneList(ReturnZoneListReq) returns(ReturnZoneListResp);
-  rpc ReturnMiList(ReturnMiListReq) returns(ReturnMiListResp);
-  rpc ReturnMiMedicineList(ReturnMiMedicineListReq) returns(ReturnMiMedicineListResp);
-
-  // 20211027 鹰潭新增  合同药品国家规则
-  // 合同药品国家规则 列表
-  rpc ContractProportionList(ContractProportionListReq) returns(ContractProportionListResp);
-  // 合同药品国家规则 更新
-  rpc ContractProportionUpdate(ContractProportionUpdateReq) returns(ContractProportionUpdateResp);
-
-
-  // 删除订单
-  rpc RemovePlans(RemovePlansReq) returns(RemovePlansResp);
-  // 接单
-  rpc ReceivePlans(ReceivePlansReq) returns(ReceivePlansResp);
-  // 待接单列表
-  rpc WaitList(ListZCReq) returns(ListZCResp);
-  // 拆单
-  rpc SplitToPlan(SplitToPlanReq) returns(SplitToPlanResp);
-  //招采单列表
-  rpc ListZC(ListZCReq) returns(ListZCResp);
-  //平台创建招采单逻辑
-  rpc CreateShipmentZC(CreateZCReq) returns(CreateZCResp);
-  //删除未拆单且未过期的招采单
-  rpc DeleteShipmentZC(DeleteZCReq) returns(DeleteZCResp);
-  // 招采详情补充
-  rpc DetailSupplement(DetailSupplementReq) returns(DetailSupplementResp);
-  //鹰潭 招采详情 订单列表
-  rpc DetailPlanList(DetailPlanListReq) returns(DetailPlanListResp);
-
-  //合同相关
-  //新建合同
-  rpc ContractCreate(ContractCreateReq) returns(ContractCreateResp);
-  // 删除合同
-  rpc ContractRemove(ContractRemoveReq) returns(ContractRemoveResp);
-  // 停用合同
-  rpc ContractStop(ContractStopReq) returns(ContractStopResp);
-  // 编辑合同
-  rpc ContractEdit(ContractEditReq) returns(ContractEditResp);
-
-  rpc ListContract(ContractListReq) returns(ContractListResp);
-  rpc ListMiContract(ContractMiListReq) returns(ContractMiListResp);
-  rpc CreateOneContractMI(CreateOneContractMIReq) returns(CreateOneContractMIResp);
-  rpc UpdateOneContractMI(UpdateOneContractMIReq) returns(UpdateOneContractMIResp);
-  rpc UpdateOneContract(UpdateOneContractReq) returns(UpdateOneContractResp);
-  rpc BatchOperateContract(BatchOperateContractReq) returns(BatchOperateContractResp);
-  rpc UpdateContractActive(UpdateContractActiveReq) returns(UpdateContractActiveResp);
-  rpc DeleteOneContract(DeleteOneContractReq) returns(DeleteOneContractResp);
-  rpc DeleteOneContractMi(DeleteOneContractMiReq) returns(DeleteOneContractMiResp);
-  rpc GetContractInfo(GetContractInfoReq) returns(GetContractInfoResp);
-  rpc CountContract(CountContractReq) returns(CountContractResp);
-  rpc RefreshContract(RefreshContractReq) returns(RefreshContractResp);
-  //合同重置
-  rpc ResetContract(ResetContractReq) returns(ResetContractResp);
-  //暂未使用
-  rpc ContractDetail(ContractDetailReq) returns(ContractDetailResp);
-  rpc CheckContractList(UpCheckContractReq) returns(CheckContractListResp);
-  //药品相关
-  rpc ListMedicine(MedicineListReq) returns(MedicineListResp);
-  rpc MedicineListForQuery(MedicineListForQueryReq) returns(MedicineListForQueryResp);
-  rpc CreateMedicine(CreateMedicineReq) returns(CreateMedicineResp);
-  rpc CreateBatchMedicine(CreateBatchMedicineReq) returns(CreateBatchMedicineResp);
-  rpc UpdateMedicine(UpdateMedicineReq) returns(UpdateMedicineResp);
-  rpc UpdateMedicineActive(UpdateMedicineActiveReq) returns(UpdateMedicineActiveResp);
-  rpc DeleteMedicine(DeleteMedicineReq) returns(DeleteMedicineResp);
-  rpc SelectTagByMedicineId(SelectTagByMedicineIdReq) returns(SelectTagByMedicineIdResp);
-  rpc SelectInfoByMedicineNames(SelectInfoByMedicineNamesReq) returns(SelectInfoByMedicineNamesResp);
-  //药品标签相关
-  rpc TagList(TagListReq) returns(TagListResp);
-  rpc CreateTag(CreateTagReq) returns(CreateTagResp);
-  rpc UpdateTag(UpdateTagReq) returns(UpdateTagResp);
-  rpc DeleteTag(DeleteTagReq) returns(DeleteTagResp);
-  rpc TagDetailList(TagDetailListReq) returns(TagDetailListResp);
-  rpc DeleteTagMedicine(DeleteTagMedicineReq) returns(DeleteTagMedicineResp);
-  rpc CreateTagMedicine(CreateTagMedicineReq) returns(CreateTagMedicineResp);
-  rpc CommonMedicineQuery(CommonMedicineQueryReq) returns(CommonMedicineQueryResp);
-  //医疗机构相关
-  rpc ListMi(ListMiReq) returns(ListMiResp);
-  rpc CommonMI(CommonMIReq) returns(CommonMIResp);
-  rpc CreateOneMI(CreateOneMIReq) returns(CreateOneMIResp);
-  rpc UpdateMi(UpdateMiReq) returns(UpdateMiResp);
-
-  //配送企业相关
-  rpc ListCompany(ListCompanyReq) returns(ListCompanyResp);
-  rpc CreateOneCompany(CreateOneCompanyReq) returns(CreateOneCompanyResp);
-  rpc UpdateOneCompany(UpdateOneCompanyReq) returns(UpdateOneCompanyResp);
-  rpc CommonCompany(CommonCompanyReq) returns(CommonCompanyResp);
-  rpc SelCompanyByNames(SelCompanyByNamesReq) returns(SelCompanyByNamesResp);
-
-  //招采异常订单相关
-  rpc ListTpPlanErr(ListTpPlanErrReq) returns(ListTpPlanErrResp);
-  rpc UpdateErrShipmentPlan(UpdateErrShipmentPlanReq) returns(UpdateErrShipmentPlanResp);
-  //招采单(配送)相关
-  rpc ListShipmentPlan(ListShipmentPlanReq) returns(ListShipmentPlanResp);
-  rpc CountShipmentPlan(CountShipmentPlanReq) returns(CountShipmentPlanResp);
-  //配送单详情
-  rpc DetailShipmentOrder(DetailShipmentOrderReq) returns(DetailShipmentOrderResp);
-  rpc ListShipmentPlanForOrder(ListShipmentPlanForOrderReq) returns(ListShipmentPlanForOrderResp);
-  //配送单创建
-  rpc CreateShipmentOrder(CreateShipmentOrderReq) returns(CreateShipmentOrderResp);
-  //配送单列表
-  rpc ListShipmentOrder(ListShipmentOrderReq) returns(ListShipmentOrderResp);
-  //配送单表头汇总
-  rpc CountShipmentOrder(CountShipmentOrderReq) returns(CountShipmentOrderResp);
-  //配送单收获
-  rpc ReceiveShipmentOrder(ReceiveShipmentOrderReq) returns(ReceiveShipmentOrderResp);
-  //根据招采单(配送计划)id查询合同编号
-  rpc GetContractByShipmentPlanId(GetContractByShipmentPlanIdReq) returns(GetContractByShipmentPlanIdResp);
-
-  //通用配置查询
-  rpc GetConfig(GetConfigReq) returns (GetConfigResp);
-  //修改配置
-  rpc UpdateConfig(UpdateConfigReq) returns (UpdateConfigResp);
-  //批量插入配置
-  rpc InsertConfigs(InsertConfigsReq) returns (InsertConfigsResp);
-  //删除配置
-  rpc DeleteConfigs(DeleteConfigsReq) returns (DeleteConfigsResp);
-
-  //配送企业绑定
-  rpc ListCompanyBind(ListCompanyBindReq) returns (ListCompanyBindResp);
-  rpc CompanyBind(CompanyBindReq) returns (CompanyBindResp);
-  //医疗机构绑定
-  rpc ListMiBind(ListMiBindReq) returns (ListMiBindResp);
-  rpc MiBind(MiBindReq) returns (MiBindResp);
-  //药品绑定绑定
-  rpc ListMedicineBind(ListMedicineBindReq) returns (ListMedicineBindResp);
-  rpc MedicineBind(MedicineBindReq) returns (MedicineBindResp);
-
-  // 由 contractMiId 列表 获取 主合同列表
-  rpc ListContractsByMiContractIds(MiContractIdsReq) returns (ListContractsResp);
-  
-  
   
   //地市医保局获取配送企业信息
   rpc CronWsGetCompany(CreateTpSyncComInfoReq) returns(CreateTpSyncInfoResp);
@@ -3094,78 +2944,6 @@ message GetInfoHashRsp {
   int64 pageNumber = 4;
 }
 
-// 库存service
-service StockService{
-  //库存数据上报
-  rpc StockSync(StockSyncReq) returns (StockSyncResp);
-  //配送企业药品绑定列表
-  rpc ComStockMedicineBindList(ComStockMedicineBindListReq) returns (ComStockMedicineBindListResp);
-  //配送企业绑定his药品code
-  rpc ComStockMedicineBind(ComStockMedicineBindReq) returns (ComStockMedicineBindResp);
-  //医疗机构药品绑定列表
-  rpc MiStockMedicineBindList(MiStockMedicineBindListReq) returns (MiStockMedicineBindListResp);
-  //医疗机构绑定his药品code
-  rpc MiStockMedicineBind(MiStockMedicineBindReq) returns (MiStockMedicineBindResp);
-  //库存列表展示
-  rpc StockList(StockListReq) returns (StockListResp);
-
-}
-
-//=========数据报表服务================
-service DataReportService {
-  //查询招采计划 日报数据
-  rpc GetShipmentPlanDayReports(GetShipmentPlanReportsReq) returns (GetShipmentPlanDayReportsResp);
-  //查询招采计划 月报数据
-  rpc GetShipmentPlanMonthReports(GetShipmentPlanReportsReq) returns (GetShipmentPlanMonthReportsResp);
-  //查询招采计划 年报数据
-  rpc GetShipmentPlanYearReports(GetShipmentPlanReportsReq) returns (GetShipmentPlanYearReportsResp);
-  //查询配送单 日报数据
-  rpc GetShipmentOrderDayReports(GetShipmentOrderReportsReq) returns (GetShipmentOrderDayReportsResp);
-  //查询配送单 月报数据
-  rpc GetShipmentOrderMonthReports(GetShipmentOrderReportsReq) returns (GetShipmentOrderMonthReportsResp);
-  //查询配送单 年报数据
-  rpc GetShipmentOrderYearReports(GetShipmentOrderReportsReq) returns (GetShipmentOrderYearReportsResp);
-  //查询保理订单 日报数据
-  rpc GetFactoringOrderDayReports(GetFactoringOrderReportsReq) returns (GetFactoringOrderDayReportsResp);
-  //查询保理订单 月报数据
-  rpc GetFactoringOrderMonthReports(GetFactoringOrderReportsReq) returns (GetFactoringOrderMonthReportsResp);
-  //查询保理订单 年报数据
-  rpc GetFactoringOrderYearReports(GetFactoringOrderReportsReq) returns (GetFactoringOrderYearReportsResp);
-  //查询合同信息 日报数据
-  rpc GetContractPlanDayReports(GetContractPlanReportsReq) returns (GetContractPlanDayReportsResp);
-  //查询合同信息 月报数据
-  rpc GetContractPlanMonthReports(GetContractPlanReportsReq) returns (GetContractPlanMonthReportsResp);
-  //查询合同信息 年报数据
-  rpc GetContractPlanYearReports(GetContractPlanReportsReq) returns (GetContractPlanYearReportsResp);
-  //查询所含条件的合同聚合数据
-  rpc GetContractSum(GetContractPlanReportsReq) returns (GetContractSumResp);
-  //查询某医保局下生效合同的统计数据
-  rpc GetValidContractInfo(GetValidContractInfoReq) returns (GetValidContractInfoResp);
-  //获取目前的待支付金额
-  rpc GetCurrentNeedPay(GetCurrentNeedPayReq) returns (GetCurrentNeedPayResp);
-  //获取目前的待审核保理金额
-  rpc GetCurrentFactoringApply(GetCurrentFactoringApplyReq) returns (GetCurrentFactoringApplyResp);
-}
-
-//=======业务hash节点管理========================
-service HashService {
-  //hash模块
-  rpc GetCompanyHash(GetCompanyHashReq) returns (GetCompanyHashResp);
-  rpc GetMiHash(GetMiHashReq) returns (GetMiHashResp);
-  rpc GetMedicineHash(GetMedicineReq) returns (GetMedicineResp);
-  rpc GetContractHash(GetContractHashReq) returns (GetContractHashResp);
-  rpc GetContractMiHash(GetContractMiHashReq) returns (GetContractMiHashResp);
-  rpc GetConfigHash(GetConfigHashReq) returns (GetConfigHashResp);
-  rpc GetShipmentPlanHash(GetShipmentPlanHashReq) returns (GetShipmentPlanHashResp);
-  rpc GetShipmentOrderHash(GetShipmentOrderHashReq) returns (GetShipmentOrderHashResp);
-  rpc GetShipmentPayHash(GetShipmentPayHashReq) returns (GetShipmentPayHashResp);
-  rpc GetShipmentFactoringHash(GetShipmentFactoringHashReq) returns (GetShipmentFactoringHashResp);
-
-  rpc GetMessageHash(ListMessageHashReq) returns (ListMessageHashResp);
-  rpc GetCommonInfoHash(GetInfoHashReq) returns (GetInfoHashRsp);
-
-}
-
 message ShipmentRankDataYearReq{
   int64 year = 1;
   int64 miId = 2;
@@ -3216,31 +2994,6 @@ message GetShipmentLogisticsListVo{
   string medicineCode = 2;
   string shipmentStatus = 3;
   google.protobuf.Timestamp  receiveDeadline = 4;
-}
-
-//============排名服务==================================
-service RankService {
-  // 医疗机构 带量采购排名前十药品
-  rpc GetShipmentMedicineRankDataYear(ShipmentRankDataYearReq) returns (ShipmentMedicineRankDataYearResp);
-  // 医疗机构 采购金额排名前十的医药企业
-  rpc GetShipmentCompanyRankDataYear(ShipmentRankDataYearReq) returns (ShipmentCompanyRankDataYearResp);
-  // 医疗机构 招采单物流信息
-  rpc GetShipmentLogisticsList(GetShipmentLogisticsListReq) returns (GetShipmentLogisticsListResp);
-
-  //MI端使用按年查询药品履约率排名
-  rpc GetShipmentRankMedicineDataYear(GetShipmentRankMedicineDataYearReq) returns (GetShipmentRankMedicineDataYearResp);
-  rpc GetShipmentRankCompanyDataYear(GetShipmentRankCompanyDataYearReq) returns (GetShipmentRankCompanyDataYearResp);
-  //MIB端使用
-  //查询医疗机构采购金额年度排名
-  rpc GetRankMiReceiveYear(GetRankMiReceiveYearReq) returns (GetRankMiReceiveYearResp);
-  //查询医药企业送达率 年度排名
-  rpc GetRankComReceiveYear(GetRankComReceiveYearReq) returns (GetRankComReceiveYearResp);
-  //查询医疗机构 主动支付率年度排名
-  rpc GetRankMiPaidYear(GetRankMiPaidYearReq) returns (GetRankMiPaidYearResp);
-  // 查询药品采购量年度排名
-  rpc GetRankMedicineYear(GetRankMedicineYearReq) returns (GetRankMedicineYearResp);
-  //  濮阳行政地图此时的数据
-  rpc GetMIBDashboardBaseInfo(GetMIBDashboardBaseInfoReq) returns (GetMIBDashboardBaseInfoResp);
 }
 
 //============ 月度报销服务 ==========================
@@ -3347,24 +3100,6 @@ message ReimbursementApproval {
   string insuranceType = 7;
 }
 
-service ReimbursementSerivce {
-  //报销列表
-  rpc List(ReimbursementListReq) returns (ReimbursementListRes);
-  //保存审批报表
-  rpc UpApprovalFile(ReimbursementUpApprovalFile) returns (StandardRes);
-  //保存报销报表
-  rpc UpApplyFile(ReimbursementUpApplyFile) returns (StandardRes);
-  //设置医院端报销金额
-  rpc UpApplyAmount(ReimbursementUpApplyAmount) returns (StandardRes);
-  //设置审批金额
-  rpc UpApprovalAmount(ReimbursementUpApprovalAmount) returns (StandardRes);
-  //设置预期报销金额
-  rpc UpExpectApplyAmount(ReimbursementUpExpectApplyAmount) returns (StandardRes);
-  //审批报销数据
-  rpc Approval(ReimbursementApproval) returns (StandardRes);
-
-}
-
 // 获取 workDay
 message GetNextWorkDayReq {
   google.protobuf.Timestamp date = 1;
@@ -3373,12 +3108,6 @@ message GetNextWorkDayReq {
 message GetNextWorkDayRsp {
   google.protobuf.Timestamp date = 1;
 }
-
-service MicroToolsService {
-  // 获取 workDay
-  rpc GetNextWorkDay(GetNextWorkDayReq) returns (GetNextWorkDayRsp);
-}
-
 
 //省平台同步数据
 message CreateTpSyncComInfoReq {
