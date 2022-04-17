@@ -380,6 +380,22 @@ message ListFactoringOrderResp {
   int64 pageSize = 3;
   int64 pageNumber = 4;
 }
+
+message RefundFactoringOrdersReq {
+  int64   managerId = 1;
+  repeated string factoringOrderNos = 2;
+}
+
+message RefundFactoringOrdersResp {
+  repeated RefundFactoringOrderVo list = 1;
+}
+
+message RefundFactoringOrderVo {
+  string factoringOrderNo = 1;
+  int64  code = 2;
+  string msg = 3;
+}
+
 message GetTransferReceiptReq {
   int64   managerId = 1;
   string shipmentNo = 2;
@@ -666,4 +682,6 @@ service FactoringOrderService {
   rpc FinishFactoringOrderError(FinishFactoringOrderErrorReq) returns(FinishFactoringOrderErrorResp);
   //发起保理请求
   rpc Apply(ApplyReq) returns(ApplyResp);
+  //保理单还款
+  rpc RefundFactoringOrders(RefundFactoringOrdersReq) returns(RefundFactoringOrdersResp);
 }
