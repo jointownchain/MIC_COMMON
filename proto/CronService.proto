@@ -2706,6 +2706,8 @@ service CronService {
   rpc CronBankSyncFactoring(OperateIntReq) returns(OperateIntResp);
   //银行保理还款查询
   rpc CronBankSyncFactoringRepay(OperateIntReq) returns(OperateIntResp); 
+  //银行保理还款逾期
+  rpc CronBankOverDueFactoringRepay(OperateIntReq) returns(OperateIntResp); 
   
   //市订单同步
   rpc SyncShipmentPlanInfo(CreateSyncShipmentPlanReq) returns(CreateTpSyncInfoResp);
