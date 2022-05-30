@@ -2682,17 +2682,17 @@ message ListAreaVo {
 service CronService {
   
   //地市医保局获取配送企业信息
-  rpc CronWsGetCompany(CreateTpSyncComInfoReq) returns(CreateTpSyncInfoResp);
+  rpc CronWsGetCompany(OperateIntReq) returns(OperateIntResp);
   //地市医保局获取生产企业信息
   rpc CronWsGetCompanySC(CreateTpSyncComInfoReq) returns(CreateTpSyncInfoResp);
   //地市医保局获取合同信息
-  rpc CronWsGetContract(CreateTpSyncContractMiInfoReq) returns(CreateTpSyncInfoResp);
+  rpc CronWsGetContract(OperateStrDateReq) returns(OperateIntResp);
   //地市医保局获取药品目录信息
-  rpc CronWsGetGoods(CreateTpSyncMedicineInfoReq) returns(CreateTpSyncInfoResp);
+  rpc CronWsGetGoods(OperateIntReq) returns(OperateIntResp);
   //地市医保局获取所属医院信息
-  rpc CronWsGetHospital(CreateTpSyncMiInfoReq) returns(CreateTpSyncInfoResp);
+  rpc CronWsGetHospital(OperateIntReq) returns(OperateIntResp);
   //地市医保局获取配送计划信息
-  rpc CronWsGetPlan(CreateTpSyncShipmentPlanReq) returns(CreateTpSyncInfoResp);
+  rpc CronWsGetPlan(OperateStrDateReq) returns(OperateIntResp);
   //省订单同步
   rpc SyncPShipmentPlan(CreateSyncShipmentPlanReq) returns(CreateTpSyncInfoResp);
   
