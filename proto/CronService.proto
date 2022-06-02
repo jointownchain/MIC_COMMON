@@ -3169,14 +3169,12 @@ message CreateSyncShipmentPlanReq {
 
 
 message CreateCityTpSyncContractMiInfoReq {
-  string tokenUser = 1;
-  Page page = 2;
-  int64 managerId = 3;
+  string strRecord = 1;
+  int64 managerId = 2;
 }
 message CreateCityTpSyncShipmentPlanReq {
-  string tokenUser = 1;
-  Page page = 2;
-  int64 managerId = 3;
+  string strRecord = 1;
+  int64 managerId = 2;
 }
 message CreateSyncPContactRenewReq {
   int64 managerId = 1;
