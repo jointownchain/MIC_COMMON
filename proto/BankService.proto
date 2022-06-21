@@ -480,6 +480,7 @@ message FinishFactoringOrderErrorResp {
 message PayShipmentOrdersReq {
   int64   managerId = 1;
   repeated string shipmentNos = 2;
+  string  payType = 3;
 }
 message PayShipmentOrdersResp {
   string code = 1;
