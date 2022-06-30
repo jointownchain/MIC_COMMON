@@ -631,6 +631,16 @@ message GetMiSpecialConfigResp {
   int64 pageSize = 3;
   int64 pageNumber = 4;
 }
+
+message ResetBankAccountQuotaReq {
+  int64 managerId = 1;
+  repeated string cardNos = 2;
+}
+
+message ResetBankAccountQuotaResp {
+  int64 result = 1;
+}
+
 service BankService {
   //联行号模糊搜索
   rpc ListCnaps(ListCnapsReq) returns(ListCnapsResp);
@@ -653,6 +663,8 @@ service BankService {
   rpc ListCompanyWithdraw(ListCompanyWithdrawReq) returns (ListCompanyWithdrawResp);
   //医保局月度报销划账
   rpc Reimbursement(ReimbursementReq) returns (ReimbursementResp);
+  //重置银行帐户quota
+  rpc ResetBankAccountQuota(ResetBankAccountQuotaReq) returns (ResetBankAccountQuotaResp);
 
 }
 //支付单相关业务

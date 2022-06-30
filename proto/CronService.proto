@@ -2760,6 +2760,9 @@ service CronService {
   
   //医疗机构支付按日提醒定时任务
   rpc CronRemindMiPayMsg(CreateMessageReq) returns(CreateMessageResp);
+  
+  //redis quota 清零
+  rpc CronResetRedisQuotaToZero(OperateIntReq) returns(OperateIntResp);
 }
 
 message MiContractIdsReq {
