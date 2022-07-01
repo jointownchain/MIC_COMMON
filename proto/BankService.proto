@@ -396,6 +396,27 @@ message RefundFactoringOrderVo {
   string msg = 3;
 }
 
+message SetBankAccountQuotaReq {
+  int64   managerId = 1;
+  string  chlType = 2;
+  repeated SetBankAccountQuotaReqVo list = 3;
+}
+
+message SetBankAccountQuotaReqVo {
+  string cardNo = 1;
+  int64  quota = 2;
+}
+
+message SetBankAccountQuotaResp {
+  repeated SetBankAccountQuotaRespVo list = 1;
+}
+
+message SetBankAccountQuotaRespVo {
+  string cardNo = 1;
+  int64  code = 2;
+  string msg = 3;
+}
+
 message GetTransferReceiptReq {
   int64   managerId = 1;
   string shipmentNo = 2;
@@ -697,4 +718,6 @@ service FactoringOrderService {
   rpc Apply(ApplyReq) returns(ApplyResp);
   //保理单还款
   rpc RefundFactoringOrders(RefundFactoringOrdersReq) returns(RefundFactoringOrdersResp);
+  //设置保理银行限额
+  rpc SetBankAccountQuota(SetBankAccountQuotaReq) returns(SetBankAccountQuotaResp);
 }
