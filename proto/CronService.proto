@@ -2763,6 +2763,9 @@ service CronService {
   
   //redis quota 清零
   rpc CronResetRedisQuotaToZero(OperateIntReq) returns(OperateIntResp);
+  
+  //生成mib中合同数据分析
+  rpc CronReportTenderContract(CreateReportReq) returns(CreateReportResp);
 }
 
 message MiContractIdsReq {

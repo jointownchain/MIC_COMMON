@@ -34203,7 +34203,7 @@ var file_CronService_proto_rawDesc = []byte{
 	0x61, 0x67, 0x65, 0x72, 0x49, 0x64, 0x22, 0x2b, 0x0a, 0x11, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65,
 	0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x52, 0x65, 0x73, 0x70, 0x12, 0x16, 0x0a, 0x06, 0x72,
 	0x65, 0x73, 0x75, 0x6c, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x06, 0x72, 0x65, 0x73,
-	0x75, 0x6c, 0x74, 0x32, 0xeb, 0x1c, 0x0a, 0x0b, 0x43, 0x72, 0x6f, 0x6e, 0x53, 0x65, 0x72, 0x76,
+	0x75, 0x6c, 0x74, 0x32, 0xc4, 0x1d, 0x0a, 0x0b, 0x43, 0x72, 0x6f, 0x6e, 0x53, 0x65, 0x72, 0x76,
 	0x69, 0x63, 0x65, 0x12, 0x4b, 0x0a, 0x10, 0x43, 0x72, 0x6f, 0x6e, 0x57, 0x73, 0x47, 0x65, 0x74,
 	0x43, 0x6f, 0x6d, 0x70, 0x61, 0x6e, 0x79, 0x12, 0x1a, 0x2e, 0x43, 0x72, 0x6f, 0x6e, 0x53, 0x65,
 	0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x4f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x65, 0x49, 0x6e, 0x74,
@@ -34434,9 +34434,15 @@ var file_CronService_proto_rawDesc = []byte{
 	0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x4f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x65, 0x49, 0x6e,
 	0x74, 0x52, 0x65, 0x71, 0x1a, 0x1b, 0x2e, 0x43, 0x72, 0x6f, 0x6e, 0x53, 0x65, 0x72, 0x76, 0x69,
 	0x63, 0x65, 0x2e, 0x4f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x65, 0x49, 0x6e, 0x74, 0x52, 0x65, 0x73,
-	0x70, 0x42, 0x21, 0x5a, 0x1f, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2f, 0x43, 0x72, 0x6f,
-	0x6e, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x3b, 0x43, 0x72, 0x6f, 0x6e, 0x53, 0x65, 0x72,
-	0x76, 0x69, 0x63, 0x65, 0x50, 0x00, 0x50, 0x01, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x70, 0x12, 0x57, 0x0a, 0x18, 0x43, 0x72, 0x6f, 0x6e, 0x52, 0x65, 0x70, 0x6f, 0x72, 0x74, 0x54,
+	0x65, 0x6e, 0x64, 0x65, 0x72, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x61, 0x63, 0x74, 0x12, 0x1c, 0x2e,
+	0x43, 0x72, 0x6f, 0x6e, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x43, 0x72, 0x65, 0x61,
+	0x74, 0x65, 0x52, 0x65, 0x70, 0x6f, 0x72, 0x74, 0x52, 0x65, 0x71, 0x1a, 0x1d, 0x2e, 0x43, 0x72,
+	0x6f, 0x6e, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65,
+	0x52, 0x65, 0x70, 0x6f, 0x72, 0x74, 0x52, 0x65, 0x73, 0x70, 0x42, 0x21, 0x5a, 0x1f, 0x73, 0x65,
+	0x72, 0x76, 0x69, 0x63, 0x65, 0x2f, 0x43, 0x72, 0x6f, 0x6e, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63,
+	0x65, 0x3b, 0x43, 0x72, 0x6f, 0x6e, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x50, 0x00, 0x50,
+	0x01, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -35166,49 +35172,51 @@ var file_CronService_proto_depIdxs = []int32{
 	363, // 340: CronService.CronService.CronReportShipmentOrderDay:input_type -> CronService.CreateReportReq
 	365, // 341: CronService.CronService.CronRemindMiPayMsg:input_type -> CronService.CreateMessageReq
 	2,   // 342: CronService.CronService.CronResetRedisQuotaToZero:input_type -> CronService.OperateIntReq
-	3,   // 343: CronService.CronService.CronWsGetCompany:output_type -> CronService.OperateIntResp
-	357, // 344: CronService.CronService.CronWsGetCompanySC:output_type -> CronService.CreateTpSyncInfoResp
-	3,   // 345: CronService.CronService.CronWsGetContract:output_type -> CronService.OperateIntResp
-	3,   // 346: CronService.CronService.CronWsGetGoods:output_type -> CronService.OperateIntResp
-	3,   // 347: CronService.CronService.CronWsGetHospital:output_type -> CronService.OperateIntResp
-	3,   // 348: CronService.CronService.CronWsGetPlan:output_type -> CronService.OperateIntResp
-	357, // 349: CronService.CronService.SyncPShipmentPlan:output_type -> CronService.CreateTpSyncInfoResp
-	3,   // 350: CronService.CronService.CronBankSyncCNAPS:output_type -> CronService.OperateIntResp
-	3,   // 351: CronService.CronService.CronBankSyncBankPayment:output_type -> CronService.OperateIntResp
-	3,   // 352: CronService.CronService.CronBankMiAutoPay:output_type -> CronService.OperateIntResp
-	3,   // 353: CronService.CronService.CronBankAutoFactoringRepay:output_type -> CronService.OperateIntResp
-	3,   // 354: CronService.CronService.CronBankSyncReceipt:output_type -> CronService.OperateIntResp
-	3,   // 355: CronService.CronService.CronBankSyncFactoring:output_type -> CronService.OperateIntResp
-	3,   // 356: CronService.CronService.CronBankSyncFactoringRepay:output_type -> CronService.OperateIntResp
-	3,   // 357: CronService.CronService.CronBankOverDueFactoringRepay:output_type -> CronService.OperateIntResp
-	3,   // 358: CronService.CronService.CronBankPaymentOverDue:output_type -> CronService.OperateIntResp
-	3,   // 359: CronService.CronService.CronBankSyncMiSpecialRecord:output_type -> CronService.OperateIntResp
-	357, // 360: CronService.CronService.SyncShipmentPlanInfo:output_type -> CronService.CreateTpSyncInfoResp
-	357, // 361: CronService.CronService.CronCityGetContract:output_type -> CronService.CreateTpSyncInfoResp
-	357, // 362: CronService.CronService.CronCityGetPlan:output_type -> CronService.CreateTpSyncInfoResp
-	357, // 363: CronService.CronService.SyncPContactRenew:output_type -> CronService.CreateTpSyncInfoResp
-	357, // 364: CronService.CronService.SyncCContactRenew:output_type -> CronService.CreateTpSyncInfoResp
-	364, // 365: CronService.CronService.CronReportShipmentPlanYear:output_type -> CronService.CreateReportResp
-	364, // 366: CronService.CronService.CronReportShipmentPlanMonth:output_type -> CronService.CreateReportResp
-	364, // 367: CronService.CronService.CronReportShipmentPlanDay:output_type -> CronService.CreateReportResp
-	364, // 368: CronService.CronService.CronReportContractPlanYear:output_type -> CronService.CreateReportResp
-	364, // 369: CronService.CronService.CronReportContractPlanMonth:output_type -> CronService.CreateReportResp
-	364, // 370: CronService.CronService.CronReportContractPlanDay:output_type -> CronService.CreateReportResp
-	366, // 371: CronService.CronService.CronShipmentPlanOutTimeMsg:output_type -> CronService.CreateMessageResp
-	366, // 372: CronService.CronService.CronSendShipmentPlanWarningMsg:output_type -> CronService.CreateMessageResp
-	366, // 373: CronService.CronService.CronShipmentOrderOverdueMsg:output_type -> CronService.CreateMessageResp
-	366, // 374: CronService.CronService.CronShipmentOrderSendingDeadlineMsg:output_type -> CronService.CreateMessageResp
-	366, // 375: CronService.CronService.CronShipmentReceiveWarningMsg:output_type -> CronService.CreateMessageResp
-	364, // 376: CronService.CronService.CronReportFactoringOrderYear:output_type -> CronService.CreateReportResp
-	364, // 377: CronService.CronService.CronReportFactoringOrderMonth:output_type -> CronService.CreateReportResp
-	364, // 378: CronService.CronService.CronReportFactoringOrderDay:output_type -> CronService.CreateReportResp
-	364, // 379: CronService.CronService.CronReportShipmentOrderYear:output_type -> CronService.CreateReportResp
-	364, // 380: CronService.CronService.CronReportShipmentOrderMonth:output_type -> CronService.CreateReportResp
-	364, // 381: CronService.CronService.CronReportShipmentOrderDay:output_type -> CronService.CreateReportResp
-	366, // 382: CronService.CronService.CronRemindMiPayMsg:output_type -> CronService.CreateMessageResp
-	3,   // 383: CronService.CronService.CronResetRedisQuotaToZero:output_type -> CronService.OperateIntResp
-	343, // [343:384] is the sub-list for method output_type
-	302, // [302:343] is the sub-list for method input_type
+	363, // 343: CronService.CronService.CronReportTenderContract:input_type -> CronService.CreateReportReq
+	3,   // 344: CronService.CronService.CronWsGetCompany:output_type -> CronService.OperateIntResp
+	357, // 345: CronService.CronService.CronWsGetCompanySC:output_type -> CronService.CreateTpSyncInfoResp
+	3,   // 346: CronService.CronService.CronWsGetContract:output_type -> CronService.OperateIntResp
+	3,   // 347: CronService.CronService.CronWsGetGoods:output_type -> CronService.OperateIntResp
+	3,   // 348: CronService.CronService.CronWsGetHospital:output_type -> CronService.OperateIntResp
+	3,   // 349: CronService.CronService.CronWsGetPlan:output_type -> CronService.OperateIntResp
+	357, // 350: CronService.CronService.SyncPShipmentPlan:output_type -> CronService.CreateTpSyncInfoResp
+	3,   // 351: CronService.CronService.CronBankSyncCNAPS:output_type -> CronService.OperateIntResp
+	3,   // 352: CronService.CronService.CronBankSyncBankPayment:output_type -> CronService.OperateIntResp
+	3,   // 353: CronService.CronService.CronBankMiAutoPay:output_type -> CronService.OperateIntResp
+	3,   // 354: CronService.CronService.CronBankAutoFactoringRepay:output_type -> CronService.OperateIntResp
+	3,   // 355: CronService.CronService.CronBankSyncReceipt:output_type -> CronService.OperateIntResp
+	3,   // 356: CronService.CronService.CronBankSyncFactoring:output_type -> CronService.OperateIntResp
+	3,   // 357: CronService.CronService.CronBankSyncFactoringRepay:output_type -> CronService.OperateIntResp
+	3,   // 358: CronService.CronService.CronBankOverDueFactoringRepay:output_type -> CronService.OperateIntResp
+	3,   // 359: CronService.CronService.CronBankPaymentOverDue:output_type -> CronService.OperateIntResp
+	3,   // 360: CronService.CronService.CronBankSyncMiSpecialRecord:output_type -> CronService.OperateIntResp
+	357, // 361: CronService.CronService.SyncShipmentPlanInfo:output_type -> CronService.CreateTpSyncInfoResp
+	357, // 362: CronService.CronService.CronCityGetContract:output_type -> CronService.CreateTpSyncInfoResp
+	357, // 363: CronService.CronService.CronCityGetPlan:output_type -> CronService.CreateTpSyncInfoResp
+	357, // 364: CronService.CronService.SyncPContactRenew:output_type -> CronService.CreateTpSyncInfoResp
+	357, // 365: CronService.CronService.SyncCContactRenew:output_type -> CronService.CreateTpSyncInfoResp
+	364, // 366: CronService.CronService.CronReportShipmentPlanYear:output_type -> CronService.CreateReportResp
+	364, // 367: CronService.CronService.CronReportShipmentPlanMonth:output_type -> CronService.CreateReportResp
+	364, // 368: CronService.CronService.CronReportShipmentPlanDay:output_type -> CronService.CreateReportResp
+	364, // 369: CronService.CronService.CronReportContractPlanYear:output_type -> CronService.CreateReportResp
+	364, // 370: CronService.CronService.CronReportContractPlanMonth:output_type -> CronService.CreateReportResp
+	364, // 371: CronService.CronService.CronReportContractPlanDay:output_type -> CronService.CreateReportResp
+	366, // 372: CronService.CronService.CronShipmentPlanOutTimeMsg:output_type -> CronService.CreateMessageResp
+	366, // 373: CronService.CronService.CronSendShipmentPlanWarningMsg:output_type -> CronService.CreateMessageResp
+	366, // 374: CronService.CronService.CronShipmentOrderOverdueMsg:output_type -> CronService.CreateMessageResp
+	366, // 375: CronService.CronService.CronShipmentOrderSendingDeadlineMsg:output_type -> CronService.CreateMessageResp
+	366, // 376: CronService.CronService.CronShipmentReceiveWarningMsg:output_type -> CronService.CreateMessageResp
+	364, // 377: CronService.CronService.CronReportFactoringOrderYear:output_type -> CronService.CreateReportResp
+	364, // 378: CronService.CronService.CronReportFactoringOrderMonth:output_type -> CronService.CreateReportResp
+	364, // 379: CronService.CronService.CronReportFactoringOrderDay:output_type -> CronService.CreateReportResp
+	364, // 380: CronService.CronService.CronReportShipmentOrderYear:output_type -> CronService.CreateReportResp
+	364, // 381: CronService.CronService.CronReportShipmentOrderMonth:output_type -> CronService.CreateReportResp
+	364, // 382: CronService.CronService.CronReportShipmentOrderDay:output_type -> CronService.CreateReportResp
+	366, // 383: CronService.CronService.CronRemindMiPayMsg:output_type -> CronService.CreateMessageResp
+	3,   // 384: CronService.CronService.CronResetRedisQuotaToZero:output_type -> CronService.OperateIntResp
+	364, // 385: CronService.CronService.CronReportTenderContract:output_type -> CronService.CreateReportResp
+	344, // [344:386] is the sub-list for method output_type
+	302, // [302:344] is the sub-list for method input_type
 	302, // [302:302] is the sub-list for extension type_name
 	302, // [302:302] is the sub-list for extension extendee
 	0,   // [0:302] is the sub-list for field type_name
@@ -39731,6 +39739,8 @@ type CronServiceClient interface {
 	CronRemindMiPayMsg(ctx context.Context, in *CreateMessageReq, opts ...grpc.CallOption) (*CreateMessageResp, error)
 	//redis quota 清零
 	CronResetRedisQuotaToZero(ctx context.Context, in *OperateIntReq, opts ...grpc.CallOption) (*OperateIntResp, error)
+	//生成mib中合同数据分析
+	CronReportTenderContract(ctx context.Context, in *CreateReportReq, opts ...grpc.CallOption) (*CreateReportResp, error)
 }
 
 type cronServiceClient struct {
@@ -40110,6 +40120,15 @@ func (c *cronServiceClient) CronResetRedisQuotaToZero(ctx context.Context, in *O
 	return out, nil
 }
 
+func (c *cronServiceClient) CronReportTenderContract(ctx context.Context, in *CreateReportReq, opts ...grpc.CallOption) (*CreateReportResp, error) {
+	out := new(CreateReportResp)
+	err := c.cc.Invoke(ctx, "/CronService.CronService/CronReportTenderContract", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // CronServiceServer is the server API for CronService service.
 type CronServiceServer interface {
 	//地市医保局获取配送企业信息
@@ -40186,6 +40205,8 @@ type CronServiceServer interface {
 	CronRemindMiPayMsg(context.Context, *CreateMessageReq) (*CreateMessageResp, error)
 	//redis quota 清零
 	CronResetRedisQuotaToZero(context.Context, *OperateIntReq) (*OperateIntResp, error)
+	//生成mib中合同数据分析
+	CronReportTenderContract(context.Context, *CreateReportReq) (*CreateReportResp, error)
 }
 
 // UnimplementedCronServiceServer can be embedded to have forward compatible implementations.
@@ -40314,6 +40335,9 @@ func (*UnimplementedCronServiceServer) CronRemindMiPayMsg(context.Context, *Crea
 }
 func (*UnimplementedCronServiceServer) CronResetRedisQuotaToZero(context.Context, *OperateIntReq) (*OperateIntResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CronResetRedisQuotaToZero not implemented")
+}
+func (*UnimplementedCronServiceServer) CronReportTenderContract(context.Context, *CreateReportReq) (*CreateReportResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CronReportTenderContract not implemented")
 }
 
 func RegisterCronServiceServer(s *grpc.Server, srv CronServiceServer) {
@@ -41058,6 +41082,24 @@ func _CronService_CronResetRedisQuotaToZero_Handler(srv interface{}, ctx context
 	return interceptor(ctx, in, info, handler)
 }
 
+func _CronService_CronReportTenderContract_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CreateReportReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CronServiceServer).CronReportTenderContract(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/CronService.CronService/CronReportTenderContract",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CronServiceServer).CronReportTenderContract(ctx, req.(*CreateReportReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 var _CronService_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "CronService.CronService",
 	HandlerType: (*CronServiceServer)(nil),
@@ -41225,6 +41267,10 @@ var _CronService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CronResetRedisQuotaToZero",
 			Handler:    _CronService_CronResetRedisQuotaToZero_Handler,
+		},
+		{
+			MethodName: "CronReportTenderContract",
+			Handler:    _CronService_CronReportTenderContract_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
