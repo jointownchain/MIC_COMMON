@@ -268,6 +268,7 @@ message UploadChainFactoringOrder {
   google.protobuf.Timestamp refundAt = 12;
   string refundStatus = 13;
   string creditRate = 14;
+  google.protobuf.Timestamp applyResultAt = 15;
 }
 
 message UploadChainFactoringOrders {
