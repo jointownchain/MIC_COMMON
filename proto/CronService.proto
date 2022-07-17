@@ -2715,8 +2715,8 @@ service CronService {
   rpc CronBankOverDueFactoringRepay(OperateIntReq) returns(OperateIntResp); 
   //医疗机构被动支付置为失败
   rpc CronBankPaymentOverDue(OperateIntReq) returns(OperateIntResp);
-  //医疗机构银行专户交易记录查询
-  rpc CronBankSyncMiSpecialRecord(OperateStrDateReq) returns(OperateIntResp);
+  //银行专户交易记录同步
+  rpc CronBankTransferRecord(OperateStrDateReq) returns(OperateIntResp);
   
   //市订单同步
   rpc SyncShipmentPlanInfo(CreateSyncShipmentPlanReq) returns(CreateTpSyncInfoResp);
