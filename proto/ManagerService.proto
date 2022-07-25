@@ -2980,6 +2980,10 @@ message StockListVo{
   string miName = 7;
   int32 miStockNum = 8;
   string medicineSpecification = 9;
+  google.protobuf.Timestamp contractStartAt = 10;
+  google.protobuf.Timestamp contractEndAt = 11;
+  google.protobuf.Timestamp comStockUpdatedAt = 12;
+  google.protobuf.Timestamp miStockUpdatedAt = 13;
 }
 
 message GetInfoHashReq {
