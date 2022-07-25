@@ -668,6 +668,7 @@ message ListFactoringAgreerefReq {
   string agreeref = 3;
   int64 managerId = 4;
   Page page = 5;
+  string activeStatus = 6;
 }
 
 message FactoringAgreerefsResp {
@@ -687,6 +688,7 @@ message FactoringAgreerefVo {
   google.protobuf.Timestamp updatedAt = 7;
   string companyName = 8;
   string miName = 9;
+  string activeStatus = 10;
 }
 
 message FactoringAgreerefReq {
@@ -696,6 +698,7 @@ message FactoringAgreerefReq {
   string miCode = 4;
   string agreeref = 5;
   int64 managerId = 6;
+  string activeStatus = 7;
 }
 
 message FactoringAgreerefIdsReq {

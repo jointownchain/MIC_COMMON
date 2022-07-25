@@ -3060,6 +3060,26 @@ service DataReportService {
   rpc GetCurrentFactoringApply(GetCurrentFactoringApplyReq) returns (GetCurrentFactoringApplyResp);
 }
 
+message GetFactoringAgreerefHashReq {
+  //谁在请求 按照搜索账号控制显示范围
+  int64 managerId = 1;
+  repeated int64 factoringAgreerefIds = 2;
+  repeated string agreerefs = 3;
+}
+
+message FactoringAgreerefHash{
+  int64 factoringAgreerefIds = 1;
+  string agreeref = 2;
+  string infoHash = 3;
+  google.protobuf.Timestamp infoUploadAt = 4;
+}
+message GetFactoringAgreerefHashResp {
+  repeated FactoringAgreerefHash list = 1;
+  int64 total = 2;
+  int64 pageSize = 3;
+  int64 pageNumber = 4;
+}
+
 //=======业务hash节点管理========================
 service HashService {
   //hash模块
@@ -3076,7 +3096,8 @@ service HashService {
 
   rpc GetMessageHash(ListMessageHashReq) returns (ListMessageHashResp);
   rpc GetCommonInfoHash(GetInfoHashReq) returns (GetInfoHashRsp);
-
+  
+  rpc GetFactoringAgreerefHash(GetFactoringAgreerefHashReq) returns (GetFactoringAgreerefHashResp);
 }
 
 message ShipmentRankDataYearReq{
