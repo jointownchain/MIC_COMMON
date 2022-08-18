@@ -710,6 +710,18 @@ message OperateIntegerResp {
  int64 result = 1;
 }
 
+message GetFundAmountReq {
+  int64  managerId = 1;
+  int64  mibId = 2;
+  int64  year = 3;
+  int64  month = 4;
+  string miCode = 5;
+}
+
+message GetFundAmountResp {
+  int64	fundSum = 1;
+}
+
 service BankService {
   //联行号模糊搜索
   rpc ListCnaps(ListCnapsReq) returns(ListCnapsResp);
@@ -740,7 +752,9 @@ service BankService {
   rpc CreateFactoringAgreeref(FactoringAgreerefReq) returns(OperateIntegerResp);
   rpc UpdateFactoringAgreeref(FactoringAgreerefReq) returns(OperateIntegerResp);
   rpc DeleteFactoringAgreeref(FactoringAgreerefIdsReq) returns(OperateIntegerResp);
-
+  
+  //获取医保基金代为支付金额
+  rpc GetFundAmount(GetFundAmountReq) returns (GetFundAmountResp);
 }
 //支付单相关业务
 service ShipmentPayOrderService {

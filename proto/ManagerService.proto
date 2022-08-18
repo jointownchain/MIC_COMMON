@@ -3216,6 +3216,7 @@ message ReimbursementListBody {
   string applyFile = 15;
   google.protobuf.Timestamp paySuccessTime = 16;
   string insuranceType = 18;
+  int64 fundAmount = 19;
 }
 
 message ReimbursementUpApplyFile {
@@ -3251,6 +3252,7 @@ message ReimbursementUpApprovalAmount {
   int64 amount = 5;
   int64 managerId = 6;
   string insuranceType = 7;
+  int64 fundAmount = 8;
 }
 
 message ReimbursementUpApplyAmount {
