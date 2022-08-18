@@ -8,7 +8,7 @@ import public "google/protobuf/timestamp.proto";
 message GetHashContentReq {
   int64 managerId = 1;
   string hash = 2;
-  //目前支持的hash类型  COM CONFIG CONTRACT CONTRACT_MI FACTORING MEDICINE MI PAY SHIPMENT
+  //目前支持的hash类型  COM CONFIG CONTRACT CONTRACT_MI FACTORING MEDICINE MI PAY SHIPMENT FACTORINGAGREEREF
   string businessType = 3;
 }
 
@@ -29,9 +29,19 @@ message GetHashContentResp {
   string description = 10;
 }
 
+message GetDecryptContentReq {
+  int64 managerId = 1;
+  string ecryptContent = 2;
+}
+
+message GetDecryptContentResp {
+  string data = 1;
+}
+
 service ChainService {
   //根据哈希查询证书内容
   rpc GetHashContent(GetHashContentReq) returns (GetHashContentResp);
+  rpc GetDecryptContent(GetDecryptContentReq) returns (GetDecryptContentResp);
 }
 
 
